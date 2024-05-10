@@ -17,6 +17,12 @@ import plotly.express as px
 import plotly.graph_objects as go
 import sentencepiece
 
+def get_openai_api_key():
+    """Retrieve OpenAI API key from environment variables."""
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("API key not found. Please set the OPENAI_API_KEY environment variable.")
+    return api_key
 
 class LLMWrapper:
     '''This is a wrapper class for LLMs, which provides a method called 'annotate' that annotates a given message using an LLM.

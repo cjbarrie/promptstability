@@ -23,6 +23,16 @@ To ensure all dependencies are installed, you can follow these steps:
 ### Baseline stochasticity
 
 ```python
+import os
+import pandas as pd
+from utils import LLMWrapper
+from utils import PromptStabilityAnalysis
+from utils import get_openai_api_key
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import simpledorff
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 ## Usage example
 APIKEY = get_openai_api_key()
 MODEL = 'gpt-3.5-turbo'

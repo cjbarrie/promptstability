@@ -2,26 +2,11 @@ import os
 import pandas as pd
 from utils import LLMWrapper
 from utils import PromptStabilityAnalysis
+from utils import get_openai_api_key
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import simpledorff
-
 import seaborn as sns
 import matplotlib.pyplot as plt
-
-# Data
-df = pd.read_csv('data/tweets.csv')
-df = df.sample(10)
-texts = list(df['text'].values)
-
-# TODO: add into main library functions
-# Get API key from environment variables
-def get_openai_api_key():
-    """Retrieve OpenAI API key from environment variables."""
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise ValueError("API key not found. Please set the OPENAI_API_KEY environment variable.")
-    return api_key
-
 
 # Baseline stochasticity
 
