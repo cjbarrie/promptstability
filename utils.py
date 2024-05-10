@@ -110,31 +110,23 @@ class LLMWrapper:
 
 class PromptStabilityAnalysis:
 
-    def __init__(self,llm, data, metric_fn=simpledorff.metrics.nominal_metric, parse_function=None) -> None:
-
+    def __init__(self, llm, data, metric_fn=simpledorff.metrics.nominal_metric, parse_function=None) -> None:
         self.llm = llm
-
-        # Get a number for the similarity between two sentences
         self.embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
-
-        #Initiate paraphraser
         model_name = 'tuner007/pegasus_paraphrase'
         self.torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.tokenizer = PegasusTokenizer.from_pretrained(model_name)
         self.model = PegasusForConditionalGeneration.from_pretrained(model_name).to(self.torch_device)
-        self.parse_function = parse_function  #The function through which to parse the result from the LLM
-        self.data = data # The data to be analyzed. Should be a list of texts.
-        self.metric_fn = metric_fn #Metric function for KA. e.g., simpledorff.metrics.interval_metric or nominal_metric metric_fn=simpledorff.metrics.nominal_metric
+        self.parse_function = parse_function
+        self.data = data
+        self.metric_fn = metric_fn
 
-    # Uses Pegasus to paraphrase a sentence
     def __paraphrase_sentence(self, input_text, num_return_sequences=10, num_beams=50, temperature=1.0):
-        batch = self.tokenizer([input_text],truncation=True,padding='longest',max_length=60, return_tensors="pt").to(self.torch_device)
-        translated = self.model.generate(**batch,max_length=60,num_beams=num_beams, num_return_sequences=num_return_sequences, temperature=temperature, do_sample=True)
+        batch = self.tokenizer([input_text], truncation=True, padding='longest', max_length=60, return_tensors="pt").to(self.torch_device)
+        translated = self.model.generate(**batch, max_length=60, num_beams=num_beams, num_return_sequences=num_return_sequences, temperature=temperature, do_sample=True)
         tgt_text = self.tokenizer.batch_decode(translated, skip_special_tokens=True)
         return tgt_text
 
-    #Generate paraphrases
-    #prompt_postfix is a fixed addition that is not paraphrased
     def __generate_paraphrases(self, original_text, prompt_postfix, nr_variations, temperature=1.0):
         phrases = self.__paraphrase_sentence(original_text, num_return_sequences=nr_variations, temperature=temperature)
         l = [{'phrase': f'{original_text} {prompt_postfix}', 'original': True}]
@@ -142,8 +134,7 @@ class PromptStabilityAnalysis:
             l.append({'phrase': f'{phrase} {prompt_postfix}', 'original': False})
         self.paraphrases = pd.DataFrame(l)
         return self.paraphrases
-
-
+    
     def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10):
         prompt = f'{original_text} {prompt_postfix}'
         annotated = []
@@ -179,27 +170,29 @@ class PromptStabilityAnalysis:
 
         return KA, df, ka_scores, iterrations_no
 
-    # CHANGE to include loop of temperatures or right new function that has interprompt stochasticity in loop (like __generate_paraphrases)
-    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperature=1.0, iterations=1):
-        paraphrases = self.__generate_paraphrases(original_text, prompt_postfix, nr_variations=nr_variations, temperature=temperature)
-        annotated = []
-        for i, (paraphrase, original) in enumerate(zip(paraphrases['phrase'], paraphrases['original'])):
-            print(f"Iteration {i}/{nr_variations}...", end='\r')
-            sys.stdout.flush()
-            for j, d in enumerate(self.data):
-                annotation = self.llm.annotate(d, paraphrase, parse_function=self.parse_function)
-                annotated.append({'id': j, 'text': d, 'annotation': annotation, 'prompt_id': i, 'prompt': paraphrase, 'original': original})
-        print()
-        print('Finished classifications.')
-        annotated_data = pd.DataFrame(annotated)
-        self.interprompt_df = annotated_data
-        KA = simpledorff.calculate_krippendorffs_alpha_for_df(annotated_data, metric_fn=self.metric_fn, experiment_col='id', annotator_col='prompt_id', class_col='annotation')
-        if KA < 0.8:
-            original_prompt = original_text + ' ' + prompt_postfix
-            print(f'Original prompt:\n{original_prompt}')
-            print('Prompts with poor performance:')
-            print(annotated_data[annotated_data['KA'] < 0.8])
-        return KA, annotated_data
-
-
+    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1):
+        ka_scores = {}
+        
+        for temp in temperatures:
+            paraphrases = self.__generate_paraphrases(original_text, prompt_postfix, nr_variations=nr_variations, temperature=temp)
+            annotated = []
+            for i, (paraphrase, original) in enumerate(zip(paraphrases['phrase'], paraphrases['original'])):
+                print(f"Temperature {temp}, Iteration {i}/{nr_variations}...", end='\r')
+                sys.stdout.flush()
+                for j, d in enumerate(self.data):
+                    annotation = self.llm.annotate(d, paraphrase, parse_function=self.parse_function)
+                    annotated.append({'id': j, 'text': d, 'annotation': annotation, 'prompt_id': i, 'prompt': paraphrase, 'original': original})
+            print()
+            print('Finished classifications for temperature:', temp)
+            annotated_data = pd.DataFrame(annotated)
+            KA = simpledorff.calculate_krippendorffs_alpha_for_df(
+                annotated_data, 
+                metric_fn=self.metric_fn, 
+                experiment_col='id', 
+                annotator_col='prompt_id', 
+                class_col='annotation')
+            ka_scores[temp] = KA
+        
+        return ka_scores, annotated_data
+    
 
