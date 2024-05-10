@@ -1,17 +1,23 @@
 import os
+import sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.insert(0, parent_dir)
+from psa_temp import LLMWrapper, PromptStabilityAnalysis
+
 import pandas as pd
-from psa_temp import LLMWrapper
-from psa_temp import PromptStabilityAnalysis
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import simpledorff
 
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
+
 # Data
 df = pd.read_csv('tweets.csv')
-df = df.sample(10)
-texts = list(df['text'].values)
+df_small = df.sample(10)
+texts = list(df_small['text'].values)
 
 # Model
 APIKEY = os.getenv("OPENAI_API_KEY")
@@ -44,5 +50,8 @@ sns.lineplot(data=all_results_df, x='temperature', y='KA_by_temp', marker='o', c
 plt.title("Krippendorff's Alpha vs. Temperature", fontsize=20)
 plt.xlabel("Temperature", fontsize=15)
 plt.ylabel("Krippendorff's Alpha (KA)", fontsize=15)
-plt.grid(True, which='both', linestyle='--', linewidth=0.7)
+plt.grid(True, which='both', linestyle='--', linewidth=.7)
+plt.ylim(0.0, 1.05)
+plt.axhline(y=0.80, color='black', linestyle='--', linewidth=.5)
+plt.savefig('graphs/ka_temp_tweets.pdf')
 plt.show()

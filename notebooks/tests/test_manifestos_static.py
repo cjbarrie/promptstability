@@ -1,7 +1,11 @@
 import os
+import sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.insert(0, parent_dir)
+from psa_temp import LLMWrapper, PromptStabilityAnalysis
+
 import pandas as pd
-from psa_temp import LLMWrapper
-from psa_temp import PromptStabilityAnalysis
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import simpledorff
 
@@ -20,18 +24,23 @@ except OSError:
     # If the model identifier is not valid, set MAX_TOKENS to 16385
     MAX_TOKENS = 16385
 
-df = pd.read_csv('UK_Manifestos.csv')
+df = pd.read_csv('/Users/ellipalaiologou/Downloads/manifestos_static_sample.csv')
 df_small = df.sample(10)
-texts = [text[:MAX_TOKENS] for text in df_small['content'].values]
+texts = list(df_small['sentence_context'].values)
 
 # Model
 APIKEY = os.getenv("OPENAI_API_KEY")
 MODEL = 'gpt-3.5-turbo'
 llm = LLMWrapper(model = MODEL, apikey=APIKEY)
-psa = PromptStabilityAnalysis(llm, texts, parse_function=lambda x: float(x), metric_fn = simpledorff.metrics.nominal_metric)
+psa = PromptStabilityAnalysis(llm, texts, parse_function=lambda x: float(x), metric_fn = simpledorff.metrics.interval_metric)
 
 # Prompt
-prompt = 'The text provided is a party manifesto for a political party in the United Kingdom. Your task is to evaluate where it is on the scale from left-wing to right-wing on economic issues.'
+prompt = (
+    'The text provided is part of a party manifesto of a political party in the United Kingdom.'
+    'In each piece of text, there are several sentences. One of these is capitalized and this is the text you should focus on.'
+    'The other sentences are there solely to provide some context.'
+    'Your task is to evaluate where the capitalized sentence is on the scale from left-wing to right-wing on economic issues.'
+)
 prompt_postfix = '[Respond with a number from 1 to 10. 1 corresponds to most left-wing. 10 corresponds to most right-wing. Guess if you do not know. Respond nothing else.]'
 
 
@@ -56,9 +65,7 @@ plt.title("Krippendorff's Alpha vs. Temperature", fontsize=20)
 plt.xlabel("Temperature", fontsize=15)
 plt.ylabel("Krippendorff's Alpha (KA)", fontsize=15)
 plt.grid(True, which='both', linestyle='--', linewidth=0.7)
-plt.savefig('graphs/ka_temp_manifestos.pdf')
+plt.ylim(0.0, 1.05)
+plt.axhline(y=0.80, color='black', linestyle='--', linewidth=.5)
+plt.savefig('graphs/ka_temp_manifestostatic_int.pdf')
 plt.show()
-
-
-# change to shorter sentences (chris file)
-# run simpledorff with interval
