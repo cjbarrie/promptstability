@@ -20,7 +20,56 @@ To ensure all dependencies are installed, you can follow these steps:
 
 ## Usage
 
-- psa.py: initial PromptStabilityAnalysis class function (cosine-based new prompts), returning full analysis (KA vs. number of prompt repetitions KA vs. cosine similarity of prompt, poor performing prompts)
-- psa_temp.py: PromptStabilityAnalysis class function with temperature (temperature-based new prompts), returning KA vs temperature ONLY
-    - test_tweets.py: testing psa_temp.py on tweets data
-    - test_manifestos.py: testing psa_temp.py on UK manifestos data
+### Baseline stochasticity
+
+```python
+## Usage example
+APIKEY = get_openai_api_key()
+MODEL = 'gpt-3.5-turbo'
+
+# Data
+df = pd.read_csv('data/tweets.csv')
+df = df.sample(10)
+example_data = list(df['text'].values)
+
+llm = LLMWrapper(apikey=APIKEY, model=MODEL)
+psa = PromptStabilityAnalysis(llm=llm, data=example_data)
+
+# Step 2: Construct the Prompt
+original_text = 'The following is a Twitter message written either by a Republican or a Democrat before the 2020 election. Your task is to guess whether the author is Republican or Democrat.'
+prompt_postfix = '[Respond 0 for Democrat, or 1 for Republican. Guess if you do not know. Respond nothing else.]'
+
+# Run baseline_stochasticity
+KA, df, ka_scores, iterrations_no = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20)
+
+# Model
+llm = LLMWrapper(model = MODEL, apikey=APIKEY)
+psa = PromptStabilityAnalysis(llm, texts, parse_function=lambda x: float(x), metric_fn = simpledorff.metrics.nominal_metric)
+
+# Prompt
+prompt = 'The following is a Twitter message written either by a Republican or a Democrat before the 2020 election. Your task is to guess whether the author is Republican or Democrat.'
+prompt_postfix = '[Respond 0 for Democrat, or 1 for Republican. Guess if you do not know. Respond nothing else.]'
+
+# TODO: add this into library as function
+# Function to plot KA scores with integer x-axis labels
+def plot_ka_scores(ka_scores, overall_ka):
+    iterations = list(range(2, 2 + len(ka_scores)))
+
+    plt.figure(figsize=(10, 5))
+    plt.plot(iterations, ka_scores, marker='o', linestyle='-', color='b', label='KA Score per Iteration')
+    plt.axhline(y=overall_ka, color='r', linestyle='--', label=f'Overall KA: {overall_ka:.2f}')
+    plt.xlabel('Iteration')
+    plt.ylabel('Krippendorff\'s Alpha (KA)')
+    plt.title('Krippendorff\'s Alpha Scores Across Iterations')
+    plt.xticks(iterations)  # Set x-axis ticks to be whole integers
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+
+# Plot the KA scores
+plot_ka_scores(ka_scores, KA)
+
+```
+
+![](plots/Figure_1.png)

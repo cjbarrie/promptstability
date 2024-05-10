@@ -69,7 +69,8 @@ def plot_ka_scores(ka_scores, overall_ka):
     plt.show()
 
 
-
+# Plot the KA scores
+plot_ka_scores(ka_scores, KA)
 
 
 
