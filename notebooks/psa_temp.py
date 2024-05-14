@@ -119,12 +119,6 @@ class PromptStabilityAnalysis:
         self.data = data # The data to be analyzed. Should be a list of texts.
         self.metric_fn = metric_fn #Metric function for KA. e.g., simpledorff.metrics.interval_metric or nominal_metric metric_fn=simpledorff.metrics.nominal_metric
 
-    # Compares similarity between two sentences in sentence embedding space
-    def __compare_similarity(self,sent1,sent2):
-        emb1 = self.embedding_model.encode(sent1, convert_to_tensor=True)
-        emb2 = self.embedding_model.encode(sent2, convert_to_tensor=True)
-
-        return util.pytorch_cos_sim(emb1, emb2)
 
     # Uses Pegasus to paraphrase a sentence
     def __paraphrase_sentence(self, input_text, num_return_sequences=10, num_beams=50, temperature=1.0):
@@ -133,22 +127,18 @@ class PromptStabilityAnalysis:
         tgt_text = self.tokenizer.batch_decode(translated, skip_special_tokens=True)
         return tgt_text
 
-    #This generates paraphrases based on an original text and uses sentence embedding to measure how different they are from the original sentence.
-    #prompt_postfix is a fixed addition that is not paraphrased
-    # CHANGE TO REMOVE SIMILARITY PART - MAYBE REMOVE IT COMPLETELY (STORING THEM IS THE ONLY USEFUL THING HERE)
+    # This generates paraphrases based on an original text and uses sentence embedding to measure how different they are from the original sentence.
     def __generate_paraphrases(self,original_text,prompt_postfix,nr_variations,temperature=1.0):
         # Create paraphrases of sentence
         phrases = self.__paraphrase_sentence(original_text,num_return_sequences=nr_variations,temperature=temperature)
 
         # Measure distances between new and original
-        l = [{'similarity':1.0,'phrase':f'{original_text} {prompt_postfix}','original':True}]
+        l = [{'phrase':f'{original_text} {prompt_postfix}','original':True}]
         for phrase in phrases:
-            sim = self.__compare_similarity(original_text,phrase)
-            l.append({'similarity':float(sim),'phrase':f'{phrase} {prompt_postfix}','original':False})
+            l.append({'phrase':f'{phrase} {prompt_postfix}','original':False})
 
         # Store for future use
-        self.paraphrases = pd.DataFrame(l).sort_values(['similarity'])
-        #display(self.paraphrases)
+        self.paraphrases = pd.DataFrame(l)
         return self.paraphrases
 
     def baseline_stochasticity(self,original_text,prompt_postfix,iterations=10, plot_type='plotly'):
