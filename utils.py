@@ -134,7 +134,7 @@ class PromptStabilityAnalysis:
             l.append({'phrase': f'{phrase} {prompt_postfix}', 'original': False})
         self.paraphrases = pd.DataFrame(l)
         return self.paraphrases
-    
+
     def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10):
         prompt = f'{original_text} {prompt_postfix}'
         annotated = []
@@ -142,7 +142,7 @@ class PromptStabilityAnalysis:
         iterrations_no = []
 
         for i in range(iterations):
-            print(f"Iteration {i}/{iterations}...", end='\r')
+            print(f"Iteration {i+1}/{iterations}...", end='\r')
             sys.stdout.flush()
             for j, d in enumerate(self.data):
                 annotation = self.llm.annotate(d, prompt, parse_function=self.parse_function)
@@ -172,7 +172,7 @@ class PromptStabilityAnalysis:
 
     def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1):
         ka_scores = {}
-        
+
         for temp in temperatures:
             paraphrases = self.__generate_paraphrases(original_text, prompt_postfix, nr_variations=nr_variations, temperature=temp)
             annotated = []
@@ -186,13 +186,11 @@ class PromptStabilityAnalysis:
             print('Finished classifications for temperature:', temp)
             annotated_data = pd.DataFrame(annotated)
             KA = simpledorff.calculate_krippendorffs_alpha_for_df(
-                annotated_data, 
-                metric_fn=self.metric_fn, 
-                experiment_col='id', 
-                annotator_col='prompt_id', 
+                annotated_data,
+                metric_fn=self.metric_fn,
+                experiment_col='id',
+                annotator_col='prompt_id',
                 class_col='annotation')
             ka_scores[temp] = KA
-        
-        return ka_scores, annotated_data
-    
 
+        return ka_scores, annotated_data
