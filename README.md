@@ -3,6 +3,13 @@ Repo for paper analyzing stability of outcomes resulting from variations in lang
 
 ## Usage
 
+To run all scripts:
+
+```bash
+python 00_master.py
+
+```
+
 ### Within prompt
 
 ```python
