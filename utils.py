@@ -28,7 +28,7 @@ class LLMWrapper:
     '''This is a wrapper class for LLMs, which provides a method called 'annotate' that annotates a given message using an LLM.
     '''
 
-    def __init__(self,apikey, model, wait_time=0.8) -> None:
+    def __init__(self, apikey, model, wait_time=0.8) -> None:
         self.apikey = apikey
         self.model = model
 
@@ -37,8 +37,7 @@ class LLMWrapper:
             api_key=apikey
         )
 
-
-    def annotate(self, text, prompt, parse_function = None, temperature = 0.1):
+    def annotate(self, text, prompt, parse_function=None, temperature=0.1):
         '''
         Annotate the given text in the way the prompt instructs you to.
 
@@ -56,17 +55,17 @@ class LLMWrapper:
         while(failed):
             try:
                 response = self.client.chat.completions.create(
-                    model = self.model,
-                    temperature = temperature,
-                    messages = [
-                        {"role": "system", "content": f"'{prompt}'"}, #The system instruction tells the bot how it is supposed to behave
-                        {"role": "user", "content": f"'{text}'"} #This provides the text to be analyzed.
+                    model=self.model,
+                    temperature=temperature,
+                    messages=[
+                        {"role": "system", "content": f"'{prompt}'"},  # The system instruction tells the bot how it is supposed to behave
+                        {"role": "user", "content": f"'{text}'"}  # This provides the text to be analyzed.
                     ]
                 )
                 failed = False
 
-            #Handle errors.
-            #If the API gets an error, perhaps because it is overwhelmed, we wait 10 seconds and then we try again.
+            # Handle errors.
+            # If the API gets an error, perhaps because it is overwhelmed, we wait 10 seconds and then we try again.
             # We do this 10 times, and then we give up.
             except openai.APIError as e:
                 print(f"OpenAI API returned an API Error: {e}")
@@ -87,9 +86,9 @@ class LLMWrapper:
                 print(f"OpenAI API request exceeded rate limit: {e}")
                 pass
 
-            #If the text is too long, we truncate it and try again. Note that if you get this error, you probably want to chunk your texts.
+            # If the text is too long, we truncate it and try again. Note that if you get this error, you probably want to chunk your texts.
             except openai.BadRequestError as e:
-                #Shorten request text
+                # Shorten request text
                 print(f"Received a InvalidRequestError. Request likely too long. {e}")
                 raise e
 
@@ -134,8 +133,8 @@ class PromptStabilityAnalysis:
             l.append({'phrase': f'{phrase} {prompt_postfix}', 'original': False})
         self.paraphrases = pd.DataFrame(l)
         return self.paraphrases
-
-    def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10):
+    
+    def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10, plot=False, save_path=None):
         prompt = f'{original_text} {prompt_postfix}'
         annotated = []
         ka_scores = []
@@ -149,9 +148,9 @@ class PromptStabilityAnalysis:
                 annotated.append({'id': j, 'text': d, 'annotation': annotation, 'iteration': i})
 
             if i > 0:
-                df = pd.DataFrame(annotated)
+                annotated_data = pd.DataFrame(annotated)
                 KA = simpledorff.calculate_krippendorffs_alpha_for_df(
-                    df,
+                    annotated_data,
                     metric_fn=self.metric_fn,
                     experiment_col='id',
                     annotator_col='iteration',
@@ -166,24 +165,48 @@ class PromptStabilityAnalysis:
         print()
         print('Finished classifications.')
         print("KA Scores:", ka_scores)
-        print(f'Within-prompt KA score for {i + 1} repetitions is {KA}')
+        # Calculate the average KA score across all iterations
+        average_ka = np.mean(ka_scores)
+        print(f'Average KA score across all iterations is {average_ka}')
 
-        return KA, df, ka_scores, iterrations_no
+        if plot:
+            # Function to plot KA scores with integer x-axis labels
+            plt.figure(figsize=(10, 5))
+            plt.plot(iterrations_no, ka_scores, marker='o', linestyle='-', color='b', label='KA Score per Iteration')
+            plt.axhline(y=average_ka, color='r', linestyle='--', label=f'Average KA: {average_ka:.2f}')
+            plt.xlabel('Iteration')
+            plt.ylabel("Krippendorff's Alpha (KA)")
+            plt.title("Krippendorff's Alpha Scores Across Iterations")
+            plt.xticks(iterrations_no)  # Set x-axis ticks to be whole integers
+            plt.legend()
+            plt.grid(True)
+            plt.axhline(y=0.8, color='black', linestyle='--', linewidth=.5)
 
-    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1):
+            if save_path:
+                plt.savefig(save_path)
+            else:
+                plt.show()
+
+        return ka_scores, annotated_data
+
+    
+    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, print_prompts=False, plot=False, save_path=None):
         ka_scores = {}
 
         for temp in temperatures:
             paraphrases = self.__generate_paraphrases(original_text, prompt_postfix, nr_variations=nr_variations, temperature=temp)
             annotated = []
-            for i, (paraphrase, original) in enumerate(zip(paraphrases['phrase'], paraphrases['original'])):
-                print(f"Temperature {temp}, Iteration {i}/{nr_variations}...", end='\r')
-                sys.stdout.flush()
-                for j, d in enumerate(self.data):
-                    annotation = self.llm.annotate(d, paraphrase, parse_function=self.parse_function)
-                    annotated.append({'id': j, 'text': d, 'annotation': annotation, 'prompt_id': i, 'prompt': paraphrase, 'original': original})
-            print()
-            print('Finished classifications for temperature:', temp)
+            
+            for i in range(iterations):
+                for j, (paraphrase, original) in enumerate(zip(paraphrases['phrase'], paraphrases['original'])):
+                    print(f"Temperature {temp}, Iteration {i+1}/{iterations}", end='\r')
+                    sys.stdout.flush()
+                    for k, d in enumerate(self.data):
+                        annotation = self.llm.annotate(d, paraphrase, parse_function=self.parse_function)
+                        annotated.append({'id': k, 'text': d, 'annotation': annotation, 'prompt_id': j, 'prompt': paraphrase, 'original': original})
+
+                print()
+            
             annotated_data = pd.DataFrame(annotated)
             KA = simpledorff.calculate_krippendorffs_alpha_for_df(
                 annotated_data,
@@ -193,4 +216,30 @@ class PromptStabilityAnalysis:
                 class_col='annotation')
             ka_scores[temp] = KA
 
+        if print_prompts:
+            unique_prompts = annotated_data['prompt'].unique()
+            print("Unique prompts:")
+            for prompt in unique_prompts:
+                print(prompt)
+
+        if plot:
+            temperatures_list = list(ka_scores.keys())
+            ka_values = list(ka_scores.values())
+
+            plt.figure(figsize=(10, 5))
+            plt.plot(temperatures_list, ka_values, marker='o', linestyle='-', color='b')
+            plt.xlabel('Temperature')
+            plt.ylabel('Krippendorff\'s Alpha (KA)')
+            plt.title('Krippendorff\'s Alpha Scores Across Temperatures')
+            plt.xticks(temperatures_list)  # Set x-axis ticks to be whole integers
+            plt.grid(True)
+            plt.ylim(0.0, 1.05)
+            plt.axhline(y=0.80, color='black', linestyle='--', linewidth=.5)
+
+            if save_path:
+                plt.savefig(save_path)
+            else:
+                plt.show()
+
         return ka_scores, annotated_data
+

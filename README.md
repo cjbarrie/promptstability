@@ -1,23 +1,6 @@
 # promptstability
 Repo for paper analyzing stability of outcomes resulting from variations in language model prompt specification.
 
-## Setup
-
-To ensure all dependencies are installed, you can follow these steps:
-
-1. Clone the repository:
-
-```bash
-   git clone <repository-url>
-``` 
-
-2. `cd` to the repository then run the setup script:
-
-```bash
-   cd <repository-directory>
-   pip install -r requirements.txt
-```
-
 ## Usage
 
 ### Within prompt
@@ -27,65 +10,41 @@ import pandas as pd
 from utils import LLMWrapper, PromptStabilityAnalysis, get_openai_api_key
 import matplotlib.pyplot as plt
 
+# Baseline stochasticity
+
+## Usage example
 APIKEY = get_openai_api_key()
 MODEL = 'gpt-3.5-turbo'
 
-# Get data
+# Data
 df = pd.read_csv('data/tweets.csv')
-df = df.sample(10)
+df = df.sample(10, random_state=123)
 example_data = list(df['text'].values)
 
 llm = LLMWrapper(apikey=APIKEY, model=MODEL)
 psa = PromptStabilityAnalysis(llm=llm, data=example_data)
 
-# Construct the Prompt
+# Step 2: Construct the Prompt
 original_text = 'The following is a Twitter message written either by a Republican or a Democrat before the 2020 election. Your task is to guess whether the author is Republican or Democrat.'
 prompt_postfix = '[Respond 0 for Democrat, or 1 for Republican. Guess if you do not know. Respond nothing else.]'
 
-# Get baseline_stochasticity
-KA, df, ka_scores, iterrations_no = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20)
-
-# Plot KA scores by iteration
-iterations = list(range(2, 2 + len(ka_scores)))
-
-plt.figure(figsize=(10, 5))
-plt.plot(iterations, ka_scores, marker='o', linestyle='-', color='b', label='KA Score per Iteration')
-plt.axhline(y=KA, color='r', linestyle='--', label=f'Overall KA: {KA:.2f}')
-plt.xlabel('Iteration')
-plt.ylabel("Krippendorff's Alpha (KA)")
-plt.title("Krippendorff's Alpha Scores Across Iterations")
-plt.xticks(iterations)  # Set x-axis ticks to be whole integers
-plt.legend()
-plt.grid(True)
-plt.show()
+# Run baseline_stochasticity
+ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/00_tweets_within.png')
 
 ```
 
-![](plots/Figure_1.png)
+![](plots/00_tweets_within.png)
 
 
 ### Between prompt
 
 ```python
+# Run interprompt_stochasticity
 # Set temperatures
 temperatures = [0.1, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5,  5.0]
 
 # Get KA scores across different temperature paraphrasings
-ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 10)
-
-# Extract temperatures (keys) and KA scores (values)
-temperatures = list(ka_scores.keys())
-ka_values = list(ka_scores.values())
-
-# Plot KA scores by temperature
-plt.figure(figsize=(10, 5))
-plt.plot(temperatures, ka_values, marker='o', linestyle='-', color='b')
-plt.xlabel('Temperature')
-plt.ylabel('Krippendorff\'s Alpha (KA)')
-plt.title('Krippendorff\'s Alpha Scores Across Temperatures')
-plt.xticks(temperatures)  # Set x-axis ticks to be whole integers
-plt.grid(True)
-plt.show()
+ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 1, print_prompts=True, plot=True, save_path='plots/00_tweets_between.png')
 ```
 
-![](plots/Figure_2.png)
+![](plots/00_tweets_between.png)
