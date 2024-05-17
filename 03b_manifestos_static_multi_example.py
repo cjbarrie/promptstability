@@ -30,8 +30,10 @@ psa = PromptStabilityAnalysis(llm=llm, data=example_data, parse_function=lambda 
 
 # Step 2: Construct the Prompt
 original_text = (
-    'The text provided is a party manifesto for a political party in the United Kingdom. '
-    'Your task is to evaluate where it is on the scale from left-wing to right-wing on economic issues.'
+    'The text provided is part of a party manifesto of a political party in the United Kingdom.'
+    'In each piece of text, there are several sentences. One of these is capitalized and this is the text you should focus on.'
+    'The other sentences are there solely to provide some context.'
+    'Your task is to evaluate where the capitalized sentence is on the scale from left-wing to right-wing on economic issues.'
 )
 prompt_postfix = (
     'Respond with a number from 1 to 10. 1 corresponds to most left-wing. 10 corresponds to most right-wing. '

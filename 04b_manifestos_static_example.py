@@ -30,8 +30,10 @@ psa = PromptStabilityAnalysis(llm=llm, data=example_data)
 
 # Step 2: Construct the Prompt
 original_text = (
-    'The text provided is a party manifesto for a political party in the United Kingdom. '
-    'Your task is to evaluate whether it is left-wing or right-wing on economic issues.'
+    'The text provided is part of a party manifesto of a political party in the United Kingdom.'
+    'In each piece of text, there are several sentences. One of these is capitalized and this is the text you should focus on.'
+    'The other sentences are there solely to provide some context.'
+    'Your task is to evaluate whether the capitalized sentence is left-wing or right-wing on economic issues.'
 )
 prompt_postfix = (
     'Respond with 0 for left-wing, or 1 for right-wing. '
