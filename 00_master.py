@@ -1,4 +1,9 @@
+import warnings
 import subprocess
+
+# Suppress specific warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", message="Some weights of PegasusForConditionalGeneration were not initialized from the model checkpoint")
 
 # Define the paths to the example scripts
 scripts = [

@@ -189,8 +189,7 @@ class PromptStabilityAnalysis:
 
         return ka_scores, annotated_data
 
-    
-    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, print_prompts=False, plot=False, save_path=None):
+    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, print_prompts=False, plot=False, save_path=None, save_csv=None):
         ka_scores = {}
 
         for temp in temperatures:
@@ -215,6 +214,10 @@ class PromptStabilityAnalysis:
                 annotator_col='prompt_id',
                 class_col='annotation')
             ka_scores[temp] = KA
+        
+        if save_csv:
+            annotated_data.to_csv(save_csv, index=False)
+            print(f"Annotated data saved to {save_csv}")    
 
         if print_prompts:
             unique_prompts = annotated_data['prompt'].unique()
@@ -242,4 +245,3 @@ class PromptStabilityAnalysis:
                 plt.show()
 
         return ka_scores, annotated_data
-
