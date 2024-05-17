@@ -1,1 +1,9 @@
 .ipynb_checkpoints/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+testing.py
+pssenv
+00_ARCHIVED/
+*.DS_Store
