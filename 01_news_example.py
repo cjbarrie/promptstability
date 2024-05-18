@@ -24,11 +24,11 @@ original_text = (
 prompt_postfix = '[Respond 0 for negative, or 1 for positive. Respond nothing else.]'
 
 # Run baseline_stochasticity
-ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/01_news_within.png', save_csv="data/annotated/news_baseline.csv")
+ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/01_news_within.png', save_csv="data/annotated/news_within.csv")
 
 # Run interprompt_stochasticity
 # Set temperatures
 temperatures = [0.1, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5,  5.0]
 
 # Get KA scores across different temperature paraphrasings
-ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 1, print_prompts=True, plot=True, save_path='plots/01_news_between.png', save_csv = 'data/annotated/soroka.csv')
+ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 1, print_prompts=True, plot=True, save_path='plots/01_news_between.png', save_csv = 'data/annotated/news_between.csv')

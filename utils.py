@@ -138,7 +138,7 @@ class PromptStabilityAnalysis:
         prompt = f'{original_text} {prompt_postfix}'
         annotated = []
         ka_scores = []
-        iterrations_no = []
+        iterations_no = []
 
         for i in range(iterations):
             print(f"Iteration {i+1}/{iterations}...", end='\r')
@@ -156,7 +156,7 @@ class PromptStabilityAnalysis:
                     annotator_col='iteration',
                     class_col='annotation')
                 ka_scores.append(KA)
-                iterrations_no.append(i + 1)
+                iterations_no.append(i + 1)
                 # Add KA score to each row of this iteration
                 for k in range(len(annotated)):
                     if annotated[k]['iteration'] == i:
@@ -169,6 +169,11 @@ class PromptStabilityAnalysis:
         average_ka = np.mean(ka_scores)
         print(f'Average KA score across all iterations is {average_ka}')
 
+        annotated_data = pd.DataFrame(annotated)
+        # Add overall KA scores to the DataFrame
+        for i in range(1, iterations):
+            annotated_data.loc[annotated_data['iteration'] == i, 'overall_KA'] = ka_scores[i-1]
+
         if save_csv:
             annotated_data.to_csv(save_csv, index=False)
             print(f"Annotated data saved to {save_csv}")    
@@ -176,12 +181,12 @@ class PromptStabilityAnalysis:
         if plot:
             # Function to plot KA scores with integer x-axis labels
             plt.figure(figsize=(10, 5))
-            plt.plot(iterrations_no, ka_scores, marker='o', linestyle='-', color='b', label='KA Score per Iteration')
+            plt.plot(iterations_no, ka_scores, marker='o', linestyle='-', color='b', label='KA Score per Iteration')
             plt.axhline(y=average_ka, color='r', linestyle='--', label=f'Average KA: {average_ka:.2f}')
             plt.xlabel('Iteration')
             plt.ylabel("Krippendorff's Alpha (KA)")
             plt.title("Krippendorff's Alpha Scores Across Iterations")
-            plt.xticks(iterrations_no)  # Set x-axis ticks to be whole integers
+            plt.xticks(iterations_no)  # Set x-axis ticks to be whole integers
             plt.legend()
             plt.grid(True)
             plt.axhline(y=0.8, color='black', linestyle='--', linewidth=.5)
@@ -193,8 +198,10 @@ class PromptStabilityAnalysis:
 
         return ka_scores, annotated_data
 
+
     def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, print_prompts=False, plot=False, save_path=None, save_csv=None):
         ka_scores = {}
+        all_annotated = []
 
         for temp in temperatures:
             paraphrases = self.__generate_paraphrases(original_text, prompt_postfix, nr_variations=nr_variations, temperature=temp)
@@ -206,7 +213,7 @@ class PromptStabilityAnalysis:
                     sys.stdout.flush()
                     for k, d in enumerate(self.data):
                         annotation = self.llm.annotate(d, paraphrase, parse_function=self.parse_function)
-                        annotated.append({'id': k, 'text': d, 'annotation': annotation, 'prompt_id': j, 'prompt': paraphrase, 'original': original})
+                        annotated.append({'id': k, 'text': d, 'annotation': annotation, 'prompt_id': j, 'prompt': paraphrase, 'original': original, 'temperature': temp})
 
                 print()
             
@@ -218,13 +225,22 @@ class PromptStabilityAnalysis:
                 annotator_col='prompt_id',
                 class_col='annotation')
             ka_scores[temp] = KA
+            
+            # Add KA score to each row for the current temperature
+            annotated_data['KA'] = KA
+            
+            # Append the annotated data to the list
+            all_annotated.append(annotated_data)
         
+        # Concatenate all annotated data
+        combined_annotated_data = pd.concat(all_annotated, ignore_index=True)
+
         if save_csv:
-            annotated_data.to_csv(save_csv, index=False)
+            combined_annotated_data.to_csv(save_csv, index=False)
             print(f"Annotated data saved to {save_csv}")    
 
         if print_prompts:
-            unique_prompts = annotated_data['prompt'].unique()
+            unique_prompts = combined_annotated_data['prompt'].unique()
             print("Unique prompts:")
             for prompt in unique_prompts:
                 print(prompt)
@@ -248,4 +264,4 @@ class PromptStabilityAnalysis:
             else:
                 plt.show()
 
-        return ka_scores, annotated_data
+        return ka_scores, combined_annotated_data
