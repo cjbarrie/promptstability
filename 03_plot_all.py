@@ -106,8 +106,8 @@ def plot_combined_between(data, save_path=None):
 
 # Combine and plot "within" datasets
 combined_within_data = combine_within_files(within_files)
-plot_combined_within(combined_within_data, save_path="combined_within.png")
+plot_combined_within(combined_within_data, save_path="plots/combined_within.png")
 
 # Combine and plot "between" datasets
 combined_between_data = combine_between_files(between_files)
-plot_combined_between(combined_between_data, save_path="combined_between.png")
+plot_combined_between(combined_between_data, save_path="plots/combined_between.png")
