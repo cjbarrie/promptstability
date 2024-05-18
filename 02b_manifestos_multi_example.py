@@ -39,7 +39,7 @@ prompt_postfix = (
 )
 
 # Run baseline_stochasticity
-ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/02b_manifestos_multi_within.png')
+ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/02b_manifestos_multi_within.png', save_csv="data/annotated/manifestos_multi_baseline.csv")
 
 # Run interprompt_stochasticity
 # Set temperatures

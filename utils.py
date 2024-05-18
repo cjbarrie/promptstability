@@ -134,7 +134,7 @@ class PromptStabilityAnalysis:
         self.paraphrases = pd.DataFrame(l)
         return self.paraphrases
     
-    def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10, plot=False, save_path=None):
+    def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10, plot=False, save_path=None, save_csv=None):
         prompt = f'{original_text} {prompt_postfix}'
         annotated = []
         ka_scores = []
@@ -168,6 +168,10 @@ class PromptStabilityAnalysis:
         # Calculate the average KA score across all iterations
         average_ka = np.mean(ka_scores)
         print(f'Average KA score across all iterations is {average_ka}')
+
+        if save_csv:
+            annotated_data.to_csv(save_csv, index=False)
+            print(f"Annotated data saved to {save_csv}")    
 
         if plot:
             # Function to plot KA scores with integer x-axis labels

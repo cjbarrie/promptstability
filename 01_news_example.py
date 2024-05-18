@@ -24,7 +24,7 @@ original_text = (
 prompt_postfix = '[Respond 0 for negative, or 1 for positive. Respond nothing else.]'
 
 # Run baseline_stochasticity
-ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/01_news_within.png')
+ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/01_news_within.png', save_csv="data/annotated/news_baseline.csv")
 
 # Run interprompt_stochasticity
 # Set temperatures

@@ -21,7 +21,7 @@ original_text = 'The following is a Twitter message written either by a Republic
 prompt_postfix = '[Respond 0 for Democrat, or 1 for Republican. Guess if you do not know. Respond nothing else.]'
 
 # Run baseline_stochasticity
-ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/00_tweets_within.png')
+ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/00_tweets_within.png', save_csv="data/annotated/tweets_baseline.csv")
 
 # Run interprompt_stochasticity
 # Set temperatures
