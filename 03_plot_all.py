@@ -47,10 +47,10 @@ def combine_between_files(files):
 
 def plot_combined_within(data, save_path=None):
     # Set the style for a minimalistic look
-    sns.set_style("whitegrid")
+    sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(data, col="label", col_wrap=2, height=6, sharey=True, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(data, col="label", col_wrap=2, height=4, aspect=2.5, sharey=True, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
     g.map(sns.lineplot, 'iteration', 'overall_KA', marker='o', linewidth=1, color='black')
@@ -58,19 +58,19 @@ def plot_combined_within(data, save_path=None):
     # Add average KA as horizontal lines
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
         avg_ka = data[data['label'] == label]['overall_KA'].mean()
-        ax.axhline(y=avg_ka, color='gray', linestyle='--', linewidth=1, label=f'Average KA: {avg_ka:.2f}')
+        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1, label=f'Average KA: {avg_ka:.2f}')
         ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1, label='Threshold KA: 0.80')
         ax.legend(fontsize=10, frameon=False)
 
     # Customize the plot for a minimalistic look
-    g.set_axis_labels('Iteration', "Krippendorff's Alpha (KA)")
-    g.set_titles("{col_name} Within")
+    g.set_axis_labels('Iteration', "Krippendorff's Alpha (KA)", fontsize=12, fontweight='bold')
+    g.set_titles("{col_name} Within", size=14, fontweight='bold')
     g.set(xticks=data['iteration'].unique())
     g.set(yticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
 
     plt.tight_layout()
     if save_path:
-        plt.savefig(save_path)
+        plt.savefig(save_path, bbox_inches='tight')
     plt.show()
 
 def plot_combined_between(data, save_path=None):
@@ -78,10 +78,10 @@ def plot_combined_between(data, save_path=None):
     average_ka_per_temp = data.groupby(['temperature', 'label'])['KA'].mean().reset_index()
 
     # Set the style for a minimalistic look
-    sns.set_style("whitegrid")
+    sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=6, sharey=True, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=4, aspect=2.5, sharey=True, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
     g.map(sns.lineplot, 'temperature', 'KA', marker='o', linewidth=1, color='black')
@@ -89,25 +89,25 @@ def plot_combined_between(data, save_path=None):
     # Add average KA as horizontal lines
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
         avg_ka = data[data['label'] == label]['KA'].mean()
-        ax.axhline(y=avg_ka, color='gray', linestyle='--', linewidth=1, label=f'Average KA: {avg_ka:.2f}')
+        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1, label=f'Average KA: {avg_ka:.2f}')
         ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1, label='Threshold KA: 0.80')
         ax.legend(fontsize=10, frameon=False)
 
     # Customize the plot for a minimalistic look
-    g.set_axis_labels('Temperature', "Krippendorff's Alpha (KA)")
-    g.set_titles("{col_name} Between")
+    g.set_axis_labels('Temperature', "Krippendorff's Alpha (KA)", fontsize=12, fontweight='bold')
+    g.set_titles("{col_name} Between", size=14, fontweight='bold')
     g.set(xticks=average_ka_per_temp['temperature'].unique())
     g.set(yticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
 
     plt.tight_layout()
     if save_path:
-        plt.savefig(save_path)
+        plt.savefig(save_path, bbox_inches='tight')
     plt.show()
 
 # Combine and plot "within" datasets
 combined_within_data = combine_within_files(within_files)
-plot_combined_within(combined_within_data, save_path="plots/combined_within.png")
+plot_combined_within(combined_within_data, save_path="combined_within.png")
 
 # Combine and plot "between" datasets
 combined_between_data = combine_between_files(between_files)
-plot_combined_between(combined_between_data, save_path="plots/combined_between.png")
+plot_combined_between(combined_between_data, save_path="combined_between.png")
