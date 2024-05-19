@@ -17,6 +17,14 @@ between_files = {
     'Manifestos Multi': 'data/annotated/manifestos_multi_between.csv'
 }
 
+# Define a color palette
+color_palette = {
+    'Tweets': 'blue',
+    'News': 'orange',
+    'Manifestos': 'green',
+    'Manifestos Multi': 'red'
+}
+
 def combine_within_files(files):
     combined_data = []
     for label, file_path in files.items():
@@ -50,27 +58,29 @@ def plot_combined_within(data, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(data, col="label", col_wrap=2, height=4, aspect=2.5, sharey=True, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(data, col="label", col_wrap=2, height=5, aspect=2, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
-    g.map(sns.lineplot, 'iteration', 'overall_KA', marker='o', linewidth=1, color='black')
-
-    # Add average KA as horizontal lines
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
+        sns.lineplot(data=data[data['label'] == label], x='iteration', y='overall_KA', marker='o', linewidth=1.5, color=color_palette[label], ax=ax, alpha=0.7)
         avg_ka = data[data['label'] == label]['overall_KA'].mean()
-        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1, label=f'Average KA: {avg_ka:.2f}')
-        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1, label='Threshold KA: 0.80')
+        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
+        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')
         ax.legend(fontsize=10, frameon=False)
+        ax.spines['top'].set_linewidth(1.5)
+        ax.spines['right'].set_linewidth(1.5)
+        ax.spines['left'].set_linewidth(1.5)
+        ax.spines['bottom'].set_linewidth(1.5)
 
-    # Customize the plot for a minimalistic look
-    g.set_axis_labels('Iteration', "Krippendorff's Alpha (KA)", fontsize=12, fontweight='bold')
-    g.set_titles("{col_name} Within", size=14, fontweight='bold')
+    # Customize the plot for a professional look
+    g.set_axis_labels('Iteration', "Krippendorff's Alpha (KA)", fontsize=16, fontweight='bold')
+    g.set_titles("{col_name} Within", size=18, fontweight='bold')
     g.set(xticks=data['iteration'].unique())
     g.set(yticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
 
     plt.tight_layout()
     if save_path:
-        plt.savefig(save_path, bbox_inches='tight')
+        plt.savefig(save_path, bbox_inches='tight', dpi=300)
     plt.show()
 
 def plot_combined_between(data, save_path=None):
@@ -81,27 +91,29 @@ def plot_combined_between(data, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=4, aspect=2.5, sharey=True, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=5, aspect=2, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
-    g.map(sns.lineplot, 'temperature', 'KA', marker='o', linewidth=1, color='black')
-
-    # Add average KA as horizontal lines
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
+        sns.lineplot(data=average_ka_per_temp[average_ka_per_temp['label'] == label], x='temperature', y='KA', marker='o', linewidth=1.5, color=color_palette[label], ax=ax, alpha=0.7)
         avg_ka = data[data['label'] == label]['KA'].mean()
-        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1, label=f'Average KA: {avg_ka:.2f}')
-        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1, label='Threshold KA: 0.80')
+        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
+        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')
         ax.legend(fontsize=10, frameon=False)
+        ax.spines['top'].set_linewidth(1.5)
+        ax.spines['right'].set_linewidth(1.5)
+        ax.spines['left'].set_linewidth(1.5)
+        ax.spines['bottom'].set_linewidth(1.5)
 
-    # Customize the plot for a minimalistic look
-    g.set_axis_labels('Temperature', "Krippendorff's Alpha (KA)", fontsize=12, fontweight='bold')
-    g.set_titles("{col_name} Between", size=14, fontweight='bold')
+    # Customize the plot for a professional look
+    g.set_axis_labels('Temperature', "Krippendorff's Alpha (KA)", fontsize=16, fontweight='bold')
+    g.set_titles("{col_name} Between", size=18, fontweight='bold')
     g.set(xticks=average_ka_per_temp['temperature'].unique())
     g.set(yticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
 
     plt.tight_layout()
     if save_path:
-        plt.savefig(save_path, bbox_inches='tight')
+        plt.savefig(save_path, bbox_inches='tight', dpi=300)
     plt.show()
 
 # Combine and plot "within" datasets
