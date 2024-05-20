@@ -22,7 +22,7 @@ except OSError:
     MAX_TOKENS = 16385
 
 df = pd.read_csv('data/manifestos_static.csv')
-df = df.sample(10, random_state=123)
+df = df.sample(100, random_state=123)
 example_data = list(df['sentence_context'].values)
 
 llm = LLMWrapper(apikey=APIKEY, model=MODEL)

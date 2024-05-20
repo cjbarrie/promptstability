@@ -10,7 +10,7 @@ MODEL = 'gpt-3.5-turbo'
 
 # Data
 df = pd.read_csv('data/soroka.csv')
-df = df.sample(10, random_state=123)
+df = df.sample(100, random_state=123)
 example_data = list(df['body'].values)
 
 llm = LLMWrapper(apikey=APIKEY, model=MODEL)
