@@ -58,7 +58,7 @@ def plot_combined_within(data, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(data, col="label", col_wrap=2, height=5, aspect=2, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(data, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
@@ -91,7 +91,7 @@ def plot_combined_between(data, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=5, aspect=2, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
