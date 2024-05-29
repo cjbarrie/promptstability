@@ -133,111 +133,119 @@ class PromptStabilityAnalysis:
             l.append({'phrase': f'{phrase} {prompt_postfix}', 'original': False})
         self.paraphrases = pd.DataFrame(l)
         return self.paraphrases
-    
-    def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10, plot=False, save_path=None, save_csv=None):
+
+    def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10, bootstrap_samples=1000, plot=False, save_path=None, save_csv=None):
         prompt = f'{original_text} {prompt_postfix}'
-        annotated = []
-        ka_scores = []
-        iterations_no = []
+        all_annotated = pd.DataFrame()
+
+        ka_scores = {}
 
         for i in range(iterations):
             print(f"Iteration {i+1}/{iterations}...", end='\r')
             sys.stdout.flush()
+
+            annotations = []
+
             for j, d in enumerate(self.data):
                 annotation = self.llm.annotate(d, prompt, parse_function=self.parse_function)
-                annotated.append({'id': j, 'text': d, 'annotation': annotation, 'iteration': i})
+                annotations.append({'id': j, 'text': d, 'annotation': annotation, 'iteration': i})
 
-            if i > 0:
-                annotated_data = pd.DataFrame(annotated)
-                KA = simpledorff.calculate_krippendorffs_alpha_for_df(
-                    annotated_data,
-                    metric_fn=self.metric_fn,
-                    experiment_col='id',
-                    annotator_col='iteration',
-                    class_col='annotation')
-                ka_scores.append(KA)
-                iterations_no.append(i + 1)
-                # Add KA score to each row of this iteration
-                for k in range(len(annotated)):
-                    if annotated[k]['iteration'] == i:
-                        annotated[k]['KA'] = KA
+            # Append current iteration's data to the cumulative DataFrame
+            iter_data = pd.DataFrame(annotations)
+            all_annotated = pd.concat([all_annotated, iter_data], ignore_index=True)
+            #print(all_annotated)
 
-        print()
-        print('Finished classifications.')
-        print("KA Scores:", ka_scores)
-        # Calculate the average KA score across all iterations
-        average_ka = np.mean(ka_scores)
-        print(f'Average KA score across all iterations is {average_ka}')
+            if i > 0:  # Start calculating Krippendorff's Alpha after collecting more than one set of annotations
+                annotator_col = 'iteration'
+                bootstrap_samples = bootstrap_samples
+                mean_alpha, (ci_lower, ci_upper) = self.bootstrap_krippendorff(all_annotated, annotator_col, bootstrap_samples)
+                ka_scores[i] = {'Average Alpha': mean_alpha, 'CI Lower': ci_lower, 'CI Upper': ci_upper}
 
-        annotated_data = pd.DataFrame(annotated)
-        # Add overall KA scores to the DataFrame
-        for i in range(1, iterations):
-            annotated_data.loc[annotated_data['iteration'] == i, 'overall_KA'] = ka_scores[i-1]
+        # Adding average KA, CI lower, and CI upper to the combined data for CSV output
+        for i in ka_scores:
+            all_annotated.loc[all_annotated['iteration'] == i, 'ka_mean'] = ka_scores[i]['Average Alpha']
+            all_annotated.loc[all_annotated['iteration'] == i, 'ka_lower'] = ka_scores[i]['CI Lower']
+            all_annotated.loc[all_annotated['iteration'] == i, 'ka_upper'] = ka_scores[i]['CI Upper']
 
         if save_csv:
-            annotated_data.to_csv(save_csv, index=False)
-            print(f"Annotated data saved to {save_csv}")    
+            all_annotated.to_csv(save_csv, index=False)
+            print(f"Annotated data saved to {save_csv}")
 
         if plot:
             # Function to plot KA scores with integer x-axis labels
+            iterations_list = list(ka_scores.keys())
+            ka_values = [ka_scores[i]['Average Alpha'] for i in iterations_list]
+            average_ka = np.mean(ka_values)
+            ci_lowers = [ka_scores[i]['Average Alpha'] - ka_scores[i]['CI Lower'] for i in iterations_list]
+            ci_uppers = [ka_scores[i]['CI Upper'] - ka_scores[i]['Average Alpha'] for i in iterations_list]
+
             plt.figure(figsize=(10, 5))
-            plt.plot(iterations_no, ka_scores, marker='o', linestyle='-', color='b', label='KA Score per Iteration')
+            plt.errorbar(iterations_list, ka_values, yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color='b', ecolor='gray', capsize=3)
             plt.axhline(y=average_ka, color='r', linestyle='--', label=f'Average KA: {average_ka:.2f}')
             plt.xlabel('Iteration')
             plt.ylabel("Krippendorff's Alpha (KA)")
-            plt.title("Krippendorff's Alpha Scores Across Iterations")
-            plt.xticks(iterations_no)  # Set x-axis ticks to be whole integers
+            plt.title("Krippendorff's Alpha Scores with 95% CI Across Iterations")
+            plt.xticks(iterations_list)  # Set x-axis ticks to be whole integers
             plt.legend()
             plt.grid(True)
             plt.axhline(y=0.8, color='black', linestyle='--', linewidth=.5)
 
             if save_path:
                 plt.savefig(save_path)
+                print(f"Plot saved to {save_path}")
             else:
                 plt.show()
 
-        return ka_scores, annotated_data
+        return ka_scores, all_annotated
 
 
-    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, print_prompts=False, plot=False, save_path=None, save_csv=None):
+    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, bootstrap_samples=1000, print_prompts=False, plot=False, save_path=None, save_csv=None):
         ka_scores = {}
         all_annotated = []
 
         for temp in temperatures:
             paraphrases = self.__generate_paraphrases(original_text, prompt_postfix, nr_variations=nr_variations, temperature=temp)
             annotated = []
-            
+
             for i in range(iterations):
+                start_time = time.time() #
                 for j, (paraphrase, original) in enumerate(zip(paraphrases['phrase'], paraphrases['original'])):
+
                     print(f"Temperature {temp}, Iteration {i+1}/{iterations}", end='\r')
                     sys.stdout.flush()
                     for k, d in enumerate(self.data):
                         annotation = self.llm.annotate(d, paraphrase, parse_function=self.parse_function)
                         annotated.append({'id': k, 'text': d, 'annotation': annotation, 'prompt_id': j, 'prompt': paraphrase, 'original': original, 'temperature': temp})
 
+                end_time = time.time()  #
+                elapsed_time = end_time - start_time  #
+                print(f"Temperature {temp} completed in {elapsed_time:.2f} seconds")
+
                 print()
-            
+
             annotated_data = pd.DataFrame(annotated)
-            KA = simpledorff.calculate_krippendorffs_alpha_for_df(
-                annotated_data,
-                metric_fn=self.metric_fn,
-                experiment_col='id',
-                annotator_col='prompt_id',
-                class_col='annotation')
-            ka_scores[temp] = KA
-            
-            # Add KA score to each row for the current temperature
-            annotated_data['KA'] = KA
-            
-            # Append the annotated data to the list
             all_annotated.append(annotated_data)
-        
+
+            # Bootstrap Krippendorff's Alpha calculation for each temperature
+            annotator_col = 'prompt_id'
+            bootstrap_samples = bootstrap_samples
+            print(f'KA calculation for {bootstrap_samples} bootstrap samples...')
+            mean_alpha, (ci_lower, ci_upper) = self.bootstrap_krippendorff(annotated_data, annotator_col, bootstrap_samples)
+            ka_scores[temp] = {'Average Alpha': mean_alpha, 'CI Lower': ci_lower, 'CI Upper': ci_upper}
+            print(f'KA calculation completed.')
+
         # Concatenate all annotated data
         combined_annotated_data = pd.concat(all_annotated, ignore_index=True)
 
+         # Add average KA, CI lower, and CI upper to the combined data for CSV output
+        for temp in ka_scores:
+            combined_annotated_data.loc[combined_annotated_data['temperature'] == temp, 'ka_mean'] = ka_scores[temp]['Average Alpha']
+            combined_annotated_data.loc[combined_annotated_data['temperature'] == temp, 'ka_lower'] = ka_scores[temp]['CI Lower']
+            combined_annotated_data.loc[combined_annotated_data['temperature'] == temp, 'ka_upper'] = ka_scores[temp]['CI Upper']
+
         if save_csv:
             combined_annotated_data.to_csv(save_csv, index=False)
-            print(f"Annotated data saved to {save_csv}")    
+            print(f"Annotated data saved to {save_csv}")
 
         if print_prompts:
             unique_prompts = combined_annotated_data['prompt'].unique()
@@ -247,13 +255,16 @@ class PromptStabilityAnalysis:
 
         if plot:
             temperatures_list = list(ka_scores.keys())
-            ka_values = list(ka_scores.values())
+            ka_values = [ka_scores[temp]['Average Alpha'] for temp in temperatures_list]
+            ka_lowers = [ka_scores[temp]['Average Alpha'] - ka_scores[temp]['CI Lower'] for temp in temperatures_list]
+            ka_uppers = [ka_scores[temp]['CI Upper'] - ka_scores[temp]['Average Alpha'] for temp in temperatures_list]
 
             plt.figure(figsize=(10, 5))
             plt.plot(temperatures_list, ka_values, marker='o', linestyle='-', color='b')
+            plt.errorbar(temperatures_list, ka_values, yerr=[ka_lowers, ka_uppers], fmt='o', linestyle='-', color='b', ecolor='gray', capsize=3)
             plt.xlabel('Temperature')
             plt.ylabel('Krippendorff\'s Alpha (KA)')
-            plt.title('Krippendorff\'s Alpha Scores Across Temperatures')
+            plt.title('Krippendorff\'s Alpha Scores with 95% CI Across Temperatures')
             plt.xticks(temperatures_list)  # Set x-axis ticks to be whole integers
             plt.grid(True)
             plt.ylim(0.0, 1.05)
@@ -261,7 +272,29 @@ class PromptStabilityAnalysis:
 
             if save_path:
                 plt.savefig(save_path)
+                print(f"Plot saved to {save_path}")
             else:
                 plt.show()
 
         return ka_scores, combined_annotated_data
+
+    def bootstrap_krippendorff(self, df, annotator_col, bootstrap_samples, confidence_level=95):
+        alpha_scores = []
+
+        for _ in range(bootstrap_samples):  # Number of bootstrap samples
+            bootstrap_sample = df.sample(n=len(df), replace=True)
+
+            alpha = simpledorff.calculate_krippendorffs_alpha_for_df(
+                bootstrap_sample,
+                metric_fn=self.metric_fn,
+                experiment_col='id',
+                annotator_col=annotator_col,
+                class_col='annotation'
+            )
+            alpha_scores.append(alpha)
+
+        alpha_scores = np.array(alpha_scores)
+        mean_alpha = np.mean(alpha_scores)
+        ci_lower = np.percentile(alpha_scores, (100 - confidence_level) / 2)
+        ci_upper = np.percentile(alpha_scores, 100 - (100 - confidence_level) / 2)
+        return mean_alpha, (ci_lower, ci_upper)

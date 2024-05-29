@@ -33,7 +33,7 @@ def combine_within_files(files):
         # Ensure iteration is of integer type for correct plotting
         annotated_data['iteration'] = annotated_data['iteration'].astype(int)
         # Drop rows where overall_KA is NaN
-        annotated_data = annotated_data.dropna(subset=['overall_KA'])
+        annotated_data = annotated_data.dropna(subset=['ka_mean'])
         # Add a column for the label
         annotated_data['label'] = label
         combined_data.append(annotated_data)
@@ -47,7 +47,7 @@ def combine_between_files(files):
         # Ensure temperature is of float type for correct plotting
         annotated_data['temperature'] = annotated_data['temperature'].astype(float)
         # Drop rows where KA is NaN
-        annotated_data = annotated_data.dropna(subset=['KA'])
+        annotated_data = annotated_data.dropna(subset=['ka_mean'])
         # Add a column for the label
         annotated_data['label'] = label
         combined_data.append(annotated_data)
