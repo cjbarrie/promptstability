@@ -90,7 +90,7 @@ def plot_combined_within(data, save_path=None):
 
 def plot_combined_between(data, save_path=None):
     # Calculate the average KA score for each temperature and label
-    average_ka_per_temp = combined_between_data.groupby(['temperature', 'label']).agg({
+    average_ka_per_temp = data.groupby(['temperature', 'label']).agg({
     'ka_mean': 'mean',
     'ka_lower': 'mean',
     'ka_upper': 'mean'
