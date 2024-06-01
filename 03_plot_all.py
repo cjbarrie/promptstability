@@ -58,15 +58,17 @@ def plot_combined_within(data, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(data, col="label", col_wrap=2, height=5, aspect=2, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(data, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
+    g.map_dataframe(sns.lineplot, x='iteration', y='ka_mean', marker='o', linewidth=1.5)
+
+    # Iterate over each axis to add the error bars and other customizations
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
         subset = data[data['label'] == label]
         ci_lowers = subset['ka_mean'] - subset['ka_lower']
         ci_uppers = subset['ka_upper'] - subset['ka_mean']
-        sns.lineplot(data=subset, x='iteration', y='ka_mean', marker='o', linewidth=1.5, color=color_palette[label], ax=ax, alpha=0.7)
-        plt.errorbar(subset['iteration'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color_palette[label], ecolor='gray', capsize=3)
+        ax.errorbar(subset['iteration'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color_palette[label], ecolor='gray', capsize=3)
         avg_ka = subset['ka_mean'].mean()
         ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
         ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')
@@ -90,25 +92,27 @@ def plot_combined_within(data, save_path=None):
 
 def plot_combined_between(data, save_path=None):
     # Calculate the average KA score for each temperature and label
-    average_ka_per_temp = combined_between_data.groupby(['temperature', 'label']).agg({
-    'ka_mean': 'mean',
-    'ka_lower': 'mean',
-    'ka_upper': 'mean'
-}).reset_index()
+    average_ka_per_temp = data.groupby(['temperature', 'label']).agg({
+        'ka_mean': 'mean',
+        'ka_lower': 'mean',
+        'ka_upper': 'mean'
+    }).reset_index()
 
     # Set the style for a minimalistic look
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=5, aspect=2, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
+    g.map_dataframe(sns.lineplot, x='temperature', y='ka_mean', marker='o', linewidth=1.5)
+
+    # Iterate over each axis to add the error bars and other customizations
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
         subset = average_ka_per_temp[average_ka_per_temp['label'] == label]
         ci_lowers = subset['ka_mean'] - subset['ka_lower']
         ci_uppers = subset['ka_upper'] - subset['ka_mean']
-        sns.lineplot(data=subset, x='temperature', y='ka_mean', marker='o', linewidth=1.5, color=color_palette[label], ax=ax, alpha=0.7)
-        plt.errorbar(subset['temperature'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color_palette[label], ecolor='gray', capsize=3)
+        ax.errorbar(subset['temperature'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color_palette[label], ecolor='gray', capsize=3)
         avg_ka = subset['ka_mean'].mean()
         ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
         ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')

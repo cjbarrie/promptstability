@@ -136,7 +136,7 @@ class PromptStabilityAnalysis:
 
     def baseline_stochasticity(self, original_text, prompt_postfix, iterations=10, bootstrap_samples=1000, plot=False, save_path=None, save_csv=None):
         prompt = f'{original_text} {prompt_postfix}'
-        all_annotated = pd.DataFrame()
+        all_annotations = []  # Use a list to collect all annotations
 
         ka_scores = {}
 
@@ -150,16 +150,14 @@ class PromptStabilityAnalysis:
                 annotation = self.llm.annotate(d, prompt, parse_function=self.parse_function)
                 annotations.append({'id': j, 'text': d, 'annotation': annotation, 'iteration': i})
 
-            # Append current iteration's data to the cumulative DataFrame
-            iter_data = pd.DataFrame(annotations)
-            all_annotated = pd.concat([all_annotated, iter_data], ignore_index=True)
-            #print(all_annotated)
+            all_annotations.extend(annotations)  # Extend the list with the current iteration's annotations
 
-            if i > 0:  # Start calculating Krippendorff's Alpha after collecting more than one set of annotations
-                annotator_col = 'iteration'
-                bootstrap_samples = bootstrap_samples
-                mean_alpha, (ci_lower, ci_upper) = self.bootstrap_krippendorff(all_annotated, annotator_col, bootstrap_samples)
-                ka_scores[i] = {'Average Alpha': mean_alpha, 'CI Lower': ci_lower, 'CI Upper': ci_upper}
+        all_annotated = pd.DataFrame(all_annotations)  # Convert list to DataFrame once
+
+        for i in range(1, iterations):  # Start calculating Krippendorff's Alpha after collecting more than one set of annotations
+            annotator_col = 'iteration'
+            mean_alpha, (ci_lower, ci_upper) = self.bootstrap_krippendorff(all_annotated[all_annotated['iteration'] <= i], annotator_col, bootstrap_samples)
+            ka_scores[i] = {'Average Alpha': mean_alpha, 'CI Lower': ci_lower, 'CI Upper': ci_upper}
 
         # Adding average KA, CI lower, and CI upper to the combined data for CSV output
         for i in ka_scores:
@@ -228,7 +226,6 @@ class PromptStabilityAnalysis:
 
             # Bootstrap Krippendorff's Alpha calculation for each temperature
             annotator_col = 'prompt_id'
-            bootstrap_samples = bootstrap_samples
             print(f'KA calculation for {bootstrap_samples} bootstrap samples...')
             mean_alpha, (ci_lower, ci_upper) = self.bootstrap_krippendorff(annotated_data, annotator_col, bootstrap_samples)
             ka_scores[temp] = {'Average Alpha': mean_alpha, 'CI Lower': ci_lower, 'CI Upper': ci_upper}
