@@ -33,7 +33,7 @@ def combine_within_files(files):
         # Ensure iteration is of integer type for correct plotting
         annotated_data['iteration'] = annotated_data['iteration'].astype(int)
         # Drop rows where overall_KA is NaN
-        annotated_data = annotated_data.dropna(subset=['overall_KA'])
+        annotated_data = annotated_data.dropna(subset=['ka_mean'])
         # Add a column for the label
         annotated_data['label'] = label
         combined_data.append(annotated_data)
@@ -47,7 +47,7 @@ def combine_between_files(files):
         # Ensure temperature is of float type for correct plotting
         annotated_data['temperature'] = annotated_data['temperature'].astype(float)
         # Drop rows where KA is NaN
-        annotated_data = annotated_data.dropna(subset=['KA'])
+        annotated_data = annotated_data.dropna(subset=['ka_mean'])
         # Add a column for the label
         annotated_data['label'] = label
         combined_data.append(annotated_data)
@@ -61,9 +61,15 @@ def plot_combined_within(data, save_path=None):
     g = sns.FacetGrid(data, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
+    g.map_dataframe(sns.lineplot, x='iteration', y='ka_mean', marker='o', linewidth=1.5)
+
+    # Iterate over each axis to add the error bars and other customizations
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
-        sns.lineplot(data=data[data['label'] == label], x='iteration', y='overall_KA', marker='o', linewidth=1.5, color=color_palette[label], ax=ax, alpha=0.7)
-        avg_ka = data[data['label'] == label]['overall_KA'].mean()
+        subset = data[data['label'] == label]
+        ci_lowers = subset['ka_mean'] - subset['ka_lower']
+        ci_uppers = subset['ka_upper'] - subset['ka_mean']
+        ax.errorbar(subset['iteration'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color_palette[label], ecolor='gray', capsize=3)
+        avg_ka = subset['ka_mean'].mean()
         ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
         ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')
         ax.legend(fontsize=10, frameon=False)
@@ -81,11 +87,16 @@ def plot_combined_within(data, save_path=None):
     plt.tight_layout()
     if save_path:
         plt.savefig(save_path, bbox_inches='tight', dpi=300)
+        print(f"Plot saved to {save_path}")
     plt.show()
 
 def plot_combined_between(data, save_path=None):
     # Calculate the average KA score for each temperature and label
-    average_ka_per_temp = data.groupby(['temperature', 'label'])['KA'].mean().reset_index()
+    average_ka_per_temp = data.groupby(['temperature', 'label']).agg({
+        'ka_mean': 'mean',
+        'ka_lower': 'mean',
+        'ka_upper': 'mean'
+    }).reset_index()
 
     # Set the style for a minimalistic look
     sns.set_style("white")
@@ -94,9 +105,15 @@ def plot_combined_between(data, save_path=None):
     g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
 
     # Map the lineplot to the FacetGrid
+    g.map_dataframe(sns.lineplot, x='temperature', y='ka_mean', marker='o', linewidth=1.5)
+
+    # Iterate over each axis to add the error bars and other customizations
     for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
-        sns.lineplot(data=average_ka_per_temp[average_ka_per_temp['label'] == label], x='temperature', y='KA', marker='o', linewidth=1.5, color=color_palette[label], ax=ax, alpha=0.7)
-        avg_ka = data[data['label'] == label]['KA'].mean()
+        subset = average_ka_per_temp[average_ka_per_temp['label'] == label]
+        ci_lowers = subset['ka_mean'] - subset['ka_lower']
+        ci_uppers = subset['ka_upper'] - subset['ka_mean']
+        ax.errorbar(subset['temperature'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color_palette[label], ecolor='gray', capsize=3)
+        avg_ka = subset['ka_mean'].mean()
         ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
         ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')
         ax.legend(fontsize=10, frameon=False)
@@ -114,6 +131,7 @@ def plot_combined_between(data, save_path=None):
     plt.tight_layout()
     if save_path:
         plt.savefig(save_path, bbox_inches='tight', dpi=300)
+        print(f"Plot saved to {save_path}")
     plt.show()
 
 # Combine and plot "within" datasets
