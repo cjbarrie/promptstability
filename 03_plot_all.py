@@ -4,14 +4,16 @@ import matplotlib.pyplot as plt
 
 # Define file paths and labels for the datasets
 within_files = {
-    'Tweets': 'data/annotated/tweets_within.csv',
+    'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_within.csv',
+    'Tweets (Populism)': 'data/annotated/tweets_pop_within.csv',
     'News': 'data/annotated/news_within.csv',
     'Manifestos': 'data/annotated/manifestos_within.csv',
     'Manifestos Multi': 'data/annotated/manifestos_multi_within.csv'
 }
 
 between_files = {
-    'Tweets': 'data/annotated/tweets_between.csv',
+    'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_between.csv',
+    'Tweets (Populism)': 'data/annotated/tweets_pop_between.csv',
     'News': 'data/annotated/news_between.csv',
     'Manifestos': 'data/annotated/manifestos_between.csv',
     'Manifestos Multi': 'data/annotated/manifestos_multi_between.csv'
@@ -19,7 +21,8 @@ between_files = {
 
 # Define a color palette
 color_palette = {
-    'Tweets': 'blue',
+    'Tweets (Rep. Dem.)': 'blue',
+    'Tweets (Populism)': 'cyan',
     'News': 'orange',
     'Manifestos': 'green',
     'Manifestos Multi': 'red'
@@ -58,13 +61,13 @@ def plot_combined_within(data, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(data, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(data, col="label", col_wrap=3, height=5, aspect=1, sharey=False, col_order=list(within_files.keys()))
 
     # Map the lineplot to the FacetGrid
     g.map_dataframe(sns.lineplot, x='iteration', y='ka_mean', marker='o', linewidth=1.5)
 
     # Iterate over each axis to add the error bars and other customizations
-    for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
+    for ax, label in zip(g.axes.flatten(), within_files.keys()):
         subset = data[data['label'] == label]
         ci_lowers = subset['ka_mean'] - subset['ka_lower']
         ci_uppers = subset['ka_upper'] - subset['ka_mean']
@@ -102,13 +105,13 @@ def plot_combined_between(data, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=2, height=5, aspect=1, sharey=False, col_order=['Tweets', 'News', 'Manifestos', 'Manifestos Multi'])
+    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=3, height=5, aspect=1, sharey=False, col_order=list(between_files.keys()))
 
     # Map the lineplot to the FacetGrid
     g.map_dataframe(sns.lineplot, x='temperature', y='ka_mean', marker='o', linewidth=1.5)
 
     # Iterate over each axis to add the error bars and other customizations
-    for ax, label in zip(g.axes.flatten(), ['Tweets', 'News', 'Manifestos', 'Manifestos Multi']):
+    for ax, label in zip(g.axes.flatten(), between_files.keys()):
         subset = average_ka_per_temp[average_ka_per_temp['label'] == label]
         ci_lowers = subset['ka_mean'] - subset['ka_lower']
         ci_uppers = subset['ka_upper'] - subset['ka_mean']

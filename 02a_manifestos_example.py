@@ -4,10 +4,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import matplotlib.pyplot as plt
 import simpledorff
 
-
-# Baseline stochasticity
-
-## Usage example
 APIKEY = get_openai_api_key()
 MODEL = 'gpt-3.5-turbo'
 
@@ -21,7 +17,9 @@ except OSError:
     # If the model identifier is not valid, set MAX_TOKENS to 16385
     MAX_TOKENS = 16385
 
-df = pd.read_csv('data/manifestos_static.csv')
+df = pd.read_csv('data/manifestos.csv')
+# Filter for rows where the "Scale" column is "Economic"
+df = df[df['scale'] == 'Economic']
 df = df.sample(100, random_state=123)
 example_data = list(df['sentence_context'].values)
 
