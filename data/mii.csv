@@ -1,0 +1,751 @@
+...1,id,wave,MII_textW,newhandcoder_code,newhandcoder_label,original_code,original_label,newhandcoder_correct,idwave
+1,109,22,covid,48,Coronavirus,48,Coronavirus,Yes,109 22
+2,146,22,Economic Loss due to Brexit,15,Europe,15,europe,Yes,146 22
+3,540,23,Cost of living,32,Living costs,32,living costs,Yes,540 23
+4,694,23,Environment/climate change,40,Environment,40,environment,Yes,694 23
+5,696,23,Climate change,40,Environment,40,environment,Yes,696 23
+6,765,22,Economy,26,Economy-general,26,economy-general,Yes,765 22
+7,891,22,Immigration,12,Immigration,12,immigration,Yes,891 22
+8,982,23,Economy,26,Economy-general,26,economy-general,Yes,982 23
+10,1059,23,economy,26,Economy-general,26,economy-general,Yes,1059 23
+12,1225,22,Coping with Brexit,15,Europe,15,europe,Yes,1225 22
+13,1333,22,Impact of Covid,48,Coronavirus,48,Coronavirus,Yes,1333 22
+14,1486,22,illegal immigration,12,Immigration,12,immigration,Yes,1486 22
+15,1551,22,Relationship with the EU,15,Europe,15,europe,Yes,1551 22
+17,1781,22,The economy,26,Economy-general,26,economy-general,Yes,1781 22
+19,1811,23,Cost of living,32,Living costs,32,living costs,Yes,1811 23
+20,2032,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,2032 21
+23,2655,21,Covid,48,Coronavirus,48,Coronavirus,Yes,2655 21
+24,2686,22,Covid,48,Coronavirus,48,Coronavirus,Yes,2686 22
+28,2870,23,Cost of living rise,32,Living costs,32,living costs,Yes,2870 23
+29,2875,22,The continuing negative effects from brexit,15,Europe,15,europe,Yes,2875 22
+30,2894,23,Food and heating,32,Living costs,32,living costs,Yes,2894 23
+31,2958,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,2958 22
+34,3215,22,Economy,26,Economy-general,26,economy-general,Yes,3215 22
+35,3315,23,Cost of living,32,Living costs,32,living costs,Yes,3315 23
+37,3500,23,Immigration,12,Immigration,12,immigration,Yes,3500 23
+39,3623,21,Economic recovery,26,Economy-general,26,economy-general,Yes,3623 21
+40,3699,21,Covid,48,Coronavirus,48,Coronavirus,Yes,3699 21
+41,3899,23,Illegal immigrants,12,Immigration,12,immigration,Yes,3899 23
+42,3994,22,Immigration,12,Immigration,12,immigration,Yes,3994 22
+44,4352,21,coronavirus,48,Coronavirus,48,Coronavirus,Yes,4352 21
+45,4537,23,the economy,26,Economy-general,26,economy-general,Yes,4537 23
+46,4744,23,cost of living crisis,32,Living costs,32,living costs,Yes,4744 23
+47,4785,22,Covid,48,Coronavirus,48,Coronavirus,Yes,4785 22
+48,4817,23,Cost of living,32,Living costs,32,living costs,Yes,4817 23
+49,4885,21,COVID,48,Coronavirus,48,Coronavirus,Yes,4885 21
+50,4955,22,Cv19,48,Coronavirus,48,Coronavirus,Yes,4955 22
+51,5002,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,5002 22
+52,5042,22,Covid,48,Coronavirus,48,Coronavirus,Yes,5042 22
+53,5072,23,costs of living,32,Living costs,32,living costs,Yes,5072 23
+54,5208,22,COVID-19,48,Coronavirus,48,Coronavirus,Yes,5208 22
+55,5240,23,Household bills,32,Living costs,32,living costs,Yes,5240 23
+56,5269,21,economy,26,Economy-general,26,economy-general,Yes,5269 21
+57,5523,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,5523 21
+58,5574,23,Cost of living,32,Living costs,32,living costs,Yes,5574 23
+62,6285,23,Covid,48,Coronavirus,48,Coronavirus,Yes,6285 23
+64,6388,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,6388 22
+65,6413,23,The cost of living crisis,32,Living costs,32,living costs,Yes,6413 23
+66,6422,22,The Economy,26,Economy-general,26,economy-general,Yes,6422 22
+67,6505,21,covid,48,Coronavirus,48,Coronavirus,Yes,6505 21
+68,6597,23,cost of living,32,Living costs,32,living costs,Yes,6597 23
+69,6700,21,Economy,26,Economy-general,26,economy-general,Yes,6700 21
+70,6766,23,economy,26,Economy-general,26,economy-general,Yes,6766 23
+71,6913,23,The economy,26,Economy-general,26,economy-general,Yes,6913 23
+72,7022,22,Covid,48,Coronavirus,48,Coronavirus,Yes,7022 22
+73,7090,23,Cost of living crisis,32,Living costs,32,living costs,Yes,7090 23
+74,7503,23,Environment,40,Environment,40,environment,Yes,7503 23
+76,7601,23,Energy costs,32,Living costs,32,living costs,Yes,7601 23
+77,7686,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,7686 22
+78,7729,23,Economy,26,Economy-general,26,economy-general,Yes,7729 23
+79,7747,21,covid,48,Coronavirus,48,Coronavirus,Yes,7747 21
+82,7958,22,Covid,48,Coronavirus,48,Coronavirus,Yes,7958 22
+83,7965,22,COVID,48,Coronavirus,48,Coronavirus,Yes,7965 22
+84,7984,21,The economy,26,Economy-general,26,economy-general,Yes,7984 21
+85,8426,21,recovering from covid,48,Coronavirus,48,Coronavirus,Yes,8426 21
+87,8804,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,8804 21
+89,9233,22,COVID,48,Coronavirus,48,Coronavirus,Yes,9233 22
+91,9427,22,Covid,48,Coronavirus,48,Coronavirus,Yes,9427 22
+93,9642,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,9642 22
+94,9792,23,economy,26,Economy-general,26,economy-general,Yes,9792 23
+96,10041,23,Cost of living,32,Living costs,32,living costs,Yes,10041 23
+97,10239,23,cost of living,32,Living costs,32,living costs,Yes,10239 23
+98,10536,22,Covid 19 Omicron variant,48,Coronavirus,48,Coronavirus,Yes,10536 22
+99,10664,21,Covid,48,Coronavirus,48,Coronavirus,Yes,10664 21
+100,10702,21,Recovering from the virus,48,Coronavirus,48,Coronavirus,Yes,10702 21
+101,10937,22,Covid,48,Coronavirus,48,Coronavirus,Yes,10937 22
+102,11001,23,Cost of Energy,32,Living costs,32,living costs,Yes,11001 23
+103,11008,23,price of energy,32,Living costs,32,living costs,Yes,11008 23
+104,11168,23,Economy,26,Economy-general,26,economy-general,Yes,11168 23
+105,11168,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,11168 21
+106,11186,23,Economy,26,Economy-general,26,economy-general,Yes,11186 23
+108,11472,21,Covid,48,Coronavirus,48,Coronavirus,Yes,11472 21
+110,11553,23,Cost of living,32,Living costs,32,living costs,Yes,11553 23
+111,11675,22,COVID,48,Coronavirus,48,Coronavirus,Yes,11675 22
+112,11781,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,11781 21
+114,11826,23,Cost of living crisis,32,Living costs,32,living costs,Yes,11826 23
+115,12319,21,Covid,48,Coronavirus,48,Coronavirus,Yes,12319 21
+116,12456,23,Cost of living,32,Living costs,32,living costs,Yes,12456 23
+117,12718,22,Brexit,15,Europe,15,europe,Yes,12718 22
+119,12828,22,Covid,48,Coronavirus,48,Coronavirus,Yes,12828 22
+120,13283,21,Pandemic,48,Coronavirus,48,Coronavirus,Yes,13283 21
+121,13558,23,Climate chnage,40,Environment,40,environment,Yes,13558 23
+122,13603,22,Covid,48,Coronavirus,48,Coronavirus,Yes,13603 22
+124,13727,22,Peak Oil / Energy crisis,32,Living costs,40,environment,No,13727 22
+125,13845,23,Affordability,32,Living costs,32,living costs,Yes,13845 23
+126,13849,21,covid,48,Coronavirus,48,Coronavirus,Yes,13849 21
+127,13940,22,COVID,48,Coronavirus,48,Coronavirus,Yes,13940 22
+128,14120,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,14120 21
+129,14252,23,Economy,26,Economy-general,26,economy-general,Yes,14252 23
+130,14252,21,Control of the pandemic,48,Coronavirus,48,Coronavirus,Yes,14252 21
+132,14455,22,Covid,48,Coronavirus,48,Coronavirus,Yes,14455 22
+133,14564,21,covid,48,Coronavirus,48,Coronavirus,Yes,14564 21
+134,14614,21,Climate change,40,Environment,40,environment,Yes,14614 21
+135,14742,21,Immigrants,12,Immigration,12,immigration,Yes,14742 21
+136,15154,23,The economy,26,Economy-general,26,economy-general,Yes,15154 23
+137,15319,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,15319 21
+140,15473,21,covid 19,48,Coronavirus,48,Coronavirus,Yes,15473 21
+142,15594,23,Cost of libing,32,Living costs,32,living costs,Yes,15594 23
+143,15611,23,Economy,26,Economy-general,26,economy-general,Yes,15611 23
+145,15831,22,Immigration,12,Immigration,12,immigration,Yes,15831 22
+146,15907,23,the economy,26,Economy-general,26,economy-general,Yes,15907 23
+147,15913,22,Coronovirus,48,Coronavirus,48,Coronavirus,Yes,15913 22
+148,15990,23,illegal migrants,12,Immigration,12,immigration,Yes,15990 23
+149,16080,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,16080 21
+150,16087,22,Climate change,40,Environment,40,environment,Yes,16087 22
+152,16556,23,Cost of living,32,Living costs,32,living costs,Yes,16556 23
+156,16896,22,Border Control,12,Immigration,12,immigration,Yes,16896 22
+157,16989,21,covid,48,Coronavirus,48,Coronavirus,Yes,16989 21
+158,17117,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,17117 21
+159,17196,22,Covid pandemic,48,Coronavirus,48,Coronavirus,Yes,17196 22
+161,17250,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,17250 21
+162,17269,21,COVID,48,Coronavirus,48,Coronavirus,Yes,17269 21
+163,17291,22,Covid 19 and the variants,48,Coronavirus,48,Coronavirus,Yes,17291 22
+166,17518,21,Pandemic,48,Coronavirus,48,Coronavirus,Yes,17518 21
+167,17639,23,Economic state of the country,26,Economy-general,26,economy-general,Yes,17639 23
+168,17803,23,rising prices/cost of living,32,Living costs,32,living costs,Yes,17803 23
+169,17819,21,COVID,48,Coronavirus,48,Coronavirus,Yes,17819 21
+170,17920,22,covid 19,48,Coronavirus,48,Coronavirus,Yes,17920 22
+171,17951,22,immigration,12,Immigration,12,immigration,Yes,17951 22
+172,17994,22,brexit,15,Europe,15,europe,Yes,17994 22
+173,18007,23,Immigration,12,Immigration,12,immigration,Yes,18007 23
+174,18368,23,Cost of living.,32,Living costs,32,living costs,Yes,18368 23
+175,18852,21,"Keeping covid at bay,unlocking the country",48,Coronavirus,48,Coronavirus,Yes,18852 21
+176,19214,22,Immigration,12,Immigration,12,immigration,Yes,19214 22
+177,19245,22,Migrants,12,Immigration,12,immigration,Yes,19245 22
+178,19355,22,coved19,48,Coronavirus,48,Coronavirus,Yes,19355 22
+181,19984,22,Covid,48,Coronavirus,48,Coronavirus,Yes,19984 22
+182,20649,21,the virus,48,Coronavirus,48,Coronavirus,Yes,20649 21
+183,20827,22,Covid,48,Coronavirus,48,Coronavirus,Yes,20827 22
+185,21196,22,Covid,48,Coronavirus,48,Coronavirus,Yes,21196 22
+186,21199,22,Covid,48,Coronavirus,48,Coronavirus,Yes,21199 22
+187,21682,22,THE ECONOMY,26,Economy-general,26,economy-general,Yes,21682 22
+189,21963,22,immigration,12,Immigration,12,immigration,Yes,21963 22
+191,22263,22,Economy,26,Economy-general,26,economy-general,Yes,22263 22
+192,22328,21,co vid,48,Coronavirus,48,Coronavirus,Yes,22328 21
+193,22374,21,Immigration,12,Immigration,12,immigration,Yes,22374 21
+194,22488,21,Covid,48,Coronavirus,48,Coronavirus,Yes,22488 21
+195,22499,21,covid,48,Coronavirus,48,Coronavirus,Yes,22499 21
+200,22996,21,COVID,48,Coronavirus,48,Coronavirus,Yes,22996 21
+201,23115,22,coronavirus,48,Coronavirus,48,Coronavirus,Yes,23115 22
+203,23179,23,cost of living,32,Living costs,32,living costs,Yes,23179 23
+204,23709,22,Brexit,15,Europe,15,europe,Yes,23709 22
+205,23863,21,Recovery from covid,48,Coronavirus,48,Coronavirus,Yes,23863 21
+207,23982,23,Climate crisis,40,Environment,40,environment,Yes,23982 23
+208,24074,22,Covid,48,Coronavirus,48,Coronavirus,Yes,24074 22
+209,24156,22,climate change,40,Environment,40,environment,Yes,24156 22
+210,24172,23,finanaces,26,Economy-personal,27,economy-personal,No,24172 23
+211,24183,23,Cost of living,32,Living costs,32,living costs,Yes,24183 23
+212,24414,23,imigration,12,Immigration,12,immigration,Yes,24414 23
+213,25110,23,Energy costs,32,Living costs,32,living costs,Yes,25110 23
+214,25360,22,dealing with the pandemic,48,Coronavirus,48,Coronavirus,Yes,25360 22
+215,25451,22,immigration,12,Immigration,12,immigration,Yes,25451 22
+216,25451,23,cost of living energy prices,32,Living costs,32,living costs,Yes,25451 23
+217,25632,21,Covid,48,Coronavirus,48,Coronavirus,Yes,25632 21
+219,26179,22,Covid control,48,Coronavirus,48,Coronavirus,Yes,26179 22
+220,26277,22,immigration,12,Immigration,12,immigration,Yes,26277 22
+221,26431,23,Living costs,32,Living costs,32,living costs,Yes,26431 23
+222,26447,22,Covid,48,Coronavirus,48,Coronavirus,Yes,26447 22
+223,26620,22,the economy,26,Economy-general,26,economy-general,Yes,26620 22
+225,26803,22,COVID 19,48,Coronavirus,48,Coronavirus,Yes,26803 22
+226,26812,23,Financial situations,26,Economy-general,26,economy-general,Yes,26812 23
+228,27224,21,Covid,48,Coronavirus,48,Coronavirus,Yes,27224 21
+229,27446,22,Pandemic,48,Coronavirus,48,Coronavirus,Yes,27446 22
+230,27694,21,covid,48,Coronavirus,48,Coronavirus,Yes,27694 21
+231,27782,23,rejoining the eu,15,Europe,15,europe,Yes,27782 23
+232,28253,23,Economy,26,Economy-general,26,economy-general,Yes,28253 23
+233,28318,23,Economy,26,Economy-general,26,economy-general,Yes,28318 23
+234,28460,22,Civid,48,Coronavirus,48,Coronavirus,Yes,28460 22
+235,28568,21,Covid,48,Coronavirus,48,Coronavirus,Yes,28568 21
+236,29177,22,covid,48,Coronavirus,48,Coronavirus,Yes,29177 22
+237,29356,22,Illegal immigration,12,Immigration,12,immigration,Yes,29356 22
+238,29388,23,Cost of Living,32,Living costs,32,living costs,Yes,29388 23
+239,29624,21,the Covid vaccinations,48,Coronavirus,48,Coronavirus,Yes,29624 21
+240,29908,21,Covid19,48,Coronavirus,48,Coronavirus,Yes,29908 21
+242,30825,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,30825 21
+243,30928,22,Covid,48,Coronavirus,48,Coronavirus,Yes,30928 22
+245,31268,21,The pandemic,48,Coronavirus,48,Coronavirus,Yes,31268 21
+246,31289,23,The economy,26,Economy-general,26,economy-general,Yes,31289 23
+247,31454,22,covid,48,Coronavirus,48,Coronavirus,Yes,31454 22
+248,31494,23,consequences of brexit/Russian aggression,15,Europe,15,europe,Yes,31494 23
+249,31642,21,covid,48,Coronavirus,48,Coronavirus,Yes,31642 21
+250,31720,23,Cost of Living,32,Living costs,32,living costs,Yes,31720 23
+251,31797,23,cost of living,32,Living costs,32,living costs,Yes,31797 23
+252,32342,21,Recovery from pandemic,48,Coronavirus,48,Coronavirus,Yes,32342 21
+253,32552,21,Economy,26,Economy-general,26,economy-general,Yes,32552 21
+254,32707,21,Covid19,48,Coronavirus,48,Coronavirus,Yes,32707 21
+255,32833,23,Rising costs,32,Living costs,32,living costs,Yes,32833 23
+257,33139,22,COVID pandemic,48,Coronavirus,48,Coronavirus,Yes,33139 22
+259,33998,22,climate change,40,Environment,40,environment,Yes,33998 22
+260,34225,22,Rise in living costs,32,Living costs,32,living costs,Yes,34225 22
+262,34381,22,Brexit & Covid,15,Europe,15,europe,Yes,34381 22
+263,34734,23,N.Ireland Protocol,15,Europe,15,europe,Yes,34734 23
+264,34792,22,Covid,48,Coronavirus,48,Coronavirus,Yes,34792 22
+265,34956,23,Cost of Living,32,Living costs,32,living costs,Yes,34956 23
+269,36172,21,Covid,48,Coronavirus,48,Coronavirus,Yes,36172 21
+270,36438,22,The economy,26,Economy-general,26,economy-general,Yes,36438 22
+271,36598,21,Covid,48,Coronavirus,48,Coronavirus,Yes,36598 21
+272,36803,21,brexit,15,Europe,15,europe,Yes,36803 21
+273,36859,21,Covid,48,Coronavirus,48,Coronavirus,Yes,36859 21
+275,37939,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,37939 22
+280,38192,23,Cost of living,32,Living costs,32,living costs,Yes,38192 23
+281,38221,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,38221 21
+282,38273,22,covid,48,Coronavirus,48,Coronavirus,Yes,38273 22
+283,38370,22,Covid,48,Coronavirus,48,Coronavirus,Yes,38370 22
+284,38536,23,Economy,26,Economy-general,26,economy-general,Yes,38536 23
+285,38544,22,Covid,48,Coronavirus,48,Coronavirus,Yes,38544 22
+286,38632,23,Energy prices,32,Living costs,32,living costs,Yes,38632 23
+287,38819,21,Economy,26,Economy-general,26,economy-general,Yes,38819 21
+288,38953,21,Corona virus,48,Coronavirus,48,Coronavirus,Yes,38953 21
+290,39177,21,covid,48,Coronavirus,48,Coronavirus,Yes,39177 21
+291,39308,23,Cost of living,32,Living costs,32,living costs,Yes,39308 23
+292,39322,21,covid,48,Coronavirus,48,Coronavirus,Yes,39322 21
+293,39392,21,illegal migrants,12,Immigration,12,immigration,Yes,39392 21
+294,39475,22,Immigration,12,Immigration,12,immigration,Yes,39475 22
+295,39732,21,Covid,48,Coronavirus,48,Coronavirus,Yes,39732 21
+296,39746,23,Cost of living,32,Living costs,32,living costs,Yes,39746 23
+297,39887,22,pandemic,48,Coronavirus,48,Coronavirus,Yes,39887 22
+299,40386,22,omnicrom virus,48,Coronavirus,48,Coronavirus,Yes,40386 22
+300,40487,22,Covid,48,Coronavirus,48,Coronavirus,Yes,40487 22
+301,40629,23,Cost of living,32,Living costs,32,living costs,Yes,40629 23
+303,40820,21,covid,48,Coronavirus,48,Coronavirus,Yes,40820 21
+304,41164,22,covid,48,Coronavirus,48,Coronavirus,Yes,41164 22
+305,41306,23,economy,26,Economy-general,26,economy-general,Yes,41306 23
+306,41346,21,coronoa virus,48,Coronavirus,48,Coronavirus,Yes,41346 21
+307,41747,22,Climate change,40,Environment,40,environment,Yes,41747 22
+308,41747,23,Climate change,40,Environment,40,environment,Yes,41747 23
+309,41837,21,economy,26,Economy-general,26,economy-general,Yes,41837 21
+310,42145,21,Covid,48,Coronavirus,48,Coronavirus,Yes,42145 21
+311,42349,22,the new covid,48,Coronavirus,48,Coronavirus,Yes,42349 22
+313,43109,21,Covid,48,Coronavirus,48,Coronavirus,Yes,43109 21
+314,43141,22,Covid-19,48,Coronavirus,48,Coronavirus,Yes,43141 22
+315,43170,23,The Environment,40,Environment,40,environment,Yes,43170 23
+317,43254,23,Cost of Living,32,Living costs,32,living costs,Yes,43254 23
+318,43317,23,Overpopulation,12,Immigration,45,other,No,43317 23
+319,43354,21,economic recovery,26,Economy-general,26,economy-general,Yes,43354 21
+323,43639,21,Economy,26,Economy-general,26,economy-general,Yes,43639 21
+324,43927,21,Covid,48,Coronavirus,48,Coronavirus,Yes,43927 21
+325,43932,23,The rising cost of living,32,Living costs,32,living costs,Yes,43932 23
+326,43958,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,43958 21
+327,43959,23,Economy,26,Economy-general,26,economy-general,Yes,43959 23
+328,44010,21,Covid,48,Coronavirus,48,Coronavirus,Yes,44010 21
+330,44266,22,covid,48,Coronavirus,48,Coronavirus,Yes,44266 22
+331,44316,21,COVID 19,48,Coronavirus,48,Coronavirus,Yes,44316 21
+332,44415,23,Economy,26,Economy-general,26,economy-general,Yes,44415 23
+333,44451,21,Covid,48,Coronavirus,48,Coronavirus,Yes,44451 21
+335,44627,21,Recovering from Coronavirus,48,Coronavirus,48,Coronavirus,Yes,44627 21
+336,44638,22,Covid,48,Coronavirus,48,Coronavirus,Yes,44638 22
+337,44751,22,virus,48,Coronavirus,48,Coronavirus,Yes,44751 22
+339,45029,22,immigraation,12,Immigration,12,immigration,Yes,45029 22
+340,45088,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,45088 21
+341,45171,23,Brexit,15,Europe,15,europe,Yes,45171 23
+342,45300,22,covid,48,Coronavirus,48,Coronavirus,Yes,45300 22
+343,45303,21,The pandemic,48,Coronavirus,48,Coronavirus,Yes,45303 21
+344,45303,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,45303 22
+345,45323,23,Cost of living,32,Living costs,32,living costs,Yes,45323 23
+346,45347,23,price increases,32,Living costs,32,living costs,Yes,45347 23
+347,45551,22,Covid,48,Coronavirus,48,Coronavirus,Yes,45551 22
+348,45621,23,Climate change,40,Environment,40,environment,Yes,45621 23
+349,45646,22,Corona virus pandemic,48,Coronavirus,48,Coronavirus,Yes,45646 22
+350,45775,21,Covid,48,Coronavirus,48,Coronavirus,Yes,45775 21
+351,45841,22,COVID,48,Coronavirus,48,Coronavirus,Yes,45841 22
+352,45919,23,Cost of living,32,Living costs,32,living costs,Yes,45919 23
+353,45927,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,45927 21
+356,46528,21,Covid,48,Coronavirus,48,Coronavirus,Yes,46528 21
+358,46833,21,covid 19,48,Coronavirus,48,Coronavirus,Yes,46833 21
+360,46876,21,Economy,26,Economy-general,26,economy-general,Yes,46876 21
+362,47074,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,47074 21
+363,47102,22,Covid,48,Coronavirus,48,Coronavirus,Yes,47102 22
+364,47134,23,Covid,48,Coronavirus,48,Coronavirus,Yes,47134 23
+366,47184,22,covid restrictions,48,Coronavirus,48,Coronavirus,Yes,47184 22
+367,47287,21,covid,48,Coronavirus,48,Coronavirus,Yes,47287 21
+368,47334,23,Climate change,40,Environment,40,environment,Yes,47334 23
+369,47386,21,Pandemic,48,Coronavirus,48,Coronavirus,Yes,47386 21
+370,47429,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,47429 21
+371,47479,21,eradicating Covid,48,Coronavirus,48,Coronavirus,Yes,47479 21
+372,47485,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,47485 22
+373,47511,23,Cost of living,32,Living costs,32,living costs,Yes,47511 23
+375,47702,22,Immigration,12,Immigration,12,immigration,Yes,47702 22
+376,47729,23,Price of oil,32,Living costs,32,living costs,Yes,47729 23
+377,47812,23,Covid,48,Coronavirus,48,Coronavirus,Yes,47812 23
+378,47963,23,Cost of living,32,Living costs,32,living costs,Yes,47963 23
+379,48083,22,Covid,48,Coronavirus,48,Coronavirus,Yes,48083 22
+380,48953,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,48953 21
+381,49039,21,COVID 19,48,Coronavirus,48,Coronavirus,Yes,49039 21
+382,49152,22,Covid and it's repercussions,48,Coronavirus,48,Coronavirus,Yes,49152 22
+384,49235,23,ECONOMY RISING PRICES,32,Living costs,32,living costs,Yes,49235 23
+385,49335,23,Energy prices,32,Living costs,32,living costs,Yes,49335 23
+386,50283,22,Covid,48,Coronavirus,48,Coronavirus,Yes,50283 22
+388,50725,23,Cost of living,32,Living costs,32,living costs,Yes,50725 23
+389,51005,22,Covid omicron,48,Coronavirus,48,Coronavirus,Yes,51005 22
+390,51207,22,Broken government promises and wasteful spending,15,Europe,5,partisan-neg,No,51207 22
+391,51253,22,Covid-19,48,Coronavirus,48,Coronavirus,Yes,51253 22
+392,51263,22,covid,48,Coronavirus,48,Coronavirus,Yes,51263 22
+394,51489,23,Economy,26,Economy-general,26,economy-general,Yes,51489 23
+396,51646,21,Covid,48,Coronavirus,48,Coronavirus,Yes,51646 21
+398,51962,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,51962 21
+399,51992,22,Brexit,15,Europe,15,europe,Yes,51992 22
+400,52051,21,Pandemic,48,Coronavirus,48,Coronavirus,Yes,52051 21
+401,52226,23,The cost of living,32,Living costs,32,living costs,Yes,52226 23
+403,52347,22,covid,48,Coronavirus,48,Coronavirus,Yes,52347 22
+404,52397,21,Climate change,40,Environment,40,environment,Yes,52397 21
+405,52422,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,52422 21
+406,52630,21,COVID,48,Coronavirus,48,Coronavirus,Yes,52630 21
+407,52672,21,brexit,15,Europe,15,europe,Yes,52672 21
+408,52687,21,Economy,26,Economy-general,26,economy-general,Yes,52687 21
+409,52805,21,Covid,48,Coronavirus,48,Coronavirus,Yes,52805 21
+410,52919,23,Cost of Living,32,Living costs,32,living costs,Yes,52919 23
+411,53055,22,Immigration,12,Immigration,12,immigration,Yes,53055 22
+412,53146,21,covid,48,Coronavirus,48,Coronavirus,Yes,53146 21
+415,53327,21,covid,48,Coronavirus,48,Coronavirus,Yes,53327 21
+417,53400,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,53400 22
+418,53530,23,cost of living,32,Living costs,32,living costs,Yes,53530 23
+426,54375,23,The economy,26,Economy-general,26,economy-general,Yes,54375 23
+427,54567,21,The Pandemic,48,Coronavirus,48,Coronavirus,Yes,54567 21
+428,54600,22,Covid,48,Coronavirus,48,Coronavirus,Yes,54600 22
+429,54662,22,Covid,48,Coronavirus,48,Coronavirus,Yes,54662 22
+430,54686,22,coronavirus,48,Coronavirus,48,Coronavirus,Yes,54686 22
+431,54793,23,rising prices,32,Living costs,32,living costs,Yes,54793 23
+432,54839,22,Covid,48,Coronavirus,48,Coronavirus,Yes,54839 22
+435,55305,22,Covid,48,Coronavirus,48,Coronavirus,Yes,55305 22
+436,55337,22,Covid,48,Coronavirus,48,Coronavirus,Yes,55337 22
+437,55520,21,pandemic,48,Coronavirus,48,Coronavirus,Yes,55520 21
+438,55652,23,pensioners struggling to pay their bills,32,Living costs,38,pensions/ageing,No,55652 23
+440,55946,22,Pandemic,48,Coronavirus,48,Coronavirus,Yes,55946 22
+441,56001,22,Covid,48,Coronavirus,48,Coronavirus,Yes,56001 22
+443,56023,22,Covid,48,Coronavirus,48,Coronavirus,Yes,56023 22
+444,56046,23,Immigration,12,Immigration,12,immigration,Yes,56046 23
+445,56121,22,Covid,48,Coronavirus,48,Coronavirus,Yes,56121 22
+446,56164,23,Economy,26,Economy-general,26,economy-general,Yes,56164 23
+447,56175,21,covid,48,Coronavirus,48,Coronavirus,Yes,56175 21
+448,56180,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,56180 22
+449,56527,22,covid,48,Coronavirus,48,Coronavirus,Yes,56527 22
+450,56562,21,EU aggression,15,Europe,15,europe,Yes,56562 21
+451,56760,21,coronavirus,48,Coronavirus,48,Coronavirus,Yes,56760 21
+453,56817,22,Covid,48,Coronavirus,48,Coronavirus,Yes,56817 22
+454,56887,23,Cost of fuel,32,Living costs,32,living costs,Yes,56887 23
+455,57190,22,Covid,48,Coronavirus,48,Coronavirus,Yes,57190 22
+456,57212,22,Covid,48,Coronavirus,48,Coronavirus,Yes,57212 22
+457,57297,22,immigration,12,Immigration,12,immigration,Yes,57297 22
+460,57775,22,COVID Issues,48,Coronavirus,48,Coronavirus,Yes,57775 22
+461,57777,23,Cost of living crisis,32,Living costs,32,living costs,Yes,57777 23
+462,57971,23,Cost of living,32,Living costs,32,living costs,Yes,57971 23
+463,58084,21,Covid,48,Coronavirus,48,Coronavirus,Yes,58084 21
+464,58204,22,covid,48,Coronavirus,48,Coronavirus,Yes,58204 22
+465,58337,22,Economy,26,Economy-general,26,economy-general,Yes,58337 22
+466,58337,23,Rising cost of living,32,Living costs,32,living costs,Yes,58337 23
+467,58365,22,The Economy,26,Economy-general,26,economy-general,Yes,58365 22
+468,58401,21,covid 19,48,Coronavirus,48,Coronavirus,Yes,58401 21
+469,58426,23,Illegal immigration,12,Immigration,12,immigration,Yes,58426 23
+471,58457,23,Climate Change,40,Environment,40,environment,Yes,58457 23
+472,58551,21,The economy.,26,Economy-general,26,economy-general,Yes,58551 21
+473,58814,21,Covid,48,Coronavirus,48,Coronavirus,Yes,58814 21
+475,58937,21,Covid,48,Coronavirus,48,Coronavirus,Yes,58937 21
+476,59036,23,Climate Change,40,Environment,40,environment,Yes,59036 23
+482,59499,21,Covid,48,Coronavirus,48,Coronavirus,Yes,59499 21
+484,59645,21,Recovery from Covid-19,48,Coronavirus,48,Coronavirus,Yes,59645 21
+485,59670,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,59670 22
+486,59837,22,The various consequences of the virus,48,Coronavirus,48,Coronavirus,Yes,59837 22
+489,60135,21,climate change,40,Environment,40,environment,Yes,60135 21
+490,60164,22,The economy,26,Economy-general,26,economy-general,Yes,60164 22
+491,60433,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,60433 21
+492,60755,22,COVID 19,48,Coronavirus,48,Coronavirus,Yes,60755 22
+493,60933,21,Covid,48,Coronavirus,48,Coronavirus,Yes,60933 21
+495,61169,21,Covid,48,Coronavirus,48,Coronavirus,Yes,61169 21
+496,61439,23,Gas and electric price rise,32,Living costs,32,living costs,Yes,61439 23
+497,61500,22,covid,48,Coronavirus,48,Coronavirus,Yes,61500 22
+498,61796,22,Brexit,15,Europe,15,europe,Yes,61796 22
+499,61833,22,Climate Change,40,Environment,40,environment,Yes,61833 22
+501,62017,22,COVID 19,48,Coronavirus,48,Coronavirus,Yes,62017 22
+502,62138,21,covid,48,Coronavirus,48,Coronavirus,Yes,62138 21
+503,62167,22,Covid,48,Coronavirus,48,Coronavirus,Yes,62167 22
+504,62325,23,The economy and cost of living,32,Living costs,26,economy-general,No,62325 23
+507,62616,22,Covid,48,Coronavirus,48,Coronavirus,Yes,62616 22
+508,62697,22,Covid,48,Coronavirus,48,Coronavirus,Yes,62697 22
+509,62929,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,62929 22
+511,63143,21,The Brexit deal,15,Europe,15,europe,Yes,63143 21
+512,63287,23,economy,26,Economy-general,26,economy-general,Yes,63287 23
+513,63356,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,63356 22
+514,63421,21,Covid,48,Coronavirus,48,Coronavirus,Yes,63421 21
+515,63543,22,Covid,48,Coronavirus,48,Coronavirus,Yes,63543 22
+516,63644,21,Environment,40,Environment,40,environment,Yes,63644 21
+518,65058,21,Covid,48,Coronavirus,48,Coronavirus,Yes,65058 21
+519,65265,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,65265 22
+520,65317,22,Covid,48,Coronavirus,48,Coronavirus,Yes,65317 22
+521,65419,22,Covid restrictions,48,Coronavirus,48,Coronavirus,Yes,65419 22
+523,65476,21,COVID pandemic,48,Coronavirus,48,Coronavirus,Yes,65476 21
+525,65575,21,Covid,48,Coronavirus,48,Coronavirus,Yes,65575 21
+528,65895,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,65895 22
+530,65931,21,Economy,26,Economy-general,26,economy-general,Yes,65931 21
+531,65968,23,ENERGY PRICE RISE,32,Living costs,32,living costs,Yes,65968 23
+534,66678,23,Energy prices,32,Living costs,32,living costs,Yes,66678 23
+535,66736,21,Covid,48,Coronavirus,48,Coronavirus,Yes,66736 21
+537,67273,23,Rising living costs,32,Living costs,32,living costs,Yes,67273 23
+539,67706,21,economy,26,Economy-general,26,economy-general,Yes,67706 21
+540,67716,21,Covid,48,Coronavirus,48,Coronavirus,Yes,67716 21
+541,67939,23,climate change,40,Environment,40,environment,Yes,67939 23
+542,68026,21,pandemic,48,Coronavirus,48,Coronavirus,Yes,68026 21
+543,68097,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,68097 21
+544,68210,21,covid,48,Coronavirus,48,Coronavirus,Yes,68210 21
+545,68221,22,Covid-19,48,Coronavirus,48,Coronavirus,Yes,68221 22
+546,68262,21,covid,48,Coronavirus,48,Coronavirus,Yes,68262 21
+547,68275,21,Economy needs to recover,26,Economy-general,26,economy-general,Yes,68275 21
+548,68862,21,Covid,48,Coronavirus,48,Coronavirus,Yes,68862 21
+549,69145,23,Cost of living,32,Living costs,32,living costs,Yes,69145 23
+550,69475,23,the cost of living,32,Living costs,32,living costs,Yes,69475 23
+551,70002,22,Immigration,12,Immigration,12,immigration,Yes,70002 22
+553,70187,23,Cost of living,32,Living costs,32,living costs,Yes,70187 23
+554,70203,21,Covid variant,48,Coronavirus,48,Coronavirus,Yes,70203 21
+555,70214,22,Covid,48,Coronavirus,48,Coronavirus,Yes,70214 22
+558,70415,23,Immigration,12,Immigration,12,immigration,Yes,70415 23
+559,70423,23,Cost of living crisis,32,Living costs,32,living costs,Yes,70423 23
+560,70442,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,70442 21
+562,70522,22,Covid,48,Coronavirus,48,Coronavirus,Yes,70522 22
+564,70805,21,The economy,26,Economy-general,26,economy-general,Yes,70805 21
+565,70843,21,Immigration and over population,12,Immigration,12,immigration,Yes,70843 21
+567,70956,23,Protecting the environment,40,Environment,40,environment,Yes,70956 23
+569,71094,21,Covid,48,Coronavirus,48,Coronavirus,Yes,71094 21
+570,71141,23,Immigration,12,Immigration,12,immigration,Yes,71141 23
+571,71195,22,Overpopulation,12,Immigration,45,other,No,71195 22
+572,71234,21,Recovery from Covid,48,Coronavirus,48,Coronavirus,Yes,71234 21
+576,71746,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,71746 21
+578,71857,23,Immigration,12,Immigration,12,immigration,Yes,71857 23
+579,71880,22,Covid-19,48,Coronavirus,48,Coronavirus,Yes,71880 22
+580,72005,21,covid 19,48,Coronavirus,48,Coronavirus,Yes,72005 21
+582,72081,21,Covid,48,Coronavirus,48,Coronavirus,Yes,72081 21
+583,72201,23,Cost of living,32,Living costs,32,living costs,Yes,72201 23
+585,72397,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,72397 22
+586,72435,23,Overpopulation,12,Immigration,45,other,No,72435 23
+587,72608,22,Climate change,40,Environment,40,environment,Yes,72608 22
+588,72714,22,Climate change,40,Environment,40,environment,Yes,72714 22
+591,72799,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,72799 21
+595,73033,22,Covid,48,Coronavirus,48,Coronavirus,Yes,73033 22
+596,73107,23,Cost of living crisis,32,Living costs,32,living costs,Yes,73107 23
+597,73129,21,Covid,48,Coronavirus,48,Coronavirus,Yes,73129 21
+598,73418,22,Pandemic,48,Coronavirus,48,Coronavirus,Yes,73418 22
+599,73445,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,73445 21
+600,73453,22,migrants,12,Immigration,12,immigration,Yes,73453 22
+602,73816,22,Covid,48,Coronavirus,48,Coronavirus,Yes,73816 22
+603,73927,23,Economy,26,Economy-general,26,economy-general,Yes,73927 23
+604,73937,22,Climate change,40,Environment,40,environment,Yes,73937 22
+606,74065,21,Climate change,40,Environment,40,environment,Yes,74065 21
+607,74432,21,Economy,26,Economy-general,26,economy-general,Yes,74432 21
+608,74670,22,Covid,48,Coronavirus,48,Coronavirus,Yes,74670 22
+609,75044,22,COVID 19,48,Coronavirus,48,Coronavirus,Yes,75044 22
+610,76048,21,Covid,48,Coronavirus,48,Coronavirus,Yes,76048 21
+611,76115,21,environment,40,Environment,40,environment,Yes,76115 21
+612,76349,22,Immigration,12,Immigration,12,immigration,Yes,76349 22
+613,76606,21,The EU,15,Europe,15,europe,Yes,76606 21
+615,76754,22,Covid,48,Coronavirus,48,Coronavirus,Yes,76754 22
+617,76962,22,immigrants crossing the English Channel,12,Immigration,12,immigration,Yes,76962 22
+618,77104,23,cost of living,32,Living costs,32,living costs,Yes,77104 23
+619,77154,21,Virus,48,Coronavirus,48,Coronavirus,Yes,77154 21
+620,77251,23,Cost of living,32,Living costs,32,living costs,Yes,77251 23
+621,77381,21,Covid,48,Coronavirus,48,Coronavirus,Yes,77381 21
+622,77439,22,Immigration,12,Immigration,12,immigration,Yes,77439 22
+623,77606,21,Economy,26,Economy-general,26,economy-general,Yes,77606 21
+624,77715,21,Covid,48,Coronavirus,48,Coronavirus,Yes,77715 21
+626,77997,21,Economic fallout from Brexit,15,Europe,15,europe,Yes,77997 21
+627,78030,23,Corina virus,48,Coronavirus,48,Coronavirus,Yes,78030 23
+629,78155,21,PANDEMIC,48,Coronavirus,48,Coronavirus,Yes,78155 21
+631,78223,23,Rising cost of living,32,Living costs,32,living costs,Yes,78223 23
+632,78339,23,Cost of living,32,Living costs,32,living costs,Yes,78339 23
+633,78521,23,Cost of living,32,Living costs,32,living costs,Yes,78521 23
+635,78545,22,Climate change,40,Environment,40,environment,Yes,78545 22
+636,78546,23,Economy,26,Economy-general,26,economy-general,Yes,78546 23
+637,78554,22,Climate change,40,Environment,40,environment,Yes,78554 22
+639,78639,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,78639 21
+640,78647,23,immigration,12,Immigration,12,immigration,Yes,78647 23
+641,78783,22,Climate change,40,Environment,40,environment,Yes,78783 22
+642,78871,23,Cost of living,32,Living costs,32,living costs,Yes,78871 23
+643,78898,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,78898 21
+644,78950,21,covid,48,Coronavirus,48,Coronavirus,Yes,78950 21
+645,79007,22,Covid,48,Coronavirus,48,Coronavirus,Yes,79007 22
+646,79057,21,Covid,48,Coronavirus,48,Coronavirus,Yes,79057 21
+647,79117,22,climate change,40,Environment,40,environment,Yes,79117 22
+648,79139,23,Economy,26,Economy-general,26,economy-general,Yes,79139 23
+649,79274,22,Covid,48,Coronavirus,48,Coronavirus,Yes,79274 22
+650,79323,23,Electric prices,32,Living costs,32,living costs,Yes,79323 23
+653,79650,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,79650 21
+654,79699,23,Cost of living,32,Living costs,32,living costs,Yes,79699 23
+655,79824,22,Global warming,40,Environment,40,environment,Yes,79824 22
+656,79865,22,Immigration,12,Immigration,12,immigration,Yes,79865 22
+657,79951,21,Covid,48,Coronavirus,48,Coronavirus,Yes,79951 21
+658,80058,21,Covid_19,48,Coronavirus,48,Coronavirus,Yes,80058 21
+659,80075,22,Covid,48,Coronavirus,48,Coronavirus,Yes,80075 22
+660,80203,21,safe release of covid restrictions,48,Coronavirus,48,Coronavirus,Yes,80203 21
+661,80853,22,Climate change,40,Environment,40,environment,Yes,80853 22
+662,81037,21,economy,26,Economy-general,26,economy-general,Yes,81037 21
+663,81324,22,Illegal immigration,12,Immigration,12,immigration,Yes,81324 22
+664,81450,22,covid,48,Coronavirus,48,Coronavirus,Yes,81450 22
+665,81487,23,Economy & cost of living,32,Living costs,32,living costs,Yes,81487 23
+666,81517,22,Brexit,15,Europe,15,europe,Yes,81517 22
+667,81521,23,Cost of Living,32,Living costs,32,living costs,Yes,81521 23
+668,81651,21,Covid,48,Coronavirus,48,Coronavirus,Yes,81651 21
+669,81793,21,Covid,48,Coronavirus,48,Coronavirus,Yes,81793 21
+670,81892,21,Economic fallout from Brexit and CV19,15,Europe,49,COVID-economy,No,81892 21
+671,82039,22,Immigration,12,Immigration,12,immigration,Yes,82039 22
+673,82288,22,Illegal immigration,12,Immigration,12,immigration,Yes,82288 22
+674,82304,22,immigration,12,Immigration,12,immigration,Yes,82304 22
+675,82498,23,Brexit,15,Europe,15,europe,Yes,82498 23
+678,82574,23,The economy,26,Economy-general,26,economy-general,Yes,82574 23
+680,82678,21,covid,48,Coronavirus,48,Coronavirus,Yes,82678 21
+681,82743,23,Immigration,12,Immigration,12,immigration,Yes,82743 23
+682,82868,21,Covid,48,Coronavirus,48,Coronavirus,Yes,82868 21
+683,82879,21,Climate change,40,Environment,40,environment,Yes,82879 21
+686,83085,21,health - fighting the Corona virus,48,Coronavirus,48,Coronavirus,Yes,83085 21
+687,83405,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,83405 21
+688,83433,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,83433 21
+692,83850,22,COVID,48,Coronavirus,48,Coronavirus,Yes,83850 22
+693,83893,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,83893 21
+695,84049,23,The destruction of the country's economy and morals due to the racism and stupidity of Brexit,15,Europe,15,europe,Yes,84049 23
+696,84159,23,Climate change,40,Environment,40,environment,Yes,84159 23
+697,84178,23,Cost of living,32,Living costs,32,living costs,Yes,84178 23
+698,84280,21,Opening country back up,48,Coronavirus,48,Coronavirus,Yes,84280 21
+699,84381,23,Immigration,12,Immigration,12,immigration,Yes,84381 23
+700,84567,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,84567 21
+701,84668,22,C0vid,48,Coronavirus,48,Coronavirus,Yes,84668 22
+702,84682,23,Energy prices,32,Living costs,32,living costs,Yes,84682 23
+704,84837,22,coronavirus,48,Coronavirus,48,Coronavirus,Yes,84837 22
+705,84860,23,economy,26,Economy-general,26,economy-general,Yes,84860 23
+706,84907,21,COVID-19,48,Coronavirus,48,Coronavirus,Yes,84907 21
+708,85106,21,Financial recovery,26,Economy-general,26,economy-general,Yes,85106 21
+710,85239,21,Covid,48,Coronavirus,48,Coronavirus,Yes,85239 21
+712,85330,22,Brexit.,15,Europe,15,europe,Yes,85330 22
+715,85522,23,Cost of living,32,Living costs,32,living costs,Yes,85522 23
+717,85771,22,The economy,26,Economy-general,26,economy-general,Yes,85771 22
+720,85924,23,economy,26,Economy-general,26,economy-general,Yes,85924 23
+721,85982,23,Cost of living,32,Living costs,32,living costs,Yes,85982 23
+722,86102,22,The economy,26,Economy-general,26,economy-general,Yes,86102 22
+723,86111,22,Covid-19,48,Coronavirus,48,Coronavirus,Yes,86111 22
+724,86149,21,Finances,26,Economy-personal,26,economy-general,Yes,86149 21
+725,86156,22,Covid,48,Coronavirus,48,Coronavirus,Yes,86156 22
+726,86158,22,The economy,26,Economy-general,26,economy-general,Yes,86158 22
+727,86212,21,Covid,48,Coronavirus,48,Coronavirus,Yes,86212 21
+728,86247,21,COVID,48,Coronavirus,48,Coronavirus,Yes,86247 21
+729,86265,23,Illegal immigration,12,Immigration,12,immigration,Yes,86265 23
+730,86416,23,Economy,26,Economy-general,26,economy-general,Yes,86416 23
+732,86643,22,economy,26,Economy-general,26,economy-general,Yes,86643 22
+733,86685,23,Price increases,32,Living costs,32,living costs,Yes,86685 23
+734,86686,23,Cost of living.,32,Living costs,32,living costs,Yes,86686 23
+735,86690,22,Climate change,40,Environment,40,environment,Yes,86690 22
+736,86723,23,Cost of living,32,Living costs,32,living costs,Yes,86723 23
+737,86743,23,economy recovery,26,Economy-general,26,economy-general,Yes,86743 23
+740,87052,23,Cost of Living,32,Living costs,32,living costs,Yes,87052 23
+741,87078,23,Economy,26,Economy-general,26,economy-general,Yes,87078 23
+743,87415,21,Covid,48,Coronavirus,48,Coronavirus,Yes,87415 21
+744,87463,23,Cost of living,32,Living costs,32,living costs,Yes,87463 23
+745,87520,23,Brexit,15,Europe,15,europe,Yes,87520 23
+747,87856,22,Covid,48,Coronavirus,48,Coronavirus,Yes,87856 22
+748,87865,23,covid,48,Coronavirus,48,Coronavirus,Yes,87865 23
+749,87947,23,Brexit,15,Europe,15,europe,Yes,87947 23
+750,87992,22,Imigrants,12,Immigration,12,immigration,Yes,87992 22
+751,88018,21,Ecomomy,26,Economy-general,26,economy-general,Yes,88018 21
+752,88107,21,covid,48,Coronavirus,48,Coronavirus,Yes,88107 21
+754,88195,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,88195 22
+755,88202,22,Immigration,12,Immigration,12,immigration,Yes,88202 22
+756,88307,23,illegal immigration,12,Immigration,12,immigration,Yes,88307 23
+757,88318,23,Cost of living,32,Living costs,32,living costs,Yes,88318 23
+758,88427,23,Cost of living crisis,32,Living costs,32,living costs,Yes,88427 23
+760,88970,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,88970 21
+761,89001,22,Corona virus,48,Coronavirus,48,Coronavirus,Yes,89001 22
+762,89037,23,Rising prices,32,Living costs,32,living costs,Yes,89037 23
+763,89066,22,Environmental,40,Environment,40,environment,Yes,89066 22
+764,89077,22,Covid,48,Coronavirus,48,Coronavirus,Yes,89077 22
+767,89274,21,Covid hoax,48,Coronavirus,48,Coronavirus,Yes,89274 21
+768,89376,21,Covid,48,Coronavirus,48,Coronavirus,Yes,89376 21
+769,89380,23,rising cost of living,32,Living costs,32,living costs,Yes,89380 23
+771,89416,21,Covid,48,Coronavirus,48,Coronavirus,Yes,89416 21
+772,89544,21,Covid,48,Coronavirus,48,Coronavirus,Yes,89544 21
+773,89782,22,Climate change,40,Environment,40,environment,Yes,89782 22
+774,89813,22,Corona virus,48,Coronavirus,48,Coronavirus,Yes,89813 22
+775,89830,23,the economy,26,Economy-general,26,economy-general,Yes,89830 23
+776,89960,22,Economy,26,Economy-general,26,economy-general,Yes,89960 22
+777,90126,22,Covid-19,48,Coronavirus,48,Coronavirus,Yes,90126 22
+778,90430,23,Cost of living,32,Living costs,32,living costs,Yes,90430 23
+779,90492,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,90492 21
+780,90629,21,Corona,48,Coronavirus,48,Coronavirus,Yes,90629 21
+781,90697,22,Covid pandemic,48,Coronavirus,48,Coronavirus,Yes,90697 22
+782,90719,22,Covid,48,Coronavirus,48,Coronavirus,Yes,90719 22
+784,91001,23,cost of living,32,Living costs,32,living costs,Yes,91001 23
+786,91268,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,91268 22
+787,91321,23,Economy,26,Economy-general,26,economy-general,Yes,91321 23
+788,91329,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,91329 21
+789,91371,23,Cost of living,32,Living costs,32,living costs,Yes,91371 23
+791,91716,23,Financial,26,Economy-general,26,economy-general,Yes,91716 23
+792,92247,22,covid,48,Coronavirus,48,Coronavirus,Yes,92247 22
+793,92289,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,92289 21
+794,92359,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,92359 22
+795,92420,22,Migration across the English Channel,12,Immigration,12,immigration,Yes,92420 22
+797,92735,21,Covid,48,Coronavirus,48,Coronavirus,Yes,92735 21
+798,92847,23,THE ECONOMY,26,Economy-general,26,economy-general,Yes,92847 23
+800,93361,21,Climate change,40,Environment,40,environment,Yes,93361 21
+801,93413,21,Brexit,15,Europe,15,europe,Yes,93413 21
+802,93479,21,Covid,48,Coronavirus,48,Coronavirus,Yes,93479 21
+803,93697,22,Global warming,40,Environment,40,environment,Yes,93697 22
+804,93759,21,Covid,48,Coronavirus,48,Coronavirus,Yes,93759 21
+805,94047,21,immigration,12,Immigration,12,immigration,Yes,94047 21
+806,94215,22,Cost of living,32,Living costs,32,living costs,Yes,94215 22
+807,94539,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,94539 22
+808,94582,23,cost of living,32,Living costs,32,living costs,Yes,94582 23
+809,95140,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,95140 21
+810,95173,23,Cost of living crisis,32,Living costs,32,living costs,Yes,95173 23
+811,95266,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,95266 22
+813,95414,22,Covid spread,48,Coronavirus,48,Coronavirus,Yes,95414 22
+814,95439,22,Covid,48,Coronavirus,48,Coronavirus,Yes,95439 22
+815,95489,22,Covid,48,Coronavirus,48,Coronavirus,Yes,95489 22
+819,96212,23,Economy,26,Economy-general,26,economy-general,Yes,96212 23
+821,96223,22,The economy,26,Economy-general,26,economy-general,Yes,96223 22
+822,96298,22,COVID,48,Coronavirus,48,Coronavirus,Yes,96298 22
+824,96461,21,Climate change,40,Environment,40,environment,Yes,96461 21
+825,96705,21,COVID,48,Coronavirus,48,Coronavirus,Yes,96705 21
+828,96943,22,Covid,48,Coronavirus,48,Coronavirus,Yes,96943 22
+829,96961,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,96961 21
+830,96963,22,Increasing prices,32,Living costs,32,living costs,Yes,96963 22
+831,97033,23,the economy,26,Economy-general,26,economy-general,Yes,97033 23
+833,97392,21,Lockdown,48,Coronavirus,48,Coronavirus,Yes,97392 21
+834,97412,21,Economic recovery,26,Economy-general,26,economy-general,Yes,97412 21
+835,97542,21,Covid,48,Coronavirus,48,Coronavirus,Yes,97542 21
+836,97676,22,Covid,48,Coronavirus,48,Coronavirus,Yes,97676 22
+837,98259,23,Cost of living,32,Living costs,32,living costs,Yes,98259 23
+838,98551,22,Covid,48,Coronavirus,48,Coronavirus,Yes,98551 22
+839,98590,22,Cost of living,32,Living costs,32,living costs,Yes,98590 22
+840,98649,22,Covid 19,48,Coronavirus,48,Coronavirus,Yes,98649 22
+842,98713,23,To many immigrants living in uk,12,Immigration,12,immigration,Yes,98713 23
+843,98759,22,Covid,48,Coronavirus,48,Coronavirus,Yes,98759 22
+844,98854,21,Covid,48,Coronavirus,48,Coronavirus,Yes,98854 21
+845,99098,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,99098 21
+846,99470,22,Covid19,48,Coronavirus,48,Coronavirus,Yes,99470 22
+847,99472,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,99472 21
+848,99622,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,99622 21
+849,99686,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,99686 21
+850,99738,22,Covid,48,Coronavirus,48,Coronavirus,Yes,99738 22
+851,99792,23,Rising energy costs.,32,Living costs,32,living costs,Yes,99792 23
+852,99802,21,economic recovery,26,Economy-general,26,economy-general,Yes,99802 21
+853,99815,23,Cost of Living increases,32,Living costs,32,living costs,Yes,99815 23
+854,99835,21,Pollution,40,Environment,40,environment,Yes,99835 21
+855,99841,21,Covid,48,Coronavirus,48,Coronavirus,Yes,99841 21
+856,99901,22,Brexit,15,Europe,15,europe,Yes,99901 22
+858,100047,22,Climate change,40,Environment,40,environment,Yes,100047 22
+859,100140,23,Cost of living,32,Living costs,32,living costs,Yes,100140 23
+860,100222,22,Covid,48,Coronavirus,48,Coronavirus,Yes,100222 22
+861,100223,21,Covid,48,Coronavirus,48,Coronavirus,Yes,100223 21
+862,100470,22,Inaction on climate change,40,Environment,40,environment,Yes,100470 22
+865,100837,23,Rising prices of food .fuel e.t.c,32,Living costs,32,living costs,Yes,100837 23
+866,100894,21,Our calamitous exit from the EU and the inept contract.,15,Europe,15,europe,Yes,100894 21
+867,100980,23,Economy,26,Economy-general,26,economy-general,Yes,100980 23
+868,101017,21,Climate change,40,Environment,40,environment,Yes,101017 21
+869,101017,22,Global warming / Climate change,40,Environment,40,environment,Yes,101017 22
+873,101805,21,covid,48,Coronavirus,48,Coronavirus,Yes,101805 21
+874,101819,23,Price rises,32,Living costs,32,living costs,Yes,101819 23
+876,101891,21,effects of covid,48,Coronavirus,48,Coronavirus,Yes,101891 21
+877,101892,22,COVID,48,Coronavirus,48,Coronavirus,Yes,101892 22
+879,102060,23,Economy,26,Economy-general,26,economy-general,Yes,102060 23
+880,102060,21,Climate Change,40,Environment,40,environment,Yes,102060 21
+881,102118,21,Immigration,12,Immigration,12,immigration,Yes,102118 21
+882,102145,23,Cost of Living,32,Living costs,32,living costs,Yes,102145 23
+883,102321,23,Climate change,40,Environment,40,environment,Yes,102321 23
+885,102487,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,102487 22
+887,102631,21,Covid,48,Coronavirus,48,Coronavirus,Yes,102631 21
+888,102763,23,Cost of living crisis,32,Living costs,32,living costs,Yes,102763 23
+891,102857,23,Illegal immigration,12,Immigration,12,immigration,Yes,102857 23
+892,102999,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,102999 21
+893,103040,21,Covid,48,Coronavirus,48,Coronavirus,Yes,103040 21
+895,103139,22,Covid,48,Coronavirus,48,Coronavirus,Yes,103139 22
+896,103179,21,Covid,48,Coronavirus,48,Coronavirus,Yes,103179 21
+898,103263,21,COVD19,48,Coronavirus,48,Coronavirus,Yes,103263 21
+899,103428,21,The coronavirus pandemic,48,Coronavirus,48,Coronavirus,Yes,103428 21
+900,103503,21,Coronavurus,48,Coronavirus,48,Coronavirus,Yes,103503 21
+902,103656,21,COVID,48,Coronavirus,48,Coronavirus,Yes,103656 21
+903,103750,23,Energy costs,32,Living costs,32,living costs,Yes,103750 23
+904,103765,21,Covid,48,Coronavirus,48,Coronavirus,Yes,103765 21
+905,103782,21,Corona virus,48,Coronavirus,48,Coronavirus,Yes,103782 21
+906,103789,22,Covid pandemic,48,Coronavirus,48,Coronavirus,Yes,103789 22
+907,103808,23,Cost of living increases,32,Living costs,32,living costs,Yes,103808 23
+908,103834,22,Covid,48,Coronavirus,48,Coronavirus,Yes,103834 22
+909,103845,23,Cost of living,32,Living costs,32,living costs,Yes,103845 23
+910,103854,23,Cost of living and paying bills,32,Living costs,32,living costs,Yes,103854 23
+911,103904,21,Covid,48,Coronavirus,48,Coronavirus,Yes,103904 21
+912,103919,22,illegal immigrants,12,Immigration,12,immigration,Yes,103919 22
+913,103952,23,Climate change,40,Environment,40,environment,Yes,103952 23
+914,103956,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,103956 21
+915,103965,21,Covid,48,Coronavirus,48,Coronavirus,Yes,103965 21
+916,103981,23,Cost of living,32,Living costs,32,living costs,Yes,103981 23
+919,104047,21,Corona virus,48,Coronavirus,48,Coronavirus,Yes,104047 21
+920,104133,21,covid,48,Coronavirus,48,Coronavirus,Yes,104133 21
+921,104297,22,COVID-19,48,Coronavirus,48,Coronavirus,Yes,104297 22
+922,104304,22,COVID,48,Coronavirus,48,Coronavirus,Yes,104304 22
+923,104389,21,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,104389 21
+924,104407,21,Coronarvius,48,Coronavirus,48,Coronavirus,Yes,104407 21
+925,104611,21,The costs of covid,48,Coronavirus,49,COVID-economy,No,104611 21
+926,104628,21,Covid pandemic,48,Coronavirus,48,Coronavirus,Yes,104628 21
+927,104704,23,economy,26,Economy-general,26,economy-general,Yes,104704 23
+929,104720,23,Climate change,40,Environment,40,environment,Yes,104720 23
+931,104753,23,Cost of living,32,Living costs,32,living costs,Yes,104753 23
+932,104754,21,Covid,48,Coronavirus,48,Coronavirus,Yes,104754 21
+933,104817,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,104817 21
+934,104853,21,Covid,48,Coronavirus,48,Coronavirus,Yes,104853 21
+935,104870,21,covie vir 19,48,Coronavirus,48,Coronavirus,Yes,104870 21
+936,104887,21,Climate change,40,Environment,40,environment,Yes,104887 21
+937,104891,21,Climate change,40,Environment,40,environment,Yes,104891 21
+940,105316,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,105316 21
+941,105381,23,Fuel crisis,32,Living costs,32,living costs,Yes,105381 23
+942,105441,22,Covid,48,Coronavirus,48,Coronavirus,Yes,105441 22
+943,105447,21,Cover 19 Indian strain,48,Coronavirus,48,Coronavirus,Yes,105447 21
+944,105491,22,Economy,26,Economy-general,26,economy-general,Yes,105491 22
+945,105533,21,Covid-19,48,Coronavirus,48,Coronavirus,Yes,105533 21
+946,105534,21,Brexit,15,Europe,15,europe,Yes,105534 21
+947,105541,21,COVID 19,48,Coronavirus,48,Coronavirus,Yes,105541 21
+949,105569,21,Covid,48,Coronavirus,48,Coronavirus,Yes,105569 21
+951,105655,21,Covid 19,48,Coronavirus,48,Coronavirus,Yes,105655 21
+952,105701,21,Economic decline due to Brexit,15,Europe,15,europe,Yes,105701 21
+953,105773,21,COVID,48,Coronavirus,48,Coronavirus,Yes,105773 21
+955,105805,21,covid,48,Coronavirus,48,Coronavirus,Yes,105805 21
+959,105894,21,corona virus,48,Coronavirus,48,Coronavirus,Yes,105894 21
+960,105894,22,covid,48,Coronavirus,48,Coronavirus,Yes,105894 22
+962,105986,21,Brexit,15,Europe,15,europe,Yes,105986 21
+964,106259,23,Rising prices for living,32,Living costs,32,living costs,Yes,106259 23
+965,106318,23,Economy,26,Economy-general,26,economy-general,Yes,106318 23
+967,106377,23,Cost of living crisis,32,Living costs,32,living costs,Yes,106377 23
+968,106413,23,Economy,26,Economy-general,26,economy-general,Yes,106413 23
+971,106616,23,The cost of living,32,Living costs,32,living costs,Yes,106616 23
+972,106627,23,Economic,26,Economy-general,26,economy-general,Yes,106627 23
+973,106650,22,Brexit,15,Europe,15,europe,Yes,106650 22
+974,106651,22,CLIMATE CHANGE,40,Environment,40,environment,Yes,106651 22
+975,106766,23,Climate emergency,40,Environment,40,environment,Yes,106766 23
+976,106781,23,Economy,26,Economy-general,26,economy-general,Yes,106781 23
+978,106905,22,Coronavirus,48,Coronavirus,48,Coronavirus,Yes,106905 22
+979,106915,22,Economy,26,Economy-general,26,economy-general,Yes,106915 22
+980,107050,23,Rise in cost of living,32,Living costs,32,living costs,Yes,107050 23
+981,107159,23,Cost of living,32,Living costs,32,living costs,Yes,107159 23
+983,107592,23,Cost of living,32,Living costs,32,living costs,Yes,107592 23
+984,107603,23,Cost of living,32,Living costs,32,living costs,Yes,107603 23
+985,107606,23,Immigration,12,Immigration,12,immigration,Yes,107606 23
+986,107726,23,Cost of living,32,Living costs,32,living costs,Yes,107726 23
+987,107768,23,The cost of living,32,Living costs,32,living costs,Yes,107768 23
+989,107849,23,cost of living going up,32,Living costs,32,living costs,Yes,107849 23
+990,107879,23,The cost of living crisis,32,Living costs,32,living costs,Yes,107879 23
+994,108835,23,Cost of living,32,Living costs,32,living costs,Yes,108835 23
+996,109003,23,Energy prices,32,Living costs,32,living costs,Yes,109003 23
+998,109067,23,Increase in living prices,32,Living costs,32,living costs,Yes,109067 23
+1000,109196,23,"Rising prices in electricity, petrol etc",32,Living costs,32,living costs,Yes,109196 23

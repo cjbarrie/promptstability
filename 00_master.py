@@ -7,11 +7,14 @@ warnings.filterwarnings("ignore", message="Some weights of PegasusForConditional
 
 # Define the paths to the example scripts
 scripts = [
-    # "00a_tweets_rd_example.py",
-    # "00b_tweets_pop_example.py",
-    # "01_news_example.py",
-    # "02a_manifestos_example.py",
-    "02b_manifestos_multi_example.py"
+    "00a_tweets_rd_example.py",
+    "00b_tweets_pop_example.py",
+    "01_news_example.py",
+    "02a_manifestos_example.py",
+    "02b_manifestos_multi_example.py",
+    "03_stance_example.py",
+    "04_mii_example.py",
+    # "05_synth_example.py"
 ]
 
 # Run each script

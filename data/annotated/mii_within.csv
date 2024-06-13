@@ -1,0 +1,2001 @@
+id,text,annotation,iteration,ka_mean,ka_lower,ka_upper
+0,Covid,48.0,0,,,
+1,Immigration,12.0,0,,,
+2,Overpopulation,,0,,,
+3,cost of living energy prices,32.0,0,,,
+4,The cost of living,32.0,0,,,
+5,Economy,26.0,0,,,
+6,Covid 19,48.0,0,,,
+7,Covid,48.0,0,,,
+8,Coronarvius,48.0,0,,,
+9,Covid,48.0,0,,,
+10,Covid,48.0,0,,,
+11,Covid-19,48.0,0,,,
+12,Covid,48.0,0,,,
+13,coved19,48.0,0,,,
+14,Covid,48.0,0,,,
+15,economy,26.0,0,,,
+16,Energy prices,,0,,,
+17,Cost of living.,,0,,,
+18,Covid-19,48.0,0,,,
+19,Climate change,40.0,0,,,
+20,Pandemic,,0,,,
+21,Global warming,,0,,,
+22,Coronavirus,48.0,0,,,
+23,illegal migrants,,0,,,
+24,Coronavirus,48.0,0,,,
+25,Covid-19,48.0,0,,,
+26,Covid 19,48.0,0,,,
+27,Financial situations,,0,,,
+28,Covid,48.0,0,,,
+29,Corona virus pandemic,48.0,0,,,
+30,Covid,48.0,0,,,
+31,Economic recovery,26.0,0,,,
+32,eradicating Covid,48.0,0,,,
+33,consequences of brexit/Russian aggression,15.0,0,,,
+34,covid,48.0,0,,,
+35,Brexit,15.0,0,,,
+36,Cost of living,32.0,0,,,
+37,immigration,12.0,0,,,
+38,Economy,26.0,0,,,
+39,Brexit.,15.0,0,,,
+40,Climate change,,0,,,
+41,Covid,48.0,0,,,
+42,Pandemic,48.0,0,,,
+43,Cost of Living,32.0,0,,,
+44,Covid,48.0,0,,,
+45,Cost of Living,32.0,0,,,
+46,Cost of living crisis,32.0,0,,,
+47,Climate change,,0,,,
+48,Covid,48.0,0,,,
+49,illegal immigration,12.0,0,,,
+50,Environment,40.0,0,,,
+51,Covid,48.0,0,,,
+52,COVID,48.0,0,,,
+53,Covid,48.0,0,,,
+54,Rising energy costs.,32.0,0,,,
+55,Cost of living,32.0,0,,,
+56,Covid,48.0,0,,,
+57,COVID 19,48.0,0,,,
+58,Covid,48.0,0,,,
+59,Covid,48.0,0,,,
+60,Inaction on climate change,40.0,0,,,
+61,Cv19,48.0,0,,,
+62,Economy,26.0,0,,,
+63,the economy,26.0,0,,,
+64,Brexit,15.0,0,,,
+65,omnicrom virus,48.0,0,,,
+66,The economy,26.0,0,,,
+67,Cost of living,32.0,0,,,
+68,Cost of living and paying bills,32.0,0,,,
+69,ECONOMY RISING PRICES,32.0,0,,,
+70,Cost of living crisis,32.0,0,,,
+71,COVID-19,48.0,0,,,
+72,covid,48.0,0,,,
+73,Covid 19,48.0,0,,,
+74,Financial,26.0,0,,,
+75,Cost of living,32.0,0,,,
+76,Climate change,40.0,0,,,
+77,The economy,26.0,0,,,
+78,Covid,48.0,0,,,
+79,Covid,48.0,0,,,
+80,Environmental,40.0,0,,,
+81,Economy,26.0,0,,,
+82,Covid 19,48.0,0,,,
+83,Cost of living,32.0,0,,,
+84,Coronavirus,48.0,0,,,
+85,COVID-19,48.0,0,,,
+86,economic recovery,26.0,0,,,
+87,Economy,26.0,0,,,
+88,Cost of living,32.0,0,,,
+89,Economy,26.0,0,,,
+90,Cost of living,32.0,0,,,
+91,Covid,48.0,0,,,
+92,Cost of living,32.0,0,,,
+93,Covid,48.0,0,,,
+94,Covid,48.0,0,,,
+95,Covid,48.0,0,,,
+96,"Keeping covid at bay,unlocking the country",48.0,0,,,
+97,Covid,48.0,0,,,
+98,immigration,12.0,0,,,
+99,Climate change,,0,,,
+0,Covid,48.0,1,1.0,1.0,1.0
+1,Immigration,12.0,1,1.0,1.0,1.0
+2,Overpopulation,,1,1.0,1.0,1.0
+3,cost of living energy prices,32.0,1,1.0,1.0,1.0
+4,The cost of living,32.0,1,1.0,1.0,1.0
+5,Economy,26.0,1,1.0,1.0,1.0
+6,Covid 19,48.0,1,1.0,1.0,1.0
+7,Covid,48.0,1,1.0,1.0,1.0
+8,Coronarvius,48.0,1,1.0,1.0,1.0
+9,Covid,48.0,1,1.0,1.0,1.0
+10,Covid,48.0,1,1.0,1.0,1.0
+11,Covid-19,48.0,1,1.0,1.0,1.0
+12,Covid,48.0,1,1.0,1.0,1.0
+13,coved19,48.0,1,1.0,1.0,1.0
+14,Covid,48.0,1,1.0,1.0,1.0
+15,economy,26.0,1,1.0,1.0,1.0
+16,Energy prices,32.0,1,1.0,1.0,1.0
+17,Cost of living.,32.0,1,1.0,1.0,1.0
+18,Covid-19,48.0,1,1.0,1.0,1.0
+19,Climate change,,1,1.0,1.0,1.0
+20,Pandemic,48.0,1,1.0,1.0,1.0
+21,Global warming,,1,1.0,1.0,1.0
+22,Coronavirus,48.0,1,1.0,1.0,1.0
+23,illegal migrants,,1,1.0,1.0,1.0
+24,Coronavirus,48.0,1,1.0,1.0,1.0
+25,Covid-19,48.0,1,1.0,1.0,1.0
+26,Covid 19,48.0,1,1.0,1.0,1.0
+27,Financial situations,,1,1.0,1.0,1.0
+28,Covid,48.0,1,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,1,1.0,1.0,1.0
+30,Covid,48.0,1,1.0,1.0,1.0
+31,Economic recovery,26.0,1,1.0,1.0,1.0
+32,eradicating Covid,48.0,1,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,1,1.0,1.0,1.0
+34,covid,48.0,1,1.0,1.0,1.0
+35,Brexit,15.0,1,1.0,1.0,1.0
+36,Cost of living,32.0,1,1.0,1.0,1.0
+37,immigration,12.0,1,1.0,1.0,1.0
+38,Economy,26.0,1,1.0,1.0,1.0
+39,Brexit.,15.0,1,1.0,1.0,1.0
+40,Climate change,,1,1.0,1.0,1.0
+41,Covid,48.0,1,1.0,1.0,1.0
+42,Pandemic,48.0,1,1.0,1.0,1.0
+43,Cost of Living,32.0,1,1.0,1.0,1.0
+44,Covid,48.0,1,1.0,1.0,1.0
+45,Cost of Living,32.0,1,1.0,1.0,1.0
+46,Cost of living crisis,32.0,1,1.0,1.0,1.0
+47,Climate change,,1,1.0,1.0,1.0
+48,Covid,48.0,1,1.0,1.0,1.0
+49,illegal immigration,12.0,1,1.0,1.0,1.0
+50,Environment,40.0,1,1.0,1.0,1.0
+51,Covid,48.0,1,1.0,1.0,1.0
+52,COVID,,1,1.0,1.0,1.0
+53,Covid,48.0,1,1.0,1.0,1.0
+54,Rising energy costs.,32.0,1,1.0,1.0,1.0
+55,Cost of living,32.0,1,1.0,1.0,1.0
+56,Covid,48.0,1,1.0,1.0,1.0
+57,COVID 19,48.0,1,1.0,1.0,1.0
+58,Covid,48.0,1,1.0,1.0,1.0
+59,Covid,48.0,1,1.0,1.0,1.0
+60,Inaction on climate change,40.0,1,1.0,1.0,1.0
+61,Cv19,48.0,1,1.0,1.0,1.0
+62,Economy,26.0,1,1.0,1.0,1.0
+63,the economy,26.0,1,1.0,1.0,1.0
+64,Brexit,15.0,1,1.0,1.0,1.0
+65,omnicrom virus,48.0,1,1.0,1.0,1.0
+66,The economy,26.0,1,1.0,1.0,1.0
+67,Cost of living,32.0,1,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,1,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,1,1.0,1.0,1.0
+70,Cost of living crisis,32.0,1,1.0,1.0,1.0
+71,COVID-19,48.0,1,1.0,1.0,1.0
+72,covid,48.0,1,1.0,1.0,1.0
+73,Covid 19,48.0,1,1.0,1.0,1.0
+74,Financial,,1,1.0,1.0,1.0
+75,Cost of living,32.0,1,1.0,1.0,1.0
+76,Climate change,40.0,1,1.0,1.0,1.0
+77,The economy,26.0,1,1.0,1.0,1.0
+78,Covid,48.0,1,1.0,1.0,1.0
+79,Covid,48.0,1,1.0,1.0,1.0
+80,Environmental,40.0,1,1.0,1.0,1.0
+81,Economy,26.0,1,1.0,1.0,1.0
+82,Covid 19,48.0,1,1.0,1.0,1.0
+83,Cost of living,32.0,1,1.0,1.0,1.0
+84,Coronavirus,48.0,1,1.0,1.0,1.0
+85,COVID-19,48.0,1,1.0,1.0,1.0
+86,economic recovery,,1,1.0,1.0,1.0
+87,Economy,26.0,1,1.0,1.0,1.0
+88,Cost of living,32.0,1,1.0,1.0,1.0
+89,Economy,26.0,1,1.0,1.0,1.0
+90,Cost of living,32.0,1,1.0,1.0,1.0
+91,Covid,48.0,1,1.0,1.0,1.0
+92,Cost of living,32.0,1,1.0,1.0,1.0
+93,Covid,48.0,1,1.0,1.0,1.0
+94,Covid,48.0,1,1.0,1.0,1.0
+95,Covid,48.0,1,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,1,1.0,1.0,1.0
+97,Covid,48.0,1,1.0,1.0,1.0
+98,immigration,12.0,1,1.0,1.0,1.0
+99,Climate change,,1,1.0,1.0,1.0
+0,Covid,48.0,2,1.0,1.0,1.0
+1,Immigration,12.0,2,1.0,1.0,1.0
+2,Overpopulation,,2,1.0,1.0,1.0
+3,cost of living energy prices,32.0,2,1.0,1.0,1.0
+4,The cost of living,32.0,2,1.0,1.0,1.0
+5,Economy,26.0,2,1.0,1.0,1.0
+6,Covid 19,48.0,2,1.0,1.0,1.0
+7,Covid,48.0,2,1.0,1.0,1.0
+8,Coronarvius,48.0,2,1.0,1.0,1.0
+9,Covid,48.0,2,1.0,1.0,1.0
+10,Covid,48.0,2,1.0,1.0,1.0
+11,Covid-19,48.0,2,1.0,1.0,1.0
+12,Covid,48.0,2,1.0,1.0,1.0
+13,coved19,48.0,2,1.0,1.0,1.0
+14,Covid,48.0,2,1.0,1.0,1.0
+15,economy,26.0,2,1.0,1.0,1.0
+16,Energy prices,,2,1.0,1.0,1.0
+17,Cost of living.,32.0,2,1.0,1.0,1.0
+18,Covid-19,48.0,2,1.0,1.0,1.0
+19,Climate change,,2,1.0,1.0,1.0
+20,Pandemic,48.0,2,1.0,1.0,1.0
+21,Global warming,,2,1.0,1.0,1.0
+22,Coronavirus,48.0,2,1.0,1.0,1.0
+23,illegal migrants,,2,1.0,1.0,1.0
+24,Coronavirus,48.0,2,1.0,1.0,1.0
+25,Covid-19,48.0,2,1.0,1.0,1.0
+26,Covid 19,48.0,2,1.0,1.0,1.0
+27,Financial situations,32.0,2,1.0,1.0,1.0
+28,Covid,48.0,2,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,2,1.0,1.0,1.0
+30,Covid,48.0,2,1.0,1.0,1.0
+31,Economic recovery,26.0,2,1.0,1.0,1.0
+32,eradicating Covid,48.0,2,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,2,1.0,1.0,1.0
+34,covid,48.0,2,1.0,1.0,1.0
+35,Brexit,15.0,2,1.0,1.0,1.0
+36,Cost of living,32.0,2,1.0,1.0,1.0
+37,immigration,12.0,2,1.0,1.0,1.0
+38,Economy,26.0,2,1.0,1.0,1.0
+39,Brexit.,15.0,2,1.0,1.0,1.0
+40,Climate change,,2,1.0,1.0,1.0
+41,Covid,48.0,2,1.0,1.0,1.0
+42,Pandemic,48.0,2,1.0,1.0,1.0
+43,Cost of Living,32.0,2,1.0,1.0,1.0
+44,Covid,48.0,2,1.0,1.0,1.0
+45,Cost of Living,32.0,2,1.0,1.0,1.0
+46,Cost of living crisis,32.0,2,1.0,1.0,1.0
+47,Climate change,40.0,2,1.0,1.0,1.0
+48,Covid,48.0,2,1.0,1.0,1.0
+49,illegal immigration,12.0,2,1.0,1.0,1.0
+50,Environment,40.0,2,1.0,1.0,1.0
+51,Covid,48.0,2,1.0,1.0,1.0
+52,COVID,48.0,2,1.0,1.0,1.0
+53,Covid,48.0,2,1.0,1.0,1.0
+54,Rising energy costs.,32.0,2,1.0,1.0,1.0
+55,Cost of living,32.0,2,1.0,1.0,1.0
+56,Covid,48.0,2,1.0,1.0,1.0
+57,COVID 19,48.0,2,1.0,1.0,1.0
+58,Covid,48.0,2,1.0,1.0,1.0
+59,Covid,48.0,2,1.0,1.0,1.0
+60,Inaction on climate change,40.0,2,1.0,1.0,1.0
+61,Cv19,48.0,2,1.0,1.0,1.0
+62,Economy,26.0,2,1.0,1.0,1.0
+63,the economy,26.0,2,1.0,1.0,1.0
+64,Brexit,15.0,2,1.0,1.0,1.0
+65,omnicrom virus,48.0,2,1.0,1.0,1.0
+66,The economy,26.0,2,1.0,1.0,1.0
+67,Cost of living,32.0,2,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,2,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,2,1.0,1.0,1.0
+70,Cost of living crisis,32.0,2,1.0,1.0,1.0
+71,COVID-19,48.0,2,1.0,1.0,1.0
+72,covid,48.0,2,1.0,1.0,1.0
+73,Covid 19,48.0,2,1.0,1.0,1.0
+74,Financial,,2,1.0,1.0,1.0
+75,Cost of living,32.0,2,1.0,1.0,1.0
+76,Climate change,,2,1.0,1.0,1.0
+77,The economy,26.0,2,1.0,1.0,1.0
+78,Covid,48.0,2,1.0,1.0,1.0
+79,Covid,48.0,2,1.0,1.0,1.0
+80,Environmental,40.0,2,1.0,1.0,1.0
+81,Economy,26.0,2,1.0,1.0,1.0
+82,Covid 19,48.0,2,1.0,1.0,1.0
+83,Cost of living,32.0,2,1.0,1.0,1.0
+84,Coronavirus,48.0,2,1.0,1.0,1.0
+85,COVID-19,48.0,2,1.0,1.0,1.0
+86,economic recovery,26.0,2,1.0,1.0,1.0
+87,Economy,26.0,2,1.0,1.0,1.0
+88,Cost of living,32.0,2,1.0,1.0,1.0
+89,Economy,26.0,2,1.0,1.0,1.0
+90,Cost of living,32.0,2,1.0,1.0,1.0
+91,Covid,48.0,2,1.0,1.0,1.0
+92,Cost of living,32.0,2,1.0,1.0,1.0
+93,Covid,48.0,2,1.0,1.0,1.0
+94,Covid,48.0,2,1.0,1.0,1.0
+95,Covid,48.0,2,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,2,1.0,1.0,1.0
+97,Covid,48.0,2,1.0,1.0,1.0
+98,immigration,12.0,2,1.0,1.0,1.0
+99,Climate change,,2,1.0,1.0,1.0
+0,Covid,48.0,3,1.0,1.0,1.0
+1,Immigration,12.0,3,1.0,1.0,1.0
+2,Overpopulation,,3,1.0,1.0,1.0
+3,cost of living energy prices,32.0,3,1.0,1.0,1.0
+4,The cost of living,32.0,3,1.0,1.0,1.0
+5,Economy,26.0,3,1.0,1.0,1.0
+6,Covid 19,48.0,3,1.0,1.0,1.0
+7,Covid,48.0,3,1.0,1.0,1.0
+8,Coronarvius,48.0,3,1.0,1.0,1.0
+9,Covid,48.0,3,1.0,1.0,1.0
+10,Covid,48.0,3,1.0,1.0,1.0
+11,Covid-19,48.0,3,1.0,1.0,1.0
+12,Covid,48.0,3,1.0,1.0,1.0
+13,coved19,48.0,3,1.0,1.0,1.0
+14,Covid,48.0,3,1.0,1.0,1.0
+15,economy,26.0,3,1.0,1.0,1.0
+16,Energy prices,32.0,3,1.0,1.0,1.0
+17,Cost of living.,32.0,3,1.0,1.0,1.0
+18,Covid-19,48.0,3,1.0,1.0,1.0
+19,Climate change,,3,1.0,1.0,1.0
+20,Pandemic,48.0,3,1.0,1.0,1.0
+21,Global warming,40.0,3,1.0,1.0,1.0
+22,Coronavirus,48.0,3,1.0,1.0,1.0
+23,illegal migrants,,3,1.0,1.0,1.0
+24,Coronavirus,48.0,3,1.0,1.0,1.0
+25,Covid-19,48.0,3,1.0,1.0,1.0
+26,Covid 19,48.0,3,1.0,1.0,1.0
+27,Financial situations,,3,1.0,1.0,1.0
+28,Covid,48.0,3,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,3,1.0,1.0,1.0
+30,Covid,48.0,3,1.0,1.0,1.0
+31,Economic recovery,26.0,3,1.0,1.0,1.0
+32,eradicating Covid,48.0,3,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,3,1.0,1.0,1.0
+34,covid,48.0,3,1.0,1.0,1.0
+35,Brexit,15.0,3,1.0,1.0,1.0
+36,Cost of living,32.0,3,1.0,1.0,1.0
+37,immigration,12.0,3,1.0,1.0,1.0
+38,Economy,26.0,3,1.0,1.0,1.0
+39,Brexit.,15.0,3,1.0,1.0,1.0
+40,Climate change,,3,1.0,1.0,1.0
+41,Covid,48.0,3,1.0,1.0,1.0
+42,Pandemic,48.0,3,1.0,1.0,1.0
+43,Cost of Living,32.0,3,1.0,1.0,1.0
+44,Covid,48.0,3,1.0,1.0,1.0
+45,Cost of Living,32.0,3,1.0,1.0,1.0
+46,Cost of living crisis,32.0,3,1.0,1.0,1.0
+47,Climate change,,3,1.0,1.0,1.0
+48,Covid,48.0,3,1.0,1.0,1.0
+49,illegal immigration,,3,1.0,1.0,1.0
+50,Environment,40.0,3,1.0,1.0,1.0
+51,Covid,48.0,3,1.0,1.0,1.0
+52,COVID,48.0,3,1.0,1.0,1.0
+53,Covid,48.0,3,1.0,1.0,1.0
+54,Rising energy costs.,32.0,3,1.0,1.0,1.0
+55,Cost of living,32.0,3,1.0,1.0,1.0
+56,Covid,48.0,3,1.0,1.0,1.0
+57,COVID 19,48.0,3,1.0,1.0,1.0
+58,Covid,48.0,3,1.0,1.0,1.0
+59,Covid,48.0,3,1.0,1.0,1.0
+60,Inaction on climate change,40.0,3,1.0,1.0,1.0
+61,Cv19,48.0,3,1.0,1.0,1.0
+62,Economy,26.0,3,1.0,1.0,1.0
+63,the economy,26.0,3,1.0,1.0,1.0
+64,Brexit,15.0,3,1.0,1.0,1.0
+65,omnicrom virus,48.0,3,1.0,1.0,1.0
+66,The economy,26.0,3,1.0,1.0,1.0
+67,Cost of living,32.0,3,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,3,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,3,1.0,1.0,1.0
+70,Cost of living crisis,32.0,3,1.0,1.0,1.0
+71,COVID-19,48.0,3,1.0,1.0,1.0
+72,covid,48.0,3,1.0,1.0,1.0
+73,Covid 19,48.0,3,1.0,1.0,1.0
+74,Financial,26.0,3,1.0,1.0,1.0
+75,Cost of living,32.0,3,1.0,1.0,1.0
+76,Climate change,,3,1.0,1.0,1.0
+77,The economy,26.0,3,1.0,1.0,1.0
+78,Covid,48.0,3,1.0,1.0,1.0
+79,Covid,48.0,3,1.0,1.0,1.0
+80,Environmental,40.0,3,1.0,1.0,1.0
+81,Economy,26.0,3,1.0,1.0,1.0
+82,Covid 19,48.0,3,1.0,1.0,1.0
+83,Cost of living,32.0,3,1.0,1.0,1.0
+84,Coronavirus,48.0,3,1.0,1.0,1.0
+85,COVID-19,48.0,3,1.0,1.0,1.0
+86,economic recovery,,3,1.0,1.0,1.0
+87,Economy,26.0,3,1.0,1.0,1.0
+88,Cost of living,32.0,3,1.0,1.0,1.0
+89,Economy,26.0,3,1.0,1.0,1.0
+90,Cost of living,32.0,3,1.0,1.0,1.0
+91,Covid,48.0,3,1.0,1.0,1.0
+92,Cost of living,32.0,3,1.0,1.0,1.0
+93,Covid,48.0,3,1.0,1.0,1.0
+94,Covid,48.0,3,1.0,1.0,1.0
+95,Covid,48.0,3,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,3,1.0,1.0,1.0
+97,Covid,48.0,3,1.0,1.0,1.0
+98,immigration,12.0,3,1.0,1.0,1.0
+99,Climate change,,3,1.0,1.0,1.0
+0,Covid,48.0,4,1.0,1.0,1.0
+1,Immigration,12.0,4,1.0,1.0,1.0
+2,Overpopulation,,4,1.0,1.0,1.0
+3,cost of living energy prices,32.0,4,1.0,1.0,1.0
+4,The cost of living,32.0,4,1.0,1.0,1.0
+5,Economy,26.0,4,1.0,1.0,1.0
+6,Covid 19,48.0,4,1.0,1.0,1.0
+7,Covid,48.0,4,1.0,1.0,1.0
+8,Coronarvius,48.0,4,1.0,1.0,1.0
+9,Covid,48.0,4,1.0,1.0,1.0
+10,Covid,48.0,4,1.0,1.0,1.0
+11,Covid-19,48.0,4,1.0,1.0,1.0
+12,Covid,48.0,4,1.0,1.0,1.0
+13,coved19,48.0,4,1.0,1.0,1.0
+14,Covid,48.0,4,1.0,1.0,1.0
+15,economy,26.0,4,1.0,1.0,1.0
+16,Energy prices,,4,1.0,1.0,1.0
+17,Cost of living.,32.0,4,1.0,1.0,1.0
+18,Covid-19,48.0,4,1.0,1.0,1.0
+19,Climate change,,4,1.0,1.0,1.0
+20,Pandemic,,4,1.0,1.0,1.0
+21,Global warming,40.0,4,1.0,1.0,1.0
+22,Coronavirus,48.0,4,1.0,1.0,1.0
+23,illegal migrants,,4,1.0,1.0,1.0
+24,Coronavirus,48.0,4,1.0,1.0,1.0
+25,Covid-19,48.0,4,1.0,1.0,1.0
+26,Covid 19,48.0,4,1.0,1.0,1.0
+27,Financial situations,32.0,4,1.0,1.0,1.0
+28,Covid,48.0,4,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,4,1.0,1.0,1.0
+30,Covid,48.0,4,1.0,1.0,1.0
+31,Economic recovery,26.0,4,1.0,1.0,1.0
+32,eradicating Covid,48.0,4,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,4,1.0,1.0,1.0
+34,covid,48.0,4,1.0,1.0,1.0
+35,Brexit,15.0,4,1.0,1.0,1.0
+36,Cost of living,32.0,4,1.0,1.0,1.0
+37,immigration,12.0,4,1.0,1.0,1.0
+38,Economy,26.0,4,1.0,1.0,1.0
+39,Brexit.,15.0,4,1.0,1.0,1.0
+40,Climate change,40.0,4,1.0,1.0,1.0
+41,Covid,48.0,4,1.0,1.0,1.0
+42,Pandemic,48.0,4,1.0,1.0,1.0
+43,Cost of Living,32.0,4,1.0,1.0,1.0
+44,Covid,48.0,4,1.0,1.0,1.0
+45,Cost of Living,32.0,4,1.0,1.0,1.0
+46,Cost of living crisis,32.0,4,1.0,1.0,1.0
+47,Climate change,,4,1.0,1.0,1.0
+48,Covid,48.0,4,1.0,1.0,1.0
+49,illegal immigration,12.0,4,1.0,1.0,1.0
+50,Environment,40.0,4,1.0,1.0,1.0
+51,Covid,48.0,4,1.0,1.0,1.0
+52,COVID,48.0,4,1.0,1.0,1.0
+53,Covid,48.0,4,1.0,1.0,1.0
+54,Rising energy costs.,32.0,4,1.0,1.0,1.0
+55,Cost of living,32.0,4,1.0,1.0,1.0
+56,Covid,48.0,4,1.0,1.0,1.0
+57,COVID 19,48.0,4,1.0,1.0,1.0
+58,Covid,48.0,4,1.0,1.0,1.0
+59,Covid,48.0,4,1.0,1.0,1.0
+60,Inaction on climate change,40.0,4,1.0,1.0,1.0
+61,Cv19,48.0,4,1.0,1.0,1.0
+62,Economy,26.0,4,1.0,1.0,1.0
+63,the economy,26.0,4,1.0,1.0,1.0
+64,Brexit,15.0,4,1.0,1.0,1.0
+65,omnicrom virus,48.0,4,1.0,1.0,1.0
+66,The economy,26.0,4,1.0,1.0,1.0
+67,Cost of living,32.0,4,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,4,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,4,1.0,1.0,1.0
+70,Cost of living crisis,32.0,4,1.0,1.0,1.0
+71,COVID-19,48.0,4,1.0,1.0,1.0
+72,covid,48.0,4,1.0,1.0,1.0
+73,Covid 19,48.0,4,1.0,1.0,1.0
+74,Financial,,4,1.0,1.0,1.0
+75,Cost of living,32.0,4,1.0,1.0,1.0
+76,Climate change,,4,1.0,1.0,1.0
+77,The economy,26.0,4,1.0,1.0,1.0
+78,Covid,48.0,4,1.0,1.0,1.0
+79,Covid,48.0,4,1.0,1.0,1.0
+80,Environmental,40.0,4,1.0,1.0,1.0
+81,Economy,26.0,4,1.0,1.0,1.0
+82,Covid 19,48.0,4,1.0,1.0,1.0
+83,Cost of living,32.0,4,1.0,1.0,1.0
+84,Coronavirus,48.0,4,1.0,1.0,1.0
+85,COVID-19,48.0,4,1.0,1.0,1.0
+86,economic recovery,26.0,4,1.0,1.0,1.0
+87,Economy,26.0,4,1.0,1.0,1.0
+88,Cost of living,32.0,4,1.0,1.0,1.0
+89,Economy,26.0,4,1.0,1.0,1.0
+90,Cost of living,32.0,4,1.0,1.0,1.0
+91,Covid,48.0,4,1.0,1.0,1.0
+92,Cost of living,32.0,4,1.0,1.0,1.0
+93,Covid,48.0,4,1.0,1.0,1.0
+94,Covid,48.0,4,1.0,1.0,1.0
+95,Covid,48.0,4,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,4,1.0,1.0,1.0
+97,Covid,48.0,4,1.0,1.0,1.0
+98,immigration,12.0,4,1.0,1.0,1.0
+99,Climate change,,4,1.0,1.0,1.0
+0,Covid,48.0,5,1.0,1.0,1.0
+1,Immigration,12.0,5,1.0,1.0,1.0
+2,Overpopulation,,5,1.0,1.0,1.0
+3,cost of living energy prices,32.0,5,1.0,1.0,1.0
+4,The cost of living,32.0,5,1.0,1.0,1.0
+5,Economy,26.0,5,1.0,1.0,1.0
+6,Covid 19,48.0,5,1.0,1.0,1.0
+7,Covid,48.0,5,1.0,1.0,1.0
+8,Coronarvius,48.0,5,1.0,1.0,1.0
+9,Covid,48.0,5,1.0,1.0,1.0
+10,Covid,48.0,5,1.0,1.0,1.0
+11,Covid-19,48.0,5,1.0,1.0,1.0
+12,Covid,48.0,5,1.0,1.0,1.0
+13,coved19,48.0,5,1.0,1.0,1.0
+14,Covid,48.0,5,1.0,1.0,1.0
+15,economy,26.0,5,1.0,1.0,1.0
+16,Energy prices,,5,1.0,1.0,1.0
+17,Cost of living.,32.0,5,1.0,1.0,1.0
+18,Covid-19,48.0,5,1.0,1.0,1.0
+19,Climate change,,5,1.0,1.0,1.0
+20,Pandemic,48.0,5,1.0,1.0,1.0
+21,Global warming,,5,1.0,1.0,1.0
+22,Coronavirus,48.0,5,1.0,1.0,1.0
+23,illegal migrants,,5,1.0,1.0,1.0
+24,Coronavirus,48.0,5,1.0,1.0,1.0
+25,Covid-19,48.0,5,1.0,1.0,1.0
+26,Covid 19,48.0,5,1.0,1.0,1.0
+27,Financial situations,,5,1.0,1.0,1.0
+28,Covid,48.0,5,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,5,1.0,1.0,1.0
+30,Covid,48.0,5,1.0,1.0,1.0
+31,Economic recovery,26.0,5,1.0,1.0,1.0
+32,eradicating Covid,48.0,5,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,5,1.0,1.0,1.0
+34,covid,48.0,5,1.0,1.0,1.0
+35,Brexit,15.0,5,1.0,1.0,1.0
+36,Cost of living,32.0,5,1.0,1.0,1.0
+37,immigration,12.0,5,1.0,1.0,1.0
+38,Economy,26.0,5,1.0,1.0,1.0
+39,Brexit.,15.0,5,1.0,1.0,1.0
+40,Climate change,,5,1.0,1.0,1.0
+41,Covid,48.0,5,1.0,1.0,1.0
+42,Pandemic,48.0,5,1.0,1.0,1.0
+43,Cost of Living,32.0,5,1.0,1.0,1.0
+44,Covid,48.0,5,1.0,1.0,1.0
+45,Cost of Living,32.0,5,1.0,1.0,1.0
+46,Cost of living crisis,32.0,5,1.0,1.0,1.0
+47,Climate change,,5,1.0,1.0,1.0
+48,Covid,48.0,5,1.0,1.0,1.0
+49,illegal immigration,12.0,5,1.0,1.0,1.0
+50,Environment,40.0,5,1.0,1.0,1.0
+51,Covid,48.0,5,1.0,1.0,1.0
+52,COVID,48.0,5,1.0,1.0,1.0
+53,Covid,48.0,5,1.0,1.0,1.0
+54,Rising energy costs.,32.0,5,1.0,1.0,1.0
+55,Cost of living,32.0,5,1.0,1.0,1.0
+56,Covid,48.0,5,1.0,1.0,1.0
+57,COVID 19,48.0,5,1.0,1.0,1.0
+58,Covid,48.0,5,1.0,1.0,1.0
+59,Covid,48.0,5,1.0,1.0,1.0
+60,Inaction on climate change,40.0,5,1.0,1.0,1.0
+61,Cv19,48.0,5,1.0,1.0,1.0
+62,Economy,26.0,5,1.0,1.0,1.0
+63,the economy,26.0,5,1.0,1.0,1.0
+64,Brexit,15.0,5,1.0,1.0,1.0
+65,omnicrom virus,,5,1.0,1.0,1.0
+66,The economy,26.0,5,1.0,1.0,1.0
+67,Cost of living,32.0,5,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,5,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,5,1.0,1.0,1.0
+70,Cost of living crisis,32.0,5,1.0,1.0,1.0
+71,COVID-19,48.0,5,1.0,1.0,1.0
+72,covid,48.0,5,1.0,1.0,1.0
+73,Covid 19,48.0,5,1.0,1.0,1.0
+74,Financial,26.0,5,1.0,1.0,1.0
+75,Cost of living,32.0,5,1.0,1.0,1.0
+76,Climate change,,5,1.0,1.0,1.0
+77,The economy,26.0,5,1.0,1.0,1.0
+78,Covid,48.0,5,1.0,1.0,1.0
+79,Covid,48.0,5,1.0,1.0,1.0
+80,Environmental,40.0,5,1.0,1.0,1.0
+81,Economy,26.0,5,1.0,1.0,1.0
+82,Covid 19,48.0,5,1.0,1.0,1.0
+83,Cost of living,32.0,5,1.0,1.0,1.0
+84,Coronavirus,48.0,5,1.0,1.0,1.0
+85,COVID-19,48.0,5,1.0,1.0,1.0
+86,economic recovery,,5,1.0,1.0,1.0
+87,Economy,26.0,5,1.0,1.0,1.0
+88,Cost of living,32.0,5,1.0,1.0,1.0
+89,Economy,26.0,5,1.0,1.0,1.0
+90,Cost of living,32.0,5,1.0,1.0,1.0
+91,Covid,48.0,5,1.0,1.0,1.0
+92,Cost of living,32.0,5,1.0,1.0,1.0
+93,Covid,48.0,5,1.0,1.0,1.0
+94,Covid,48.0,5,1.0,1.0,1.0
+95,Covid,48.0,5,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,5,1.0,1.0,1.0
+97,Covid,48.0,5,1.0,1.0,1.0
+98,immigration,12.0,5,1.0,1.0,1.0
+99,Climate change,,5,1.0,1.0,1.0
+0,Covid,48.0,6,1.0,1.0,1.0
+1,Immigration,12.0,6,1.0,1.0,1.0
+2,Overpopulation,,6,1.0,1.0,1.0
+3,cost of living energy prices,32.0,6,1.0,1.0,1.0
+4,The cost of living,32.0,6,1.0,1.0,1.0
+5,Economy,26.0,6,1.0,1.0,1.0
+6,Covid 19,48.0,6,1.0,1.0,1.0
+7,Covid,48.0,6,1.0,1.0,1.0
+8,Coronarvius,48.0,6,1.0,1.0,1.0
+9,Covid,48.0,6,1.0,1.0,1.0
+10,Covid,48.0,6,1.0,1.0,1.0
+11,Covid-19,48.0,6,1.0,1.0,1.0
+12,Covid,48.0,6,1.0,1.0,1.0
+13,coved19,48.0,6,1.0,1.0,1.0
+14,Covid,48.0,6,1.0,1.0,1.0
+15,economy,26.0,6,1.0,1.0,1.0
+16,Energy prices,32.0,6,1.0,1.0,1.0
+17,Cost of living.,32.0,6,1.0,1.0,1.0
+18,Covid-19,48.0,6,1.0,1.0,1.0
+19,Climate change,,6,1.0,1.0,1.0
+20,Pandemic,,6,1.0,1.0,1.0
+21,Global warming,,6,1.0,1.0,1.0
+22,Coronavirus,48.0,6,1.0,1.0,1.0
+23,illegal migrants,,6,1.0,1.0,1.0
+24,Coronavirus,48.0,6,1.0,1.0,1.0
+25,Covid-19,48.0,6,1.0,1.0,1.0
+26,Covid 19,48.0,6,1.0,1.0,1.0
+27,Financial situations,,6,1.0,1.0,1.0
+28,Covid,48.0,6,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,6,1.0,1.0,1.0
+30,Covid,48.0,6,1.0,1.0,1.0
+31,Economic recovery,26.0,6,1.0,1.0,1.0
+32,eradicating Covid,48.0,6,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,6,1.0,1.0,1.0
+34,covid,48.0,6,1.0,1.0,1.0
+35,Brexit,15.0,6,1.0,1.0,1.0
+36,Cost of living,32.0,6,1.0,1.0,1.0
+37,immigration,12.0,6,1.0,1.0,1.0
+38,Economy,26.0,6,1.0,1.0,1.0
+39,Brexit.,15.0,6,1.0,1.0,1.0
+40,Climate change,,6,1.0,1.0,1.0
+41,Covid,48.0,6,1.0,1.0,1.0
+42,Pandemic,48.0,6,1.0,1.0,1.0
+43,Cost of Living,32.0,6,1.0,1.0,1.0
+44,Covid,48.0,6,1.0,1.0,1.0
+45,Cost of Living,32.0,6,1.0,1.0,1.0
+46,Cost of living crisis,32.0,6,1.0,1.0,1.0
+47,Climate change,,6,1.0,1.0,1.0
+48,Covid,48.0,6,1.0,1.0,1.0
+49,illegal immigration,,6,1.0,1.0,1.0
+50,Environment,40.0,6,1.0,1.0,1.0
+51,Covid,48.0,6,1.0,1.0,1.0
+52,COVID,48.0,6,1.0,1.0,1.0
+53,Covid,48.0,6,1.0,1.0,1.0
+54,Rising energy costs.,,6,1.0,1.0,1.0
+55,Cost of living,32.0,6,1.0,1.0,1.0
+56,Covid,48.0,6,1.0,1.0,1.0
+57,COVID 19,48.0,6,1.0,1.0,1.0
+58,Covid,48.0,6,1.0,1.0,1.0
+59,Covid,48.0,6,1.0,1.0,1.0
+60,Inaction on climate change,40.0,6,1.0,1.0,1.0
+61,Cv19,48.0,6,1.0,1.0,1.0
+62,Economy,26.0,6,1.0,1.0,1.0
+63,the economy,26.0,6,1.0,1.0,1.0
+64,Brexit,15.0,6,1.0,1.0,1.0
+65,omnicrom virus,48.0,6,1.0,1.0,1.0
+66,The economy,26.0,6,1.0,1.0,1.0
+67,Cost of living,32.0,6,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,6,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,6,1.0,1.0,1.0
+70,Cost of living crisis,32.0,6,1.0,1.0,1.0
+71,COVID-19,48.0,6,1.0,1.0,1.0
+72,covid,48.0,6,1.0,1.0,1.0
+73,Covid 19,48.0,6,1.0,1.0,1.0
+74,Financial,26.0,6,1.0,1.0,1.0
+75,Cost of living,32.0,6,1.0,1.0,1.0
+76,Climate change,40.0,6,1.0,1.0,1.0
+77,The economy,26.0,6,1.0,1.0,1.0
+78,Covid,48.0,6,1.0,1.0,1.0
+79,Covid,48.0,6,1.0,1.0,1.0
+80,Environmental,40.0,6,1.0,1.0,1.0
+81,Economy,26.0,6,1.0,1.0,1.0
+82,Covid 19,48.0,6,1.0,1.0,1.0
+83,Cost of living,32.0,6,1.0,1.0,1.0
+84,Coronavirus,48.0,6,1.0,1.0,1.0
+85,COVID-19,48.0,6,1.0,1.0,1.0
+86,economic recovery,26.0,6,1.0,1.0,1.0
+87,Economy,26.0,6,1.0,1.0,1.0
+88,Cost of living,32.0,6,1.0,1.0,1.0
+89,Economy,26.0,6,1.0,1.0,1.0
+90,Cost of living,32.0,6,1.0,1.0,1.0
+91,Covid,48.0,6,1.0,1.0,1.0
+92,Cost of living,32.0,6,1.0,1.0,1.0
+93,Covid,48.0,6,1.0,1.0,1.0
+94,Covid,48.0,6,1.0,1.0,1.0
+95,Covid,48.0,6,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",,6,1.0,1.0,1.0
+97,Covid,48.0,6,1.0,1.0,1.0
+98,immigration,12.0,6,1.0,1.0,1.0
+99,Climate change,,6,1.0,1.0,1.0
+0,Covid,48.0,7,1.0,1.0,1.0
+1,Immigration,12.0,7,1.0,1.0,1.0
+2,Overpopulation,,7,1.0,1.0,1.0
+3,cost of living energy prices,32.0,7,1.0,1.0,1.0
+4,The cost of living,32.0,7,1.0,1.0,1.0
+5,Economy,26.0,7,1.0,1.0,1.0
+6,Covid 19,48.0,7,1.0,1.0,1.0
+7,Covid,48.0,7,1.0,1.0,1.0
+8,Coronarvius,48.0,7,1.0,1.0,1.0
+9,Covid,48.0,7,1.0,1.0,1.0
+10,Covid,48.0,7,1.0,1.0,1.0
+11,Covid-19,48.0,7,1.0,1.0,1.0
+12,Covid,48.0,7,1.0,1.0,1.0
+13,coved19,48.0,7,1.0,1.0,1.0
+14,Covid,48.0,7,1.0,1.0,1.0
+15,economy,26.0,7,1.0,1.0,1.0
+16,Energy prices,32.0,7,1.0,1.0,1.0
+17,Cost of living.,32.0,7,1.0,1.0,1.0
+18,Covid-19,48.0,7,1.0,1.0,1.0
+19,Climate change,,7,1.0,1.0,1.0
+20,Pandemic,48.0,7,1.0,1.0,1.0
+21,Global warming,,7,1.0,1.0,1.0
+22,Coronavirus,48.0,7,1.0,1.0,1.0
+23,illegal migrants,12.0,7,1.0,1.0,1.0
+24,Coronavirus,48.0,7,1.0,1.0,1.0
+25,Covid-19,48.0,7,1.0,1.0,1.0
+26,Covid 19,48.0,7,1.0,1.0,1.0
+27,Financial situations,,7,1.0,1.0,1.0
+28,Covid,48.0,7,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,7,1.0,1.0,1.0
+30,Covid,48.0,7,1.0,1.0,1.0
+31,Economic recovery,26.0,7,1.0,1.0,1.0
+32,eradicating Covid,48.0,7,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,7,1.0,1.0,1.0
+34,covid,48.0,7,1.0,1.0,1.0
+35,Brexit,15.0,7,1.0,1.0,1.0
+36,Cost of living,32.0,7,1.0,1.0,1.0
+37,immigration,12.0,7,1.0,1.0,1.0
+38,Economy,26.0,7,1.0,1.0,1.0
+39,Brexit.,15.0,7,1.0,1.0,1.0
+40,Climate change,,7,1.0,1.0,1.0
+41,Covid,48.0,7,1.0,1.0,1.0
+42,Pandemic,48.0,7,1.0,1.0,1.0
+43,Cost of Living,32.0,7,1.0,1.0,1.0
+44,Covid,48.0,7,1.0,1.0,1.0
+45,Cost of Living,32.0,7,1.0,1.0,1.0
+46,Cost of living crisis,32.0,7,1.0,1.0,1.0
+47,Climate change,40.0,7,1.0,1.0,1.0
+48,Covid,48.0,7,1.0,1.0,1.0
+49,illegal immigration,12.0,7,1.0,1.0,1.0
+50,Environment,40.0,7,1.0,1.0,1.0
+51,Covid,48.0,7,1.0,1.0,1.0
+52,COVID,48.0,7,1.0,1.0,1.0
+53,Covid,48.0,7,1.0,1.0,1.0
+54,Rising energy costs.,32.0,7,1.0,1.0,1.0
+55,Cost of living,32.0,7,1.0,1.0,1.0
+56,Covid,48.0,7,1.0,1.0,1.0
+57,COVID 19,48.0,7,1.0,1.0,1.0
+58,Covid,48.0,7,1.0,1.0,1.0
+59,Covid,48.0,7,1.0,1.0,1.0
+60,Inaction on climate change,,7,1.0,1.0,1.0
+61,Cv19,48.0,7,1.0,1.0,1.0
+62,Economy,26.0,7,1.0,1.0,1.0
+63,the economy,26.0,7,1.0,1.0,1.0
+64,Brexit,15.0,7,1.0,1.0,1.0
+65,omnicrom virus,48.0,7,1.0,1.0,1.0
+66,The economy,26.0,7,1.0,1.0,1.0
+67,Cost of living,32.0,7,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,7,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,7,1.0,1.0,1.0
+70,Cost of living crisis,,7,1.0,1.0,1.0
+71,COVID-19,48.0,7,1.0,1.0,1.0
+72,covid,48.0,7,1.0,1.0,1.0
+73,Covid 19,48.0,7,1.0,1.0,1.0
+74,Financial,,7,1.0,1.0,1.0
+75,Cost of living,32.0,7,1.0,1.0,1.0
+76,Climate change,,7,1.0,1.0,1.0
+77,The economy,26.0,7,1.0,1.0,1.0
+78,Covid,48.0,7,1.0,1.0,1.0
+79,Covid,48.0,7,1.0,1.0,1.0
+80,Environmental,40.0,7,1.0,1.0,1.0
+81,Economy,26.0,7,1.0,1.0,1.0
+82,Covid 19,48.0,7,1.0,1.0,1.0
+83,Cost of living,32.0,7,1.0,1.0,1.0
+84,Coronavirus,48.0,7,1.0,1.0,1.0
+85,COVID-19,48.0,7,1.0,1.0,1.0
+86,economic recovery,26.0,7,1.0,1.0,1.0
+87,Economy,26.0,7,1.0,1.0,1.0
+88,Cost of living,32.0,7,1.0,1.0,1.0
+89,Economy,26.0,7,1.0,1.0,1.0
+90,Cost of living,32.0,7,1.0,1.0,1.0
+91,Covid,48.0,7,1.0,1.0,1.0
+92,Cost of living,32.0,7,1.0,1.0,1.0
+93,Covid,48.0,7,1.0,1.0,1.0
+94,Covid,48.0,7,1.0,1.0,1.0
+95,Covid,48.0,7,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,7,1.0,1.0,1.0
+97,Covid,48.0,7,1.0,1.0,1.0
+98,immigration,12.0,7,1.0,1.0,1.0
+99,Climate change,,7,1.0,1.0,1.0
+0,Covid,48.0,8,1.0,1.0,1.0
+1,Immigration,12.0,8,1.0,1.0,1.0
+2,Overpopulation,,8,1.0,1.0,1.0
+3,cost of living energy prices,32.0,8,1.0,1.0,1.0
+4,The cost of living,32.0,8,1.0,1.0,1.0
+5,Economy,26.0,8,1.0,1.0,1.0
+6,Covid 19,48.0,8,1.0,1.0,1.0
+7,Covid,48.0,8,1.0,1.0,1.0
+8,Coronarvius,48.0,8,1.0,1.0,1.0
+9,Covid,48.0,8,1.0,1.0,1.0
+10,Covid,48.0,8,1.0,1.0,1.0
+11,Covid-19,48.0,8,1.0,1.0,1.0
+12,Covid,48.0,8,1.0,1.0,1.0
+13,coved19,48.0,8,1.0,1.0,1.0
+14,Covid,48.0,8,1.0,1.0,1.0
+15,economy,26.0,8,1.0,1.0,1.0
+16,Energy prices,,8,1.0,1.0,1.0
+17,Cost of living.,32.0,8,1.0,1.0,1.0
+18,Covid-19,48.0,8,1.0,1.0,1.0
+19,Climate change,,8,1.0,1.0,1.0
+20,Pandemic,,8,1.0,1.0,1.0
+21,Global warming,,8,1.0,1.0,1.0
+22,Coronavirus,48.0,8,1.0,1.0,1.0
+23,illegal migrants,,8,1.0,1.0,1.0
+24,Coronavirus,48.0,8,1.0,1.0,1.0
+25,Covid-19,48.0,8,1.0,1.0,1.0
+26,Covid 19,48.0,8,1.0,1.0,1.0
+27,Financial situations,,8,1.0,1.0,1.0
+28,Covid,48.0,8,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,8,1.0,1.0,1.0
+30,Covid,48.0,8,1.0,1.0,1.0
+31,Economic recovery,26.0,8,1.0,1.0,1.0
+32,eradicating Covid,48.0,8,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,8,1.0,1.0,1.0
+34,covid,48.0,8,1.0,1.0,1.0
+35,Brexit,15.0,8,1.0,1.0,1.0
+36,Cost of living,32.0,8,1.0,1.0,1.0
+37,immigration,12.0,8,1.0,1.0,1.0
+38,Economy,26.0,8,1.0,1.0,1.0
+39,Brexit.,15.0,8,1.0,1.0,1.0
+40,Climate change,,8,1.0,1.0,1.0
+41,Covid,48.0,8,1.0,1.0,1.0
+42,Pandemic,,8,1.0,1.0,1.0
+43,Cost of Living,32.0,8,1.0,1.0,1.0
+44,Covid,48.0,8,1.0,1.0,1.0
+45,Cost of Living,32.0,8,1.0,1.0,1.0
+46,Cost of living crisis,32.0,8,1.0,1.0,1.0
+47,Climate change,,8,1.0,1.0,1.0
+48,Covid,48.0,8,1.0,1.0,1.0
+49,illegal immigration,12.0,8,1.0,1.0,1.0
+50,Environment,40.0,8,1.0,1.0,1.0
+51,Covid,48.0,8,1.0,1.0,1.0
+52,COVID,48.0,8,1.0,1.0,1.0
+53,Covid,48.0,8,1.0,1.0,1.0
+54,Rising energy costs.,32.0,8,1.0,1.0,1.0
+55,Cost of living,32.0,8,1.0,1.0,1.0
+56,Covid,48.0,8,1.0,1.0,1.0
+57,COVID 19,48.0,8,1.0,1.0,1.0
+58,Covid,48.0,8,1.0,1.0,1.0
+59,Covid,48.0,8,1.0,1.0,1.0
+60,Inaction on climate change,40.0,8,1.0,1.0,1.0
+61,Cv19,48.0,8,1.0,1.0,1.0
+62,Economy,26.0,8,1.0,1.0,1.0
+63,the economy,26.0,8,1.0,1.0,1.0
+64,Brexit,15.0,8,1.0,1.0,1.0
+65,omnicrom virus,48.0,8,1.0,1.0,1.0
+66,The economy,26.0,8,1.0,1.0,1.0
+67,Cost of living,32.0,8,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,8,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,8,1.0,1.0,1.0
+70,Cost of living crisis,32.0,8,1.0,1.0,1.0
+71,COVID-19,48.0,8,1.0,1.0,1.0
+72,covid,48.0,8,1.0,1.0,1.0
+73,Covid 19,48.0,8,1.0,1.0,1.0
+74,Financial,,8,1.0,1.0,1.0
+75,Cost of living,32.0,8,1.0,1.0,1.0
+76,Climate change,,8,1.0,1.0,1.0
+77,The economy,26.0,8,1.0,1.0,1.0
+78,Covid,48.0,8,1.0,1.0,1.0
+79,Covid,48.0,8,1.0,1.0,1.0
+80,Environmental,40.0,8,1.0,1.0,1.0
+81,Economy,26.0,8,1.0,1.0,1.0
+82,Covid 19,48.0,8,1.0,1.0,1.0
+83,Cost of living,32.0,8,1.0,1.0,1.0
+84,Coronavirus,48.0,8,1.0,1.0,1.0
+85,COVID-19,48.0,8,1.0,1.0,1.0
+86,economic recovery,26.0,8,1.0,1.0,1.0
+87,Economy,26.0,8,1.0,1.0,1.0
+88,Cost of living,32.0,8,1.0,1.0,1.0
+89,Economy,26.0,8,1.0,1.0,1.0
+90,Cost of living,32.0,8,1.0,1.0,1.0
+91,Covid,48.0,8,1.0,1.0,1.0
+92,Cost of living,32.0,8,1.0,1.0,1.0
+93,Covid,48.0,8,1.0,1.0,1.0
+94,Covid,48.0,8,1.0,1.0,1.0
+95,Covid,48.0,8,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,8,1.0,1.0,1.0
+97,Covid,48.0,8,1.0,1.0,1.0
+98,immigration,12.0,8,1.0,1.0,1.0
+99,Climate change,,8,1.0,1.0,1.0
+0,Covid,48.0,9,1.0,1.0,1.0
+1,Immigration,12.0,9,1.0,1.0,1.0
+2,Overpopulation,,9,1.0,1.0,1.0
+3,cost of living energy prices,32.0,9,1.0,1.0,1.0
+4,The cost of living,32.0,9,1.0,1.0,1.0
+5,Economy,26.0,9,1.0,1.0,1.0
+6,Covid 19,48.0,9,1.0,1.0,1.0
+7,Covid,48.0,9,1.0,1.0,1.0
+8,Coronarvius,48.0,9,1.0,1.0,1.0
+9,Covid,48.0,9,1.0,1.0,1.0
+10,Covid,48.0,9,1.0,1.0,1.0
+11,Covid-19,48.0,9,1.0,1.0,1.0
+12,Covid,48.0,9,1.0,1.0,1.0
+13,coved19,48.0,9,1.0,1.0,1.0
+14,Covid,48.0,9,1.0,1.0,1.0
+15,economy,26.0,9,1.0,1.0,1.0
+16,Energy prices,,9,1.0,1.0,1.0
+17,Cost of living.,32.0,9,1.0,1.0,1.0
+18,Covid-19,48.0,9,1.0,1.0,1.0
+19,Climate change,40.0,9,1.0,1.0,1.0
+20,Pandemic,48.0,9,1.0,1.0,1.0
+21,Global warming,40.0,9,1.0,1.0,1.0
+22,Coronavirus,48.0,9,1.0,1.0,1.0
+23,illegal migrants,12.0,9,1.0,1.0,1.0
+24,Coronavirus,48.0,9,1.0,1.0,1.0
+25,Covid-19,48.0,9,1.0,1.0,1.0
+26,Covid 19,48.0,9,1.0,1.0,1.0
+27,Financial situations,,9,1.0,1.0,1.0
+28,Covid,48.0,9,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,9,1.0,1.0,1.0
+30,Covid,48.0,9,1.0,1.0,1.0
+31,Economic recovery,26.0,9,1.0,1.0,1.0
+32,eradicating Covid,48.0,9,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,9,1.0,1.0,1.0
+34,covid,48.0,9,1.0,1.0,1.0
+35,Brexit,15.0,9,1.0,1.0,1.0
+36,Cost of living,32.0,9,1.0,1.0,1.0
+37,immigration,12.0,9,1.0,1.0,1.0
+38,Economy,26.0,9,1.0,1.0,1.0
+39,Brexit.,15.0,9,1.0,1.0,1.0
+40,Climate change,,9,1.0,1.0,1.0
+41,Covid,48.0,9,1.0,1.0,1.0
+42,Pandemic,48.0,9,1.0,1.0,1.0
+43,Cost of Living,32.0,9,1.0,1.0,1.0
+44,Covid,48.0,9,1.0,1.0,1.0
+45,Cost of Living,32.0,9,1.0,1.0,1.0
+46,Cost of living crisis,32.0,9,1.0,1.0,1.0
+47,Climate change,,9,1.0,1.0,1.0
+48,Covid,48.0,9,1.0,1.0,1.0
+49,illegal immigration,12.0,9,1.0,1.0,1.0
+50,Environment,40.0,9,1.0,1.0,1.0
+51,Covid,48.0,9,1.0,1.0,1.0
+52,COVID,48.0,9,1.0,1.0,1.0
+53,Covid,48.0,9,1.0,1.0,1.0
+54,Rising energy costs.,32.0,9,1.0,1.0,1.0
+55,Cost of living,32.0,9,1.0,1.0,1.0
+56,Covid,48.0,9,1.0,1.0,1.0
+57,COVID 19,48.0,9,1.0,1.0,1.0
+58,Covid,48.0,9,1.0,1.0,1.0
+59,Covid,48.0,9,1.0,1.0,1.0
+60,Inaction on climate change,40.0,9,1.0,1.0,1.0
+61,Cv19,48.0,9,1.0,1.0,1.0
+62,Economy,26.0,9,1.0,1.0,1.0
+63,the economy,26.0,9,1.0,1.0,1.0
+64,Brexit,15.0,9,1.0,1.0,1.0
+65,omnicrom virus,48.0,9,1.0,1.0,1.0
+66,The economy,26.0,9,1.0,1.0,1.0
+67,Cost of living,32.0,9,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,9,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,9,1.0,1.0,1.0
+70,Cost of living crisis,32.0,9,1.0,1.0,1.0
+71,COVID-19,48.0,9,1.0,1.0,1.0
+72,covid,48.0,9,1.0,1.0,1.0
+73,Covid 19,48.0,9,1.0,1.0,1.0
+74,Financial,,9,1.0,1.0,1.0
+75,Cost of living,32.0,9,1.0,1.0,1.0
+76,Climate change,,9,1.0,1.0,1.0
+77,The economy,26.0,9,1.0,1.0,1.0
+78,Covid,48.0,9,1.0,1.0,1.0
+79,Covid,48.0,9,1.0,1.0,1.0
+80,Environmental,,9,1.0,1.0,1.0
+81,Economy,26.0,9,1.0,1.0,1.0
+82,Covid 19,48.0,9,1.0,1.0,1.0
+83,Cost of living,32.0,9,1.0,1.0,1.0
+84,Coronavirus,48.0,9,1.0,1.0,1.0
+85,COVID-19,48.0,9,1.0,1.0,1.0
+86,economic recovery,26.0,9,1.0,1.0,1.0
+87,Economy,26.0,9,1.0,1.0,1.0
+88,Cost of living,32.0,9,1.0,1.0,1.0
+89,Economy,26.0,9,1.0,1.0,1.0
+90,Cost of living,32.0,9,1.0,1.0,1.0
+91,Covid,48.0,9,1.0,1.0,1.0
+92,Cost of living,32.0,9,1.0,1.0,1.0
+93,Covid,48.0,9,1.0,1.0,1.0
+94,Covid,48.0,9,1.0,1.0,1.0
+95,Covid,48.0,9,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,9,1.0,1.0,1.0
+97,Covid,48.0,9,1.0,1.0,1.0
+98,immigration,12.0,9,1.0,1.0,1.0
+99,Climate change,,9,1.0,1.0,1.0
+0,Covid,48.0,10,1.0,1.0,1.0
+1,Immigration,12.0,10,1.0,1.0,1.0
+2,Overpopulation,,10,1.0,1.0,1.0
+3,cost of living energy prices,32.0,10,1.0,1.0,1.0
+4,The cost of living,32.0,10,1.0,1.0,1.0
+5,Economy,26.0,10,1.0,1.0,1.0
+6,Covid 19,48.0,10,1.0,1.0,1.0
+7,Covid,48.0,10,1.0,1.0,1.0
+8,Coronarvius,48.0,10,1.0,1.0,1.0
+9,Covid,48.0,10,1.0,1.0,1.0
+10,Covid,48.0,10,1.0,1.0,1.0
+11,Covid-19,48.0,10,1.0,1.0,1.0
+12,Covid,48.0,10,1.0,1.0,1.0
+13,coved19,48.0,10,1.0,1.0,1.0
+14,Covid,48.0,10,1.0,1.0,1.0
+15,economy,26.0,10,1.0,1.0,1.0
+16,Energy prices,,10,1.0,1.0,1.0
+17,Cost of living.,32.0,10,1.0,1.0,1.0
+18,Covid-19,48.0,10,1.0,1.0,1.0
+19,Climate change,,10,1.0,1.0,1.0
+20,Pandemic,48.0,10,1.0,1.0,1.0
+21,Global warming,40.0,10,1.0,1.0,1.0
+22,Coronavirus,48.0,10,1.0,1.0,1.0
+23,illegal migrants,,10,1.0,1.0,1.0
+24,Coronavirus,48.0,10,1.0,1.0,1.0
+25,Covid-19,48.0,10,1.0,1.0,1.0
+26,Covid 19,48.0,10,1.0,1.0,1.0
+27,Financial situations,32.0,10,1.0,1.0,1.0
+28,Covid,48.0,10,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,10,1.0,1.0,1.0
+30,Covid,48.0,10,1.0,1.0,1.0
+31,Economic recovery,,10,1.0,1.0,1.0
+32,eradicating Covid,48.0,10,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,10,1.0,1.0,1.0
+34,covid,48.0,10,1.0,1.0,1.0
+35,Brexit,15.0,10,1.0,1.0,1.0
+36,Cost of living,32.0,10,1.0,1.0,1.0
+37,immigration,12.0,10,1.0,1.0,1.0
+38,Economy,26.0,10,1.0,1.0,1.0
+39,Brexit.,15.0,10,1.0,1.0,1.0
+40,Climate change,40.0,10,1.0,1.0,1.0
+41,Covid,48.0,10,1.0,1.0,1.0
+42,Pandemic,48.0,10,1.0,1.0,1.0
+43,Cost of Living,32.0,10,1.0,1.0,1.0
+44,Covid,48.0,10,1.0,1.0,1.0
+45,Cost of Living,32.0,10,1.0,1.0,1.0
+46,Cost of living crisis,32.0,10,1.0,1.0,1.0
+47,Climate change,,10,1.0,1.0,1.0
+48,Covid,48.0,10,1.0,1.0,1.0
+49,illegal immigration,,10,1.0,1.0,1.0
+50,Environment,40.0,10,1.0,1.0,1.0
+51,Covid,48.0,10,1.0,1.0,1.0
+52,COVID,48.0,10,1.0,1.0,1.0
+53,Covid,48.0,10,1.0,1.0,1.0
+54,Rising energy costs.,32.0,10,1.0,1.0,1.0
+55,Cost of living,32.0,10,1.0,1.0,1.0
+56,Covid,48.0,10,1.0,1.0,1.0
+57,COVID 19,48.0,10,1.0,1.0,1.0
+58,Covid,48.0,10,1.0,1.0,1.0
+59,Covid,48.0,10,1.0,1.0,1.0
+60,Inaction on climate change,40.0,10,1.0,1.0,1.0
+61,Cv19,48.0,10,1.0,1.0,1.0
+62,Economy,26.0,10,1.0,1.0,1.0
+63,the economy,26.0,10,1.0,1.0,1.0
+64,Brexit,15.0,10,1.0,1.0,1.0
+65,omnicrom virus,48.0,10,1.0,1.0,1.0
+66,The economy,26.0,10,1.0,1.0,1.0
+67,Cost of living,32.0,10,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,10,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,10,1.0,1.0,1.0
+70,Cost of living crisis,,10,1.0,1.0,1.0
+71,COVID-19,48.0,10,1.0,1.0,1.0
+72,covid,48.0,10,1.0,1.0,1.0
+73,Covid 19,48.0,10,1.0,1.0,1.0
+74,Financial,,10,1.0,1.0,1.0
+75,Cost of living,32.0,10,1.0,1.0,1.0
+76,Climate change,40.0,10,1.0,1.0,1.0
+77,The economy,26.0,10,1.0,1.0,1.0
+78,Covid,48.0,10,1.0,1.0,1.0
+79,Covid,48.0,10,1.0,1.0,1.0
+80,Environmental,40.0,10,1.0,1.0,1.0
+81,Economy,26.0,10,1.0,1.0,1.0
+82,Covid 19,48.0,10,1.0,1.0,1.0
+83,Cost of living,32.0,10,1.0,1.0,1.0
+84,Coronavirus,48.0,10,1.0,1.0,1.0
+85,COVID-19,48.0,10,1.0,1.0,1.0
+86,economic recovery,26.0,10,1.0,1.0,1.0
+87,Economy,26.0,10,1.0,1.0,1.0
+88,Cost of living,32.0,10,1.0,1.0,1.0
+89,Economy,26.0,10,1.0,1.0,1.0
+90,Cost of living,32.0,10,1.0,1.0,1.0
+91,Covid,48.0,10,1.0,1.0,1.0
+92,Cost of living,32.0,10,1.0,1.0,1.0
+93,Covid,48.0,10,1.0,1.0,1.0
+94,Covid,48.0,10,1.0,1.0,1.0
+95,Covid,48.0,10,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,10,1.0,1.0,1.0
+97,Covid,48.0,10,1.0,1.0,1.0
+98,immigration,12.0,10,1.0,1.0,1.0
+99,Climate change,,10,1.0,1.0,1.0
+0,Covid,48.0,11,1.0,1.0,1.0
+1,Immigration,12.0,11,1.0,1.0,1.0
+2,Overpopulation,,11,1.0,1.0,1.0
+3,cost of living energy prices,32.0,11,1.0,1.0,1.0
+4,The cost of living,32.0,11,1.0,1.0,1.0
+5,Economy,26.0,11,1.0,1.0,1.0
+6,Covid 19,48.0,11,1.0,1.0,1.0
+7,Covid,48.0,11,1.0,1.0,1.0
+8,Coronarvius,48.0,11,1.0,1.0,1.0
+9,Covid,48.0,11,1.0,1.0,1.0
+10,Covid,48.0,11,1.0,1.0,1.0
+11,Covid-19,48.0,11,1.0,1.0,1.0
+12,Covid,48.0,11,1.0,1.0,1.0
+13,coved19,48.0,11,1.0,1.0,1.0
+14,Covid,,11,1.0,1.0,1.0
+15,economy,26.0,11,1.0,1.0,1.0
+16,Energy prices,,11,1.0,1.0,1.0
+17,Cost of living.,32.0,11,1.0,1.0,1.0
+18,Covid-19,48.0,11,1.0,1.0,1.0
+19,Climate change,,11,1.0,1.0,1.0
+20,Pandemic,48.0,11,1.0,1.0,1.0
+21,Global warming,,11,1.0,1.0,1.0
+22,Coronavirus,48.0,11,1.0,1.0,1.0
+23,illegal migrants,,11,1.0,1.0,1.0
+24,Coronavirus,48.0,11,1.0,1.0,1.0
+25,Covid-19,48.0,11,1.0,1.0,1.0
+26,Covid 19,48.0,11,1.0,1.0,1.0
+27,Financial situations,32.0,11,1.0,1.0,1.0
+28,Covid,48.0,11,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,11,1.0,1.0,1.0
+30,Covid,48.0,11,1.0,1.0,1.0
+31,Economic recovery,26.0,11,1.0,1.0,1.0
+32,eradicating Covid,48.0,11,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,11,1.0,1.0,1.0
+34,covid,48.0,11,1.0,1.0,1.0
+35,Brexit,15.0,11,1.0,1.0,1.0
+36,Cost of living,32.0,11,1.0,1.0,1.0
+37,immigration,12.0,11,1.0,1.0,1.0
+38,Economy,26.0,11,1.0,1.0,1.0
+39,Brexit.,15.0,11,1.0,1.0,1.0
+40,Climate change,,11,1.0,1.0,1.0
+41,Covid,48.0,11,1.0,1.0,1.0
+42,Pandemic,48.0,11,1.0,1.0,1.0
+43,Cost of Living,32.0,11,1.0,1.0,1.0
+44,Covid,48.0,11,1.0,1.0,1.0
+45,Cost of Living,32.0,11,1.0,1.0,1.0
+46,Cost of living crisis,32.0,11,1.0,1.0,1.0
+47,Climate change,40.0,11,1.0,1.0,1.0
+48,Covid,48.0,11,1.0,1.0,1.0
+49,illegal immigration,12.0,11,1.0,1.0,1.0
+50,Environment,40.0,11,1.0,1.0,1.0
+51,Covid,48.0,11,1.0,1.0,1.0
+52,COVID,48.0,11,1.0,1.0,1.0
+53,Covid,48.0,11,1.0,1.0,1.0
+54,Rising energy costs.,32.0,11,1.0,1.0,1.0
+55,Cost of living,32.0,11,1.0,1.0,1.0
+56,Covid,48.0,11,1.0,1.0,1.0
+57,COVID 19,48.0,11,1.0,1.0,1.0
+58,Covid,48.0,11,1.0,1.0,1.0
+59,Covid,48.0,11,1.0,1.0,1.0
+60,Inaction on climate change,,11,1.0,1.0,1.0
+61,Cv19,48.0,11,1.0,1.0,1.0
+62,Economy,26.0,11,1.0,1.0,1.0
+63,the economy,26.0,11,1.0,1.0,1.0
+64,Brexit,15.0,11,1.0,1.0,1.0
+65,omnicrom virus,48.0,11,1.0,1.0,1.0
+66,The economy,26.0,11,1.0,1.0,1.0
+67,Cost of living,32.0,11,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,11,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,11,1.0,1.0,1.0
+70,Cost of living crisis,32.0,11,1.0,1.0,1.0
+71,COVID-19,48.0,11,1.0,1.0,1.0
+72,covid,48.0,11,1.0,1.0,1.0
+73,Covid 19,48.0,11,1.0,1.0,1.0
+74,Financial,,11,1.0,1.0,1.0
+75,Cost of living,32.0,11,1.0,1.0,1.0
+76,Climate change,40.0,11,1.0,1.0,1.0
+77,The economy,26.0,11,1.0,1.0,1.0
+78,Covid,48.0,11,1.0,1.0,1.0
+79,Covid,48.0,11,1.0,1.0,1.0
+80,Environmental,40.0,11,1.0,1.0,1.0
+81,Economy,26.0,11,1.0,1.0,1.0
+82,Covid 19,48.0,11,1.0,1.0,1.0
+83,Cost of living,32.0,11,1.0,1.0,1.0
+84,Coronavirus,48.0,11,1.0,1.0,1.0
+85,COVID-19,48.0,11,1.0,1.0,1.0
+86,economic recovery,26.0,11,1.0,1.0,1.0
+87,Economy,26.0,11,1.0,1.0,1.0
+88,Cost of living,32.0,11,1.0,1.0,1.0
+89,Economy,26.0,11,1.0,1.0,1.0
+90,Cost of living,32.0,11,1.0,1.0,1.0
+91,Covid,48.0,11,1.0,1.0,1.0
+92,Cost of living,32.0,11,1.0,1.0,1.0
+93,Covid,48.0,11,1.0,1.0,1.0
+94,Covid,48.0,11,1.0,1.0,1.0
+95,Covid,48.0,11,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,11,1.0,1.0,1.0
+97,Covid,48.0,11,1.0,1.0,1.0
+98,immigration,12.0,11,1.0,1.0,1.0
+99,Climate change,40.0,11,1.0,1.0,1.0
+0,Covid,48.0,12,1.0,1.0,1.0
+1,Immigration,12.0,12,1.0,1.0,1.0
+2,Overpopulation,,12,1.0,1.0,1.0
+3,cost of living energy prices,32.0,12,1.0,1.0,1.0
+4,The cost of living,32.0,12,1.0,1.0,1.0
+5,Economy,26.0,12,1.0,1.0,1.0
+6,Covid 19,48.0,12,1.0,1.0,1.0
+7,Covid,48.0,12,1.0,1.0,1.0
+8,Coronarvius,48.0,12,1.0,1.0,1.0
+9,Covid,48.0,12,1.0,1.0,1.0
+10,Covid,48.0,12,1.0,1.0,1.0
+11,Covid-19,48.0,12,1.0,1.0,1.0
+12,Covid,48.0,12,1.0,1.0,1.0
+13,coved19,48.0,12,1.0,1.0,1.0
+14,Covid,48.0,12,1.0,1.0,1.0
+15,economy,26.0,12,1.0,1.0,1.0
+16,Energy prices,32.0,12,1.0,1.0,1.0
+17,Cost of living.,32.0,12,1.0,1.0,1.0
+18,Covid-19,48.0,12,1.0,1.0,1.0
+19,Climate change,,12,1.0,1.0,1.0
+20,Pandemic,48.0,12,1.0,1.0,1.0
+21,Global warming,40.0,12,1.0,1.0,1.0
+22,Coronavirus,48.0,12,1.0,1.0,1.0
+23,illegal migrants,12.0,12,1.0,1.0,1.0
+24,Coronavirus,48.0,12,1.0,1.0,1.0
+25,Covid-19,48.0,12,1.0,1.0,1.0
+26,Covid 19,48.0,12,1.0,1.0,1.0
+27,Financial situations,,12,1.0,1.0,1.0
+28,Covid,48.0,12,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,12,1.0,1.0,1.0
+30,Covid,48.0,12,1.0,1.0,1.0
+31,Economic recovery,26.0,12,1.0,1.0,1.0
+32,eradicating Covid,48.0,12,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,12,1.0,1.0,1.0
+34,covid,48.0,12,1.0,1.0,1.0
+35,Brexit,15.0,12,1.0,1.0,1.0
+36,Cost of living,32.0,12,1.0,1.0,1.0
+37,immigration,12.0,12,1.0,1.0,1.0
+38,Economy,26.0,12,1.0,1.0,1.0
+39,Brexit.,15.0,12,1.0,1.0,1.0
+40,Climate change,,12,1.0,1.0,1.0
+41,Covid,48.0,12,1.0,1.0,1.0
+42,Pandemic,48.0,12,1.0,1.0,1.0
+43,Cost of Living,32.0,12,1.0,1.0,1.0
+44,Covid,48.0,12,1.0,1.0,1.0
+45,Cost of Living,32.0,12,1.0,1.0,1.0
+46,Cost of living crisis,32.0,12,1.0,1.0,1.0
+47,Climate change,,12,1.0,1.0,1.0
+48,Covid,48.0,12,1.0,1.0,1.0
+49,illegal immigration,12.0,12,1.0,1.0,1.0
+50,Environment,40.0,12,1.0,1.0,1.0
+51,Covid,48.0,12,1.0,1.0,1.0
+52,COVID,48.0,12,1.0,1.0,1.0
+53,Covid,48.0,12,1.0,1.0,1.0
+54,Rising energy costs.,,12,1.0,1.0,1.0
+55,Cost of living,32.0,12,1.0,1.0,1.0
+56,Covid,48.0,12,1.0,1.0,1.0
+57,COVID 19,48.0,12,1.0,1.0,1.0
+58,Covid,48.0,12,1.0,1.0,1.0
+59,Covid,48.0,12,1.0,1.0,1.0
+60,Inaction on climate change,40.0,12,1.0,1.0,1.0
+61,Cv19,48.0,12,1.0,1.0,1.0
+62,Economy,26.0,12,1.0,1.0,1.0
+63,the economy,26.0,12,1.0,1.0,1.0
+64,Brexit,15.0,12,1.0,1.0,1.0
+65,omnicrom virus,48.0,12,1.0,1.0,1.0
+66,The economy,26.0,12,1.0,1.0,1.0
+67,Cost of living,32.0,12,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,12,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,12,1.0,1.0,1.0
+70,Cost of living crisis,32.0,12,1.0,1.0,1.0
+71,COVID-19,48.0,12,1.0,1.0,1.0
+72,covid,48.0,12,1.0,1.0,1.0
+73,Covid 19,48.0,12,1.0,1.0,1.0
+74,Financial,,12,1.0,1.0,1.0
+75,Cost of living,32.0,12,1.0,1.0,1.0
+76,Climate change,,12,1.0,1.0,1.0
+77,The economy,26.0,12,1.0,1.0,1.0
+78,Covid,48.0,12,1.0,1.0,1.0
+79,Covid,48.0,12,1.0,1.0,1.0
+80,Environmental,40.0,12,1.0,1.0,1.0
+81,Economy,26.0,12,1.0,1.0,1.0
+82,Covid 19,48.0,12,1.0,1.0,1.0
+83,Cost of living,32.0,12,1.0,1.0,1.0
+84,Coronavirus,48.0,12,1.0,1.0,1.0
+85,COVID-19,48.0,12,1.0,1.0,1.0
+86,economic recovery,26.0,12,1.0,1.0,1.0
+87,Economy,26.0,12,1.0,1.0,1.0
+88,Cost of living,32.0,12,1.0,1.0,1.0
+89,Economy,26.0,12,1.0,1.0,1.0
+90,Cost of living,32.0,12,1.0,1.0,1.0
+91,Covid,48.0,12,1.0,1.0,1.0
+92,Cost of living,32.0,12,1.0,1.0,1.0
+93,Covid,48.0,12,1.0,1.0,1.0
+94,Covid,48.0,12,1.0,1.0,1.0
+95,Covid,48.0,12,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,12,1.0,1.0,1.0
+97,Covid,48.0,12,1.0,1.0,1.0
+98,immigration,12.0,12,1.0,1.0,1.0
+99,Climate change,,12,1.0,1.0,1.0
+0,Covid,48.0,13,1.0,1.0,1.0
+1,Immigration,12.0,13,1.0,1.0,1.0
+2,Overpopulation,,13,1.0,1.0,1.0
+3,cost of living energy prices,32.0,13,1.0,1.0,1.0
+4,The cost of living,32.0,13,1.0,1.0,1.0
+5,Economy,26.0,13,1.0,1.0,1.0
+6,Covid 19,48.0,13,1.0,1.0,1.0
+7,Covid,48.0,13,1.0,1.0,1.0
+8,Coronarvius,48.0,13,1.0,1.0,1.0
+9,Covid,48.0,13,1.0,1.0,1.0
+10,Covid,48.0,13,1.0,1.0,1.0
+11,Covid-19,48.0,13,1.0,1.0,1.0
+12,Covid,48.0,13,1.0,1.0,1.0
+13,coved19,48.0,13,1.0,1.0,1.0
+14,Covid,48.0,13,1.0,1.0,1.0
+15,economy,26.0,13,1.0,1.0,1.0
+16,Energy prices,,13,1.0,1.0,1.0
+17,Cost of living.,32.0,13,1.0,1.0,1.0
+18,Covid-19,48.0,13,1.0,1.0,1.0
+19,Climate change,40.0,13,1.0,1.0,1.0
+20,Pandemic,48.0,13,1.0,1.0,1.0
+21,Global warming,,13,1.0,1.0,1.0
+22,Coronavirus,48.0,13,1.0,1.0,1.0
+23,illegal migrants,,13,1.0,1.0,1.0
+24,Coronavirus,48.0,13,1.0,1.0,1.0
+25,Covid-19,48.0,13,1.0,1.0,1.0
+26,Covid 19,48.0,13,1.0,1.0,1.0
+27,Financial situations,,13,1.0,1.0,1.0
+28,Covid,48.0,13,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,13,1.0,1.0,1.0
+30,Covid,48.0,13,1.0,1.0,1.0
+31,Economic recovery,,13,1.0,1.0,1.0
+32,eradicating Covid,48.0,13,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,13,1.0,1.0,1.0
+34,covid,48.0,13,1.0,1.0,1.0
+35,Brexit,15.0,13,1.0,1.0,1.0
+36,Cost of living,32.0,13,1.0,1.0,1.0
+37,immigration,12.0,13,1.0,1.0,1.0
+38,Economy,26.0,13,1.0,1.0,1.0
+39,Brexit.,15.0,13,1.0,1.0,1.0
+40,Climate change,,13,1.0,1.0,1.0
+41,Covid,48.0,13,1.0,1.0,1.0
+42,Pandemic,48.0,13,1.0,1.0,1.0
+43,Cost of Living,32.0,13,1.0,1.0,1.0
+44,Covid,48.0,13,1.0,1.0,1.0
+45,Cost of Living,32.0,13,1.0,1.0,1.0
+46,Cost of living crisis,32.0,13,1.0,1.0,1.0
+47,Climate change,,13,1.0,1.0,1.0
+48,Covid,48.0,13,1.0,1.0,1.0
+49,illegal immigration,12.0,13,1.0,1.0,1.0
+50,Environment,40.0,13,1.0,1.0,1.0
+51,Covid,48.0,13,1.0,1.0,1.0
+52,COVID,48.0,13,1.0,1.0,1.0
+53,Covid,48.0,13,1.0,1.0,1.0
+54,Rising energy costs.,32.0,13,1.0,1.0,1.0
+55,Cost of living,32.0,13,1.0,1.0,1.0
+56,Covid,48.0,13,1.0,1.0,1.0
+57,COVID 19,48.0,13,1.0,1.0,1.0
+58,Covid,48.0,13,1.0,1.0,1.0
+59,Covid,48.0,13,1.0,1.0,1.0
+60,Inaction on climate change,,13,1.0,1.0,1.0
+61,Cv19,48.0,13,1.0,1.0,1.0
+62,Economy,26.0,13,1.0,1.0,1.0
+63,the economy,26.0,13,1.0,1.0,1.0
+64,Brexit,15.0,13,1.0,1.0,1.0
+65,omnicrom virus,,13,1.0,1.0,1.0
+66,The economy,26.0,13,1.0,1.0,1.0
+67,Cost of living,32.0,13,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,13,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,13,1.0,1.0,1.0
+70,Cost of living crisis,32.0,13,1.0,1.0,1.0
+71,COVID-19,48.0,13,1.0,1.0,1.0
+72,covid,48.0,13,1.0,1.0,1.0
+73,Covid 19,48.0,13,1.0,1.0,1.0
+74,Financial,,13,1.0,1.0,1.0
+75,Cost of living,32.0,13,1.0,1.0,1.0
+76,Climate change,,13,1.0,1.0,1.0
+77,The economy,26.0,13,1.0,1.0,1.0
+78,Covid,48.0,13,1.0,1.0,1.0
+79,Covid,48.0,13,1.0,1.0,1.0
+80,Environmental,40.0,13,1.0,1.0,1.0
+81,Economy,26.0,13,1.0,1.0,1.0
+82,Covid 19,48.0,13,1.0,1.0,1.0
+83,Cost of living,32.0,13,1.0,1.0,1.0
+84,Coronavirus,48.0,13,1.0,1.0,1.0
+85,COVID-19,48.0,13,1.0,1.0,1.0
+86,economic recovery,,13,1.0,1.0,1.0
+87,Economy,26.0,13,1.0,1.0,1.0
+88,Cost of living,32.0,13,1.0,1.0,1.0
+89,Economy,26.0,13,1.0,1.0,1.0
+90,Cost of living,32.0,13,1.0,1.0,1.0
+91,Covid,48.0,13,1.0,1.0,1.0
+92,Cost of living,32.0,13,1.0,1.0,1.0
+93,Covid,48.0,13,1.0,1.0,1.0
+94,Covid,48.0,13,1.0,1.0,1.0
+95,Covid,48.0,13,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,13,1.0,1.0,1.0
+97,Covid,48.0,13,1.0,1.0,1.0
+98,immigration,12.0,13,1.0,1.0,1.0
+99,Climate change,,13,1.0,1.0,1.0
+0,Covid,48.0,14,1.0,1.0,1.0
+1,Immigration,12.0,14,1.0,1.0,1.0
+2,Overpopulation,,14,1.0,1.0,1.0
+3,cost of living energy prices,32.0,14,1.0,1.0,1.0
+4,The cost of living,32.0,14,1.0,1.0,1.0
+5,Economy,26.0,14,1.0,1.0,1.0
+6,Covid 19,48.0,14,1.0,1.0,1.0
+7,Covid,48.0,14,1.0,1.0,1.0
+8,Coronarvius,48.0,14,1.0,1.0,1.0
+9,Covid,48.0,14,1.0,1.0,1.0
+10,Covid,48.0,14,1.0,1.0,1.0
+11,Covid-19,48.0,14,1.0,1.0,1.0
+12,Covid,48.0,14,1.0,1.0,1.0
+13,coved19,48.0,14,1.0,1.0,1.0
+14,Covid,48.0,14,1.0,1.0,1.0
+15,economy,26.0,14,1.0,1.0,1.0
+16,Energy prices,,14,1.0,1.0,1.0
+17,Cost of living.,32.0,14,1.0,1.0,1.0
+18,Covid-19,48.0,14,1.0,1.0,1.0
+19,Climate change,,14,1.0,1.0,1.0
+20,Pandemic,48.0,14,1.0,1.0,1.0
+21,Global warming,40.0,14,1.0,1.0,1.0
+22,Coronavirus,48.0,14,1.0,1.0,1.0
+23,illegal migrants,,14,1.0,1.0,1.0
+24,Coronavirus,48.0,14,1.0,1.0,1.0
+25,Covid-19,48.0,14,1.0,1.0,1.0
+26,Covid 19,48.0,14,1.0,1.0,1.0
+27,Financial situations,,14,1.0,1.0,1.0
+28,Covid,48.0,14,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,14,1.0,1.0,1.0
+30,Covid,48.0,14,1.0,1.0,1.0
+31,Economic recovery,26.0,14,1.0,1.0,1.0
+32,eradicating Covid,48.0,14,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,14,1.0,1.0,1.0
+34,covid,48.0,14,1.0,1.0,1.0
+35,Brexit,15.0,14,1.0,1.0,1.0
+36,Cost of living,32.0,14,1.0,1.0,1.0
+37,immigration,12.0,14,1.0,1.0,1.0
+38,Economy,26.0,14,1.0,1.0,1.0
+39,Brexit.,15.0,14,1.0,1.0,1.0
+40,Climate change,,14,1.0,1.0,1.0
+41,Covid,48.0,14,1.0,1.0,1.0
+42,Pandemic,48.0,14,1.0,1.0,1.0
+43,Cost of Living,32.0,14,1.0,1.0,1.0
+44,Covid,48.0,14,1.0,1.0,1.0
+45,Cost of Living,32.0,14,1.0,1.0,1.0
+46,Cost of living crisis,32.0,14,1.0,1.0,1.0
+47,Climate change,,14,1.0,1.0,1.0
+48,Covid,48.0,14,1.0,1.0,1.0
+49,illegal immigration,,14,1.0,1.0,1.0
+50,Environment,40.0,14,1.0,1.0,1.0
+51,Covid,48.0,14,1.0,1.0,1.0
+52,COVID,48.0,14,1.0,1.0,1.0
+53,Covid,48.0,14,1.0,1.0,1.0
+54,Rising energy costs.,,14,1.0,1.0,1.0
+55,Cost of living,32.0,14,1.0,1.0,1.0
+56,Covid,48.0,14,1.0,1.0,1.0
+57,COVID 19,48.0,14,1.0,1.0,1.0
+58,Covid,48.0,14,1.0,1.0,1.0
+59,Covid,48.0,14,1.0,1.0,1.0
+60,Inaction on climate change,40.0,14,1.0,1.0,1.0
+61,Cv19,48.0,14,1.0,1.0,1.0
+62,Economy,26.0,14,1.0,1.0,1.0
+63,the economy,26.0,14,1.0,1.0,1.0
+64,Brexit,15.0,14,1.0,1.0,1.0
+65,omnicrom virus,48.0,14,1.0,1.0,1.0
+66,The economy,26.0,14,1.0,1.0,1.0
+67,Cost of living,32.0,14,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,14,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,14,1.0,1.0,1.0
+70,Cost of living crisis,32.0,14,1.0,1.0,1.0
+71,COVID-19,48.0,14,1.0,1.0,1.0
+72,covid,48.0,14,1.0,1.0,1.0
+73,Covid 19,48.0,14,1.0,1.0,1.0
+74,Financial,26.0,14,1.0,1.0,1.0
+75,Cost of living,32.0,14,1.0,1.0,1.0
+76,Climate change,,14,1.0,1.0,1.0
+77,The economy,26.0,14,1.0,1.0,1.0
+78,Covid,48.0,14,1.0,1.0,1.0
+79,Covid,48.0,14,1.0,1.0,1.0
+80,Environmental,40.0,14,1.0,1.0,1.0
+81,Economy,26.0,14,1.0,1.0,1.0
+82,Covid 19,48.0,14,1.0,1.0,1.0
+83,Cost of living,32.0,14,1.0,1.0,1.0
+84,Coronavirus,48.0,14,1.0,1.0,1.0
+85,COVID-19,48.0,14,1.0,1.0,1.0
+86,economic recovery,,14,1.0,1.0,1.0
+87,Economy,26.0,14,1.0,1.0,1.0
+88,Cost of living,32.0,14,1.0,1.0,1.0
+89,Economy,26.0,14,1.0,1.0,1.0
+90,Cost of living,32.0,14,1.0,1.0,1.0
+91,Covid,48.0,14,1.0,1.0,1.0
+92,Cost of living,32.0,14,1.0,1.0,1.0
+93,Covid,48.0,14,1.0,1.0,1.0
+94,Covid,48.0,14,1.0,1.0,1.0
+95,Covid,48.0,14,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,14,1.0,1.0,1.0
+97,Covid,48.0,14,1.0,1.0,1.0
+98,immigration,12.0,14,1.0,1.0,1.0
+99,Climate change,,14,1.0,1.0,1.0
+0,Covid,48.0,15,1.0,1.0,1.0
+1,Immigration,12.0,15,1.0,1.0,1.0
+2,Overpopulation,,15,1.0,1.0,1.0
+3,cost of living energy prices,32.0,15,1.0,1.0,1.0
+4,The cost of living,32.0,15,1.0,1.0,1.0
+5,Economy,26.0,15,1.0,1.0,1.0
+6,Covid 19,48.0,15,1.0,1.0,1.0
+7,Covid,48.0,15,1.0,1.0,1.0
+8,Coronarvius,48.0,15,1.0,1.0,1.0
+9,Covid,48.0,15,1.0,1.0,1.0
+10,Covid,48.0,15,1.0,1.0,1.0
+11,Covid-19,48.0,15,1.0,1.0,1.0
+12,Covid,48.0,15,1.0,1.0,1.0
+13,coved19,48.0,15,1.0,1.0,1.0
+14,Covid,48.0,15,1.0,1.0,1.0
+15,economy,26.0,15,1.0,1.0,1.0
+16,Energy prices,,15,1.0,1.0,1.0
+17,Cost of living.,32.0,15,1.0,1.0,1.0
+18,Covid-19,48.0,15,1.0,1.0,1.0
+19,Climate change,,15,1.0,1.0,1.0
+20,Pandemic,48.0,15,1.0,1.0,1.0
+21,Global warming,40.0,15,1.0,1.0,1.0
+22,Coronavirus,48.0,15,1.0,1.0,1.0
+23,illegal migrants,,15,1.0,1.0,1.0
+24,Coronavirus,48.0,15,1.0,1.0,1.0
+25,Covid-19,48.0,15,1.0,1.0,1.0
+26,Covid 19,48.0,15,1.0,1.0,1.0
+27,Financial situations,32.0,15,1.0,1.0,1.0
+28,Covid,48.0,15,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,15,1.0,1.0,1.0
+30,Covid,48.0,15,1.0,1.0,1.0
+31,Economic recovery,26.0,15,1.0,1.0,1.0
+32,eradicating Covid,48.0,15,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,15,1.0,1.0,1.0
+34,covid,48.0,15,1.0,1.0,1.0
+35,Brexit,15.0,15,1.0,1.0,1.0
+36,Cost of living,32.0,15,1.0,1.0,1.0
+37,immigration,12.0,15,1.0,1.0,1.0
+38,Economy,26.0,15,1.0,1.0,1.0
+39,Brexit.,15.0,15,1.0,1.0,1.0
+40,Climate change,,15,1.0,1.0,1.0
+41,Covid,48.0,15,1.0,1.0,1.0
+42,Pandemic,48.0,15,1.0,1.0,1.0
+43,Cost of Living,32.0,15,1.0,1.0,1.0
+44,Covid,48.0,15,1.0,1.0,1.0
+45,Cost of Living,32.0,15,1.0,1.0,1.0
+46,Cost of living crisis,,15,1.0,1.0,1.0
+47,Climate change,,15,1.0,1.0,1.0
+48,Covid,48.0,15,1.0,1.0,1.0
+49,illegal immigration,12.0,15,1.0,1.0,1.0
+50,Environment,40.0,15,1.0,1.0,1.0
+51,Covid,48.0,15,1.0,1.0,1.0
+52,COVID,48.0,15,1.0,1.0,1.0
+53,Covid,48.0,15,1.0,1.0,1.0
+54,Rising energy costs.,32.0,15,1.0,1.0,1.0
+55,Cost of living,32.0,15,1.0,1.0,1.0
+56,Covid,48.0,15,1.0,1.0,1.0
+57,COVID 19,48.0,15,1.0,1.0,1.0
+58,Covid,48.0,15,1.0,1.0,1.0
+59,Covid,48.0,15,1.0,1.0,1.0
+60,Inaction on climate change,,15,1.0,1.0,1.0
+61,Cv19,48.0,15,1.0,1.0,1.0
+62,Economy,26.0,15,1.0,1.0,1.0
+63,the economy,26.0,15,1.0,1.0,1.0
+64,Brexit,15.0,15,1.0,1.0,1.0
+65,omnicrom virus,48.0,15,1.0,1.0,1.0
+66,The economy,26.0,15,1.0,1.0,1.0
+67,Cost of living,32.0,15,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,15,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,15,1.0,1.0,1.0
+70,Cost of living crisis,32.0,15,1.0,1.0,1.0
+71,COVID-19,48.0,15,1.0,1.0,1.0
+72,covid,48.0,15,1.0,1.0,1.0
+73,Covid 19,48.0,15,1.0,1.0,1.0
+74,Financial,,15,1.0,1.0,1.0
+75,Cost of living,32.0,15,1.0,1.0,1.0
+76,Climate change,,15,1.0,1.0,1.0
+77,The economy,26.0,15,1.0,1.0,1.0
+78,Covid,48.0,15,1.0,1.0,1.0
+79,Covid,48.0,15,1.0,1.0,1.0
+80,Environmental,40.0,15,1.0,1.0,1.0
+81,Economy,26.0,15,1.0,1.0,1.0
+82,Covid 19,48.0,15,1.0,1.0,1.0
+83,Cost of living,32.0,15,1.0,1.0,1.0
+84,Coronavirus,48.0,15,1.0,1.0,1.0
+85,COVID-19,48.0,15,1.0,1.0,1.0
+86,economic recovery,,15,1.0,1.0,1.0
+87,Economy,26.0,15,1.0,1.0,1.0
+88,Cost of living,32.0,15,1.0,1.0,1.0
+89,Economy,26.0,15,1.0,1.0,1.0
+90,Cost of living,32.0,15,1.0,1.0,1.0
+91,Covid,48.0,15,1.0,1.0,1.0
+92,Cost of living,32.0,15,1.0,1.0,1.0
+93,Covid,48.0,15,1.0,1.0,1.0
+94,Covid,48.0,15,1.0,1.0,1.0
+95,Covid,48.0,15,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,15,1.0,1.0,1.0
+97,Covid,48.0,15,1.0,1.0,1.0
+98,immigration,12.0,15,1.0,1.0,1.0
+99,Climate change,40.0,15,1.0,1.0,1.0
+0,Covid,48.0,16,1.0,1.0,1.0
+1,Immigration,12.0,16,1.0,1.0,1.0
+2,Overpopulation,,16,1.0,1.0,1.0
+3,cost of living energy prices,32.0,16,1.0,1.0,1.0
+4,The cost of living,32.0,16,1.0,1.0,1.0
+5,Economy,26.0,16,1.0,1.0,1.0
+6,Covid 19,48.0,16,1.0,1.0,1.0
+7,Covid,48.0,16,1.0,1.0,1.0
+8,Coronarvius,48.0,16,1.0,1.0,1.0
+9,Covid,48.0,16,1.0,1.0,1.0
+10,Covid,48.0,16,1.0,1.0,1.0
+11,Covid-19,48.0,16,1.0,1.0,1.0
+12,Covid,48.0,16,1.0,1.0,1.0
+13,coved19,48.0,16,1.0,1.0,1.0
+14,Covid,48.0,16,1.0,1.0,1.0
+15,economy,26.0,16,1.0,1.0,1.0
+16,Energy prices,32.0,16,1.0,1.0,1.0
+17,Cost of living.,32.0,16,1.0,1.0,1.0
+18,Covid-19,48.0,16,1.0,1.0,1.0
+19,Climate change,,16,1.0,1.0,1.0
+20,Pandemic,48.0,16,1.0,1.0,1.0
+21,Global warming,40.0,16,1.0,1.0,1.0
+22,Coronavirus,48.0,16,1.0,1.0,1.0
+23,illegal migrants,,16,1.0,1.0,1.0
+24,Coronavirus,48.0,16,1.0,1.0,1.0
+25,Covid-19,48.0,16,1.0,1.0,1.0
+26,Covid 19,48.0,16,1.0,1.0,1.0
+27,Financial situations,,16,1.0,1.0,1.0
+28,Covid,48.0,16,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,16,1.0,1.0,1.0
+30,Covid,48.0,16,1.0,1.0,1.0
+31,Economic recovery,26.0,16,1.0,1.0,1.0
+32,eradicating Covid,48.0,16,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,16,1.0,1.0,1.0
+34,covid,48.0,16,1.0,1.0,1.0
+35,Brexit,15.0,16,1.0,1.0,1.0
+36,Cost of living,32.0,16,1.0,1.0,1.0
+37,immigration,12.0,16,1.0,1.0,1.0
+38,Economy,26.0,16,1.0,1.0,1.0
+39,Brexit.,15.0,16,1.0,1.0,1.0
+40,Climate change,,16,1.0,1.0,1.0
+41,Covid,48.0,16,1.0,1.0,1.0
+42,Pandemic,48.0,16,1.0,1.0,1.0
+43,Cost of Living,32.0,16,1.0,1.0,1.0
+44,Covid,48.0,16,1.0,1.0,1.0
+45,Cost of Living,32.0,16,1.0,1.0,1.0
+46,Cost of living crisis,32.0,16,1.0,1.0,1.0
+47,Climate change,,16,1.0,1.0,1.0
+48,Covid,48.0,16,1.0,1.0,1.0
+49,illegal immigration,12.0,16,1.0,1.0,1.0
+50,Environment,40.0,16,1.0,1.0,1.0
+51,Covid,48.0,16,1.0,1.0,1.0
+52,COVID,48.0,16,1.0,1.0,1.0
+53,Covid,48.0,16,1.0,1.0,1.0
+54,Rising energy costs.,32.0,16,1.0,1.0,1.0
+55,Cost of living,32.0,16,1.0,1.0,1.0
+56,Covid,48.0,16,1.0,1.0,1.0
+57,COVID 19,48.0,16,1.0,1.0,1.0
+58,Covid,48.0,16,1.0,1.0,1.0
+59,Covid,48.0,16,1.0,1.0,1.0
+60,Inaction on climate change,40.0,16,1.0,1.0,1.0
+61,Cv19,48.0,16,1.0,1.0,1.0
+62,Economy,26.0,16,1.0,1.0,1.0
+63,the economy,26.0,16,1.0,1.0,1.0
+64,Brexit,,16,1.0,1.0,1.0
+65,omnicrom virus,48.0,16,1.0,1.0,1.0
+66,The economy,26.0,16,1.0,1.0,1.0
+67,Cost of living,32.0,16,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,16,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,16,1.0,1.0,1.0
+70,Cost of living crisis,32.0,16,1.0,1.0,1.0
+71,COVID-19,48.0,16,1.0,1.0,1.0
+72,covid,48.0,16,1.0,1.0,1.0
+73,Covid 19,48.0,16,1.0,1.0,1.0
+74,Financial,,16,1.0,1.0,1.0
+75,Cost of living,32.0,16,1.0,1.0,1.0
+76,Climate change,,16,1.0,1.0,1.0
+77,The economy,26.0,16,1.0,1.0,1.0
+78,Covid,48.0,16,1.0,1.0,1.0
+79,Covid,48.0,16,1.0,1.0,1.0
+80,Environmental,40.0,16,1.0,1.0,1.0
+81,Economy,26.0,16,1.0,1.0,1.0
+82,Covid 19,48.0,16,1.0,1.0,1.0
+83,Cost of living,32.0,16,1.0,1.0,1.0
+84,Coronavirus,48.0,16,1.0,1.0,1.0
+85,COVID-19,48.0,16,1.0,1.0,1.0
+86,economic recovery,26.0,16,1.0,1.0,1.0
+87,Economy,26.0,16,1.0,1.0,1.0
+88,Cost of living,32.0,16,1.0,1.0,1.0
+89,Economy,26.0,16,1.0,1.0,1.0
+90,Cost of living,32.0,16,1.0,1.0,1.0
+91,Covid,48.0,16,1.0,1.0,1.0
+92,Cost of living,32.0,16,1.0,1.0,1.0
+93,Covid,48.0,16,1.0,1.0,1.0
+94,Covid,48.0,16,1.0,1.0,1.0
+95,Covid,48.0,16,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,16,1.0,1.0,1.0
+97,Covid,48.0,16,1.0,1.0,1.0
+98,immigration,12.0,16,1.0,1.0,1.0
+99,Climate change,,16,1.0,1.0,1.0
+0,Covid,48.0,17,1.0,1.0,1.0
+1,Immigration,12.0,17,1.0,1.0,1.0
+2,Overpopulation,,17,1.0,1.0,1.0
+3,cost of living energy prices,32.0,17,1.0,1.0,1.0
+4,The cost of living,32.0,17,1.0,1.0,1.0
+5,Economy,26.0,17,1.0,1.0,1.0
+6,Covid 19,48.0,17,1.0,1.0,1.0
+7,Covid,48.0,17,1.0,1.0,1.0
+8,Coronarvius,48.0,17,1.0,1.0,1.0
+9,Covid,48.0,17,1.0,1.0,1.0
+10,Covid,48.0,17,1.0,1.0,1.0
+11,Covid-19,48.0,17,1.0,1.0,1.0
+12,Covid,48.0,17,1.0,1.0,1.0
+13,coved19,48.0,17,1.0,1.0,1.0
+14,Covid,48.0,17,1.0,1.0,1.0
+15,economy,26.0,17,1.0,1.0,1.0
+16,Energy prices,,17,1.0,1.0,1.0
+17,Cost of living.,32.0,17,1.0,1.0,1.0
+18,Covid-19,48.0,17,1.0,1.0,1.0
+19,Climate change,,17,1.0,1.0,1.0
+20,Pandemic,48.0,17,1.0,1.0,1.0
+21,Global warming,,17,1.0,1.0,1.0
+22,Coronavirus,48.0,17,1.0,1.0,1.0
+23,illegal migrants,,17,1.0,1.0,1.0
+24,Coronavirus,48.0,17,1.0,1.0,1.0
+25,Covid-19,48.0,17,1.0,1.0,1.0
+26,Covid 19,48.0,17,1.0,1.0,1.0
+27,Financial situations,32.0,17,1.0,1.0,1.0
+28,Covid,48.0,17,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,17,1.0,1.0,1.0
+30,Covid,48.0,17,1.0,1.0,1.0
+31,Economic recovery,26.0,17,1.0,1.0,1.0
+32,eradicating Covid,48.0,17,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,17,1.0,1.0,1.0
+34,covid,48.0,17,1.0,1.0,1.0
+35,Brexit,15.0,17,1.0,1.0,1.0
+36,Cost of living,32.0,17,1.0,1.0,1.0
+37,immigration,12.0,17,1.0,1.0,1.0
+38,Economy,26.0,17,1.0,1.0,1.0
+39,Brexit.,15.0,17,1.0,1.0,1.0
+40,Climate change,,17,1.0,1.0,1.0
+41,Covid,48.0,17,1.0,1.0,1.0
+42,Pandemic,48.0,17,1.0,1.0,1.0
+43,Cost of Living,32.0,17,1.0,1.0,1.0
+44,Covid,48.0,17,1.0,1.0,1.0
+45,Cost of Living,32.0,17,1.0,1.0,1.0
+46,Cost of living crisis,32.0,17,1.0,1.0,1.0
+47,Climate change,40.0,17,1.0,1.0,1.0
+48,Covid,48.0,17,1.0,1.0,1.0
+49,illegal immigration,12.0,17,1.0,1.0,1.0
+50,Environment,40.0,17,1.0,1.0,1.0
+51,Covid,48.0,17,1.0,1.0,1.0
+52,COVID,48.0,17,1.0,1.0,1.0
+53,Covid,48.0,17,1.0,1.0,1.0
+54,Rising energy costs.,32.0,17,1.0,1.0,1.0
+55,Cost of living,32.0,17,1.0,1.0,1.0
+56,Covid,48.0,17,1.0,1.0,1.0
+57,COVID 19,48.0,17,1.0,1.0,1.0
+58,Covid,48.0,17,1.0,1.0,1.0
+59,Covid,48.0,17,1.0,1.0,1.0
+60,Inaction on climate change,40.0,17,1.0,1.0,1.0
+61,Cv19,48.0,17,1.0,1.0,1.0
+62,Economy,26.0,17,1.0,1.0,1.0
+63,the economy,26.0,17,1.0,1.0,1.0
+64,Brexit,15.0,17,1.0,1.0,1.0
+65,omnicrom virus,48.0,17,1.0,1.0,1.0
+66,The economy,26.0,17,1.0,1.0,1.0
+67,Cost of living,32.0,17,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,17,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,17,1.0,1.0,1.0
+70,Cost of living crisis,32.0,17,1.0,1.0,1.0
+71,COVID-19,48.0,17,1.0,1.0,1.0
+72,covid,48.0,17,1.0,1.0,1.0
+73,Covid 19,48.0,17,1.0,1.0,1.0
+74,Financial,26.0,17,1.0,1.0,1.0
+75,Cost of living,32.0,17,1.0,1.0,1.0
+76,Climate change,,17,1.0,1.0,1.0
+77,The economy,26.0,17,1.0,1.0,1.0
+78,Covid,48.0,17,1.0,1.0,1.0
+79,Covid,48.0,17,1.0,1.0,1.0
+80,Environmental,,17,1.0,1.0,1.0
+81,Economy,26.0,17,1.0,1.0,1.0
+82,Covid 19,48.0,17,1.0,1.0,1.0
+83,Cost of living,32.0,17,1.0,1.0,1.0
+84,Coronavirus,48.0,17,1.0,1.0,1.0
+85,COVID-19,48.0,17,1.0,1.0,1.0
+86,economic recovery,26.0,17,1.0,1.0,1.0
+87,Economy,26.0,17,1.0,1.0,1.0
+88,Cost of living,32.0,17,1.0,1.0,1.0
+89,Economy,26.0,17,1.0,1.0,1.0
+90,Cost of living,32.0,17,1.0,1.0,1.0
+91,Covid,48.0,17,1.0,1.0,1.0
+92,Cost of living,32.0,17,1.0,1.0,1.0
+93,Covid,48.0,17,1.0,1.0,1.0
+94,Covid,48.0,17,1.0,1.0,1.0
+95,Covid,48.0,17,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,17,1.0,1.0,1.0
+97,Covid,48.0,17,1.0,1.0,1.0
+98,immigration,12.0,17,1.0,1.0,1.0
+99,Climate change,,17,1.0,1.0,1.0
+0,Covid,48.0,18,1.0,1.0,1.0
+1,Immigration,12.0,18,1.0,1.0,1.0
+2,Overpopulation,,18,1.0,1.0,1.0
+3,cost of living energy prices,32.0,18,1.0,1.0,1.0
+4,The cost of living,32.0,18,1.0,1.0,1.0
+5,Economy,26.0,18,1.0,1.0,1.0
+6,Covid 19,48.0,18,1.0,1.0,1.0
+7,Covid,48.0,18,1.0,1.0,1.0
+8,Coronarvius,48.0,18,1.0,1.0,1.0
+9,Covid,48.0,18,1.0,1.0,1.0
+10,Covid,48.0,18,1.0,1.0,1.0
+11,Covid-19,48.0,18,1.0,1.0,1.0
+12,Covid,48.0,18,1.0,1.0,1.0
+13,coved19,48.0,18,1.0,1.0,1.0
+14,Covid,48.0,18,1.0,1.0,1.0
+15,economy,26.0,18,1.0,1.0,1.0
+16,Energy prices,,18,1.0,1.0,1.0
+17,Cost of living.,32.0,18,1.0,1.0,1.0
+18,Covid-19,48.0,18,1.0,1.0,1.0
+19,Climate change,,18,1.0,1.0,1.0
+20,Pandemic,48.0,18,1.0,1.0,1.0
+21,Global warming,,18,1.0,1.0,1.0
+22,Coronavirus,48.0,18,1.0,1.0,1.0
+23,illegal migrants,12.0,18,1.0,1.0,1.0
+24,Coronavirus,48.0,18,1.0,1.0,1.0
+25,Covid-19,48.0,18,1.0,1.0,1.0
+26,Covid 19,48.0,18,1.0,1.0,1.0
+27,Financial situations,,18,1.0,1.0,1.0
+28,Covid,48.0,18,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,18,1.0,1.0,1.0
+30,Covid,48.0,18,1.0,1.0,1.0
+31,Economic recovery,26.0,18,1.0,1.0,1.0
+32,eradicating Covid,48.0,18,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,18,1.0,1.0,1.0
+34,covid,48.0,18,1.0,1.0,1.0
+35,Brexit,15.0,18,1.0,1.0,1.0
+36,Cost of living,32.0,18,1.0,1.0,1.0
+37,immigration,12.0,18,1.0,1.0,1.0
+38,Economy,26.0,18,1.0,1.0,1.0
+39,Brexit.,15.0,18,1.0,1.0,1.0
+40,Climate change,,18,1.0,1.0,1.0
+41,Covid,48.0,18,1.0,1.0,1.0
+42,Pandemic,48.0,18,1.0,1.0,1.0
+43,Cost of Living,32.0,18,1.0,1.0,1.0
+44,Covid,48.0,18,1.0,1.0,1.0
+45,Cost of Living,32.0,18,1.0,1.0,1.0
+46,Cost of living crisis,32.0,18,1.0,1.0,1.0
+47,Climate change,,18,1.0,1.0,1.0
+48,Covid,48.0,18,1.0,1.0,1.0
+49,illegal immigration,12.0,18,1.0,1.0,1.0
+50,Environment,40.0,18,1.0,1.0,1.0
+51,Covid,48.0,18,1.0,1.0,1.0
+52,COVID,48.0,18,1.0,1.0,1.0
+53,Covid,48.0,18,1.0,1.0,1.0
+54,Rising energy costs.,32.0,18,1.0,1.0,1.0
+55,Cost of living,32.0,18,1.0,1.0,1.0
+56,Covid,48.0,18,1.0,1.0,1.0
+57,COVID 19,48.0,18,1.0,1.0,1.0
+58,Covid,48.0,18,1.0,1.0,1.0
+59,Covid,48.0,18,1.0,1.0,1.0
+60,Inaction on climate change,40.0,18,1.0,1.0,1.0
+61,Cv19,48.0,18,1.0,1.0,1.0
+62,Economy,26.0,18,1.0,1.0,1.0
+63,the economy,26.0,18,1.0,1.0,1.0
+64,Brexit,15.0,18,1.0,1.0,1.0
+65,omnicrom virus,48.0,18,1.0,1.0,1.0
+66,The economy,26.0,18,1.0,1.0,1.0
+67,Cost of living,32.0,18,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,18,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,32.0,18,1.0,1.0,1.0
+70,Cost of living crisis,32.0,18,1.0,1.0,1.0
+71,COVID-19,48.0,18,1.0,1.0,1.0
+72,covid,48.0,18,1.0,1.0,1.0
+73,Covid 19,48.0,18,1.0,1.0,1.0
+74,Financial,,18,1.0,1.0,1.0
+75,Cost of living,32.0,18,1.0,1.0,1.0
+76,Climate change,,18,1.0,1.0,1.0
+77,The economy,26.0,18,1.0,1.0,1.0
+78,Covid,48.0,18,1.0,1.0,1.0
+79,Covid,48.0,18,1.0,1.0,1.0
+80,Environmental,40.0,18,1.0,1.0,1.0
+81,Economy,26.0,18,1.0,1.0,1.0
+82,Covid 19,48.0,18,1.0,1.0,1.0
+83,Cost of living,32.0,18,1.0,1.0,1.0
+84,Coronavirus,48.0,18,1.0,1.0,1.0
+85,COVID-19,48.0,18,1.0,1.0,1.0
+86,economic recovery,,18,1.0,1.0,1.0
+87,Economy,26.0,18,1.0,1.0,1.0
+88,Cost of living,32.0,18,1.0,1.0,1.0
+89,Economy,26.0,18,1.0,1.0,1.0
+90,Cost of living,32.0,18,1.0,1.0,1.0
+91,Covid,48.0,18,1.0,1.0,1.0
+92,Cost of living,32.0,18,1.0,1.0,1.0
+93,Covid,48.0,18,1.0,1.0,1.0
+94,Covid,48.0,18,1.0,1.0,1.0
+95,Covid,48.0,18,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,18,1.0,1.0,1.0
+97,Covid,48.0,18,1.0,1.0,1.0
+98,immigration,12.0,18,1.0,1.0,1.0
+99,Climate change,,18,1.0,1.0,1.0
+0,Covid,48.0,19,1.0,1.0,1.0
+1,Immigration,12.0,19,1.0,1.0,1.0
+2,Overpopulation,,19,1.0,1.0,1.0
+3,cost of living energy prices,32.0,19,1.0,1.0,1.0
+4,The cost of living,32.0,19,1.0,1.0,1.0
+5,Economy,26.0,19,1.0,1.0,1.0
+6,Covid 19,48.0,19,1.0,1.0,1.0
+7,Covid,48.0,19,1.0,1.0,1.0
+8,Coronarvius,48.0,19,1.0,1.0,1.0
+9,Covid,48.0,19,1.0,1.0,1.0
+10,Covid,48.0,19,1.0,1.0,1.0
+11,Covid-19,48.0,19,1.0,1.0,1.0
+12,Covid,48.0,19,1.0,1.0,1.0
+13,coved19,48.0,19,1.0,1.0,1.0
+14,Covid,48.0,19,1.0,1.0,1.0
+15,economy,26.0,19,1.0,1.0,1.0
+16,Energy prices,32.0,19,1.0,1.0,1.0
+17,Cost of living.,32.0,19,1.0,1.0,1.0
+18,Covid-19,48.0,19,1.0,1.0,1.0
+19,Climate change,,19,1.0,1.0,1.0
+20,Pandemic,48.0,19,1.0,1.0,1.0
+21,Global warming,40.0,19,1.0,1.0,1.0
+22,Coronavirus,48.0,19,1.0,1.0,1.0
+23,illegal migrants,,19,1.0,1.0,1.0
+24,Coronavirus,48.0,19,1.0,1.0,1.0
+25,Covid-19,48.0,19,1.0,1.0,1.0
+26,Covid 19,48.0,19,1.0,1.0,1.0
+27,Financial situations,,19,1.0,1.0,1.0
+28,Covid,48.0,19,1.0,1.0,1.0
+29,Corona virus pandemic,48.0,19,1.0,1.0,1.0
+30,Covid,48.0,19,1.0,1.0,1.0
+31,Economic recovery,26.0,19,1.0,1.0,1.0
+32,eradicating Covid,48.0,19,1.0,1.0,1.0
+33,consequences of brexit/Russian aggression,15.0,19,1.0,1.0,1.0
+34,covid,48.0,19,1.0,1.0,1.0
+35,Brexit,15.0,19,1.0,1.0,1.0
+36,Cost of living,32.0,19,1.0,1.0,1.0
+37,immigration,12.0,19,1.0,1.0,1.0
+38,Economy,26.0,19,1.0,1.0,1.0
+39,Brexit.,15.0,19,1.0,1.0,1.0
+40,Climate change,,19,1.0,1.0,1.0
+41,Covid,48.0,19,1.0,1.0,1.0
+42,Pandemic,48.0,19,1.0,1.0,1.0
+43,Cost of Living,32.0,19,1.0,1.0,1.0
+44,Covid,48.0,19,1.0,1.0,1.0
+45,Cost of Living,32.0,19,1.0,1.0,1.0
+46,Cost of living crisis,32.0,19,1.0,1.0,1.0
+47,Climate change,,19,1.0,1.0,1.0
+48,Covid,48.0,19,1.0,1.0,1.0
+49,illegal immigration,,19,1.0,1.0,1.0
+50,Environment,40.0,19,1.0,1.0,1.0
+51,Covid,48.0,19,1.0,1.0,1.0
+52,COVID,48.0,19,1.0,1.0,1.0
+53,Covid,48.0,19,1.0,1.0,1.0
+54,Rising energy costs.,32.0,19,1.0,1.0,1.0
+55,Cost of living,32.0,19,1.0,1.0,1.0
+56,Covid,48.0,19,1.0,1.0,1.0
+57,COVID 19,48.0,19,1.0,1.0,1.0
+58,Covid,48.0,19,1.0,1.0,1.0
+59,Covid,48.0,19,1.0,1.0,1.0
+60,Inaction on climate change,40.0,19,1.0,1.0,1.0
+61,Cv19,48.0,19,1.0,1.0,1.0
+62,Economy,26.0,19,1.0,1.0,1.0
+63,the economy,26.0,19,1.0,1.0,1.0
+64,Brexit,15.0,19,1.0,1.0,1.0
+65,omnicrom virus,48.0,19,1.0,1.0,1.0
+66,The economy,26.0,19,1.0,1.0,1.0
+67,Cost of living,32.0,19,1.0,1.0,1.0
+68,Cost of living and paying bills,32.0,19,1.0,1.0,1.0
+69,ECONOMY RISING PRICES,,19,1.0,1.0,1.0
+70,Cost of living crisis,32.0,19,1.0,1.0,1.0
+71,COVID-19,48.0,19,1.0,1.0,1.0
+72,covid,48.0,19,1.0,1.0,1.0
+73,Covid 19,48.0,19,1.0,1.0,1.0
+74,Financial,26.0,19,1.0,1.0,1.0
+75,Cost of living,32.0,19,1.0,1.0,1.0
+76,Climate change,40.0,19,1.0,1.0,1.0
+77,The economy,26.0,19,1.0,1.0,1.0
+78,Covid,48.0,19,1.0,1.0,1.0
+79,Covid,48.0,19,1.0,1.0,1.0
+80,Environmental,40.0,19,1.0,1.0,1.0
+81,Economy,26.0,19,1.0,1.0,1.0
+82,Covid 19,48.0,19,1.0,1.0,1.0
+83,Cost of living,32.0,19,1.0,1.0,1.0
+84,Coronavirus,48.0,19,1.0,1.0,1.0
+85,COVID-19,48.0,19,1.0,1.0,1.0
+86,economic recovery,,19,1.0,1.0,1.0
+87,Economy,26.0,19,1.0,1.0,1.0
+88,Cost of living,32.0,19,1.0,1.0,1.0
+89,Economy,26.0,19,1.0,1.0,1.0
+90,Cost of living,32.0,19,1.0,1.0,1.0
+91,Covid,48.0,19,1.0,1.0,1.0
+92,Cost of living,32.0,19,1.0,1.0,1.0
+93,Covid,48.0,19,1.0,1.0,1.0
+94,Covid,48.0,19,1.0,1.0,1.0
+95,Covid,48.0,19,1.0,1.0,1.0
+96,"Keeping covid at bay,unlocking the country",48.0,19,1.0,1.0,1.0
+97,Covid,48.0,19,1.0,1.0,1.0
+98,immigration,12.0,19,1.0,1.0,1.0
+99,Climate change,,19,1.0,1.0,1.0
