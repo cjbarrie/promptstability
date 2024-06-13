@@ -22,10 +22,10 @@ for file in files:
     df['temperature'] = df['temperature'].round(1)
     
     # Select the unique combinations of 'prompt' and 'temperature'
-    unique_combinations = df[['prompt', 'temperature']].drop_duplicates(subset=['temperature'])
+    unique_combinations = df[['prompt', 'temperature']].drop_duplicates()
     
     # Escape LaTeX special characters in the prompt column
-    unique_combinations['prompt'] = unique_combinations['prompt'].str.replace('_', r'\_')
+    unique_combinations['prompt'] = unique_combinations['prompt'].str.replace('_', r'\_', regex=True)
     
     # Add the dataset name to each entry
     unique_combinations['dataset'] = dataset_name
@@ -34,7 +34,7 @@ for file in files:
     results.append(unique_combinations)
 
 # Concatenate all results into a single DataFrame
-all_results = pd.concat(results)
+all_results = pd.concat(results, ignore_index=True)
 
 # Convert temperature to string with 1 decimal place
 all_results['temperature'] = all_results['temperature'].map('{:.1f}'.format)
