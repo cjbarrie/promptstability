@@ -10,7 +10,9 @@ python 00_master.py
 
 ```
 
-### Define your custom annotation function: OpenAI example
+### Define your custom annotation function
+
+#### OpenAI example
 ```
 import OpenAI
 
