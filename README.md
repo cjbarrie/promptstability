@@ -10,26 +10,60 @@ python 00_master.py
 
 ```
 
+### Define your custom annotation function: OpenAI example
+```
+import OpenAI
+
+client = OpenAI(
+    api_key = get_openai_api_key()
+)
+
+# The annotation function should take the text, the prompt, and temperature as its three parameters.
+def annotate(text, prompt, temperature=0.1): 
+    try:
+        response = client.chat.completions.create(
+            model='gpt-3-5-turbo',
+            temperature=temperature,
+            messages=[
+                {"role": "system", "content": prompt}, 
+                {"role": "user", "content": text}
+            ]
+        )
+    except Exception as e:
+        print(f"Caught exception: {e}")
+        raise e
+
+    return ''.join(choice.message.content for choice in response.choices)
+```
+
+#### Ollama example
+```    
+import ollama
+MODEL = 'llama3'
+def annotate(text, prompt, temperature=0.1):
+    response = ollama.chat(model=MODEL, messages=[
+        {"role": "system", "content": f"'{prompt}'"},  # The system instruction tells the bot how it is supposed to behave
+        {"role": "user", "content": f"'{text}'"}  # This provides the text to be analyzed.
+    ])
+return response['message']['content']
+```
+
+
 ### Within prompt
 
 ```python
 import pandas as pd
-from utils import LLMWrapper, PromptStabilityAnalysis, get_openai_api_key
+from utils import PromptStabilityAnalysis, get_openai_api_key
 import matplotlib.pyplot as plt
 
 # Baseline stochasticity
-
-## Usage example
-APIKEY = get_openai_api_key()
-MODEL = 'gpt-3.5-turbo'
 
 # Data
 df = pd.read_csv('data/tweets.csv')
 df = df.sample(10, random_state=123)
 example_data = list(df['text'].values)
 
-llm = LLMWrapper(apikey=APIKEY, model=MODEL)
-psa = PromptStabilityAnalysis(llm=llm, data=example_data)
+psa = PromptStabilityAnalysis(annotation_function=annotate, data=example_data)
 
 # Step 2: Construct the Prompt
 original_text = 'The following is a Twitter message written either by a Republican or a Democrat before the 2020 election. Your task is to guess whether the author is Republican or Democrat.'

@@ -1,11 +1,33 @@
 import pandas as pd
-from utils import LLMWrapper, PromptStabilityAnalysis, get_openai_api_key
+from utils import PromptStabilityAnalysis, get_openai_api_key
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import matplotlib.pyplot as plt
 import simpledorff
 
+from openai import OpenAI
+
+# Example: We here use the OpenAI API. You can provide any annotation function.
 APIKEY = get_openai_api_key()
 MODEL = 'gpt-3.5-turbo'
+client = OpenAI(
+    api_key = get_openai_api_key()
+)
+
+def annotate(text, prompt, temperature=0.1):
+    try:
+        response = client.chat.completions.create(
+            model=MODEL,
+            temperature=temperature,
+            messages=[
+                {"role": "system", "content": prompt}, 
+                {"role": "user", "content": text}
+            ]
+        )
+    except Exception as e:
+        print(f"Caught exception: {e}")
+        raise e
+
+    return ''.join(choice.message.content for choice in response.choices)
 
 # Data
 try:
@@ -23,8 +45,7 @@ df = df[df['scale'] == 'Economic']
 df = df.sample(100, random_state=123)
 example_data = list(df['sentence_context'].values)
 
-llm = LLMWrapper(apikey=APIKEY, model=MODEL)
-psa = PromptStabilityAnalysis(llm=llm, data=example_data, parse_function=lambda x: float(x), metric_fn=simpledorff.metrics.interval_metric)
+psa = PromptStabilityAnalysis(annotation_function=annotate, data=example_data, parse_function=lambda x: float(x), metric_fn=simpledorff.metrics.interval_metric)
 
 # Step 2: Construct the Prompt
 original_text = (

@@ -3,8 +3,30 @@ from utils import LLMWrapper, PromptStabilityAnalysis, get_openai_api_key
 import matplotlib.pyplot as plt
 import simpledorff
 
+from openai import OpenAI
+
+# Example: We here use the OpenAI API. You can provide any annotation function.
 APIKEY = get_openai_api_key()
 MODEL = 'gpt-3.5-turbo'
+client = OpenAI(
+    api_key = get_openai_api_key()
+)
+
+def annotate(text, prompt, temperature=0.1):
+    try:
+        response = client.chat.completions.create(
+            model=MODEL,
+            temperature=temperature,
+            messages=[
+                {"role": "system", "content": prompt}, 
+                {"role": "user", "content": text}
+            ]
+        )
+    except Exception as e:
+        print(f"Caught exception: {e}")
+        raise e
+
+    return ''.join(choice.message.content for choice in response.choices)
 
 # Data
 df = pd.read_csv('data/news.csv')
@@ -19,7 +41,7 @@ def parse_function(x):
         return None  # Handle cases where conversion fails
 
 llm = LLMWrapper(apikey=APIKEY, model=MODEL)
-psa = PromptStabilityAnalysis(llm=llm, data=example_data, parse_function=parse_function, metric_fn=simpledorff.metrics.nominal_metric)
+psa = PromptStabilityAnalysis(annotation_function=annotate, data=example_data, parse_function=parse_function, metric_fn=simpledorff.metrics.nominal_metric)
 
 # Step 2: Construct the Prompt
 original_text = (
