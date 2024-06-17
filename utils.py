@@ -197,7 +197,7 @@ class PromptStabilityAnalysis:
         return ka_scores, all_annotated
 
 
-    def interprompt_stochasticity(self, original_text, prompt_postfix, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, bootstrap_samples=1000, print_prompts=False, plot=False, save_path=None, save_csv=None):
+    def interprompt_stochasticity(self, original_text, prompt_postfix=None, nr_variations=5, temperatures=[0.5, 0.7, 0.9], iterations=1, bootstrap_samples=1000, print_prompts=False, edit_prompts_path=None, plot=False, save_path=None, save_csv=None):
         ka_scores = {}
         all_annotated = []
 
@@ -219,8 +219,6 @@ class PromptStabilityAnalysis:
                 elapsed_time = end_time - start_time  #
                 print(f"Temperature {temp} completed in {elapsed_time:.2f} seconds")
 
-                print()
-
             annotated_data = pd.DataFrame(annotated)
             all_annotated.append(annotated_data)
 
@@ -230,6 +228,7 @@ class PromptStabilityAnalysis:
             mean_alpha, (ci_lower, ci_upper) = self.bootstrap_krippendorff(annotated_data, annotator_col, bootstrap_samples)
             ka_scores[temp] = {'Average Alpha': mean_alpha, 'CI Lower': ci_lower, 'CI Upper': ci_upper}
             print(f'KA calculation completed.')
+            print()
 
         # Concatenate all annotated data
         combined_annotated_data = pd.concat(all_annotated, ignore_index=True)
@@ -249,6 +248,10 @@ class PromptStabilityAnalysis:
             print("Unique prompts:")
             for prompt in unique_prompts:
                 print(prompt)
+
+        if edit_prompts_path:
+            combined_annotated_data['prompt'].to_csv(edit_prompts_path, index=False)
+            print(f"Prompts saved to {save_csv}")
 
         if plot:
             temperatures_list = list(ka_scores.keys())
