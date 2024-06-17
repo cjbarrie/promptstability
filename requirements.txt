@@ -3,9 +3,8 @@ transformers
 sentence-transformers
 simpledorff
 pandas
-numpy
-openai
+bumpy
 seaborn
 matplotlib
 plotly
-sentencepiece
+sentencepiece 

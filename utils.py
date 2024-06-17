@@ -5,17 +5,14 @@ import simpledorff
 
 import pandas as pd
 import numpy as np
-import openai
 import time
 import sys
 import os
-from openai import OpenAI
 
 import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
-import sentencepiece
 
 def get_openai_api_key():
     """Retrieve OpenAI API key from environment variables."""
@@ -24,99 +21,16 @@ def get_openai_api_key():
         raise ValueError("API key not found. Please set the OPENAI_API_KEY environment variable.")
     return api_key
 
-class LLMWrapper:
-    '''This is a wrapper class for LLMs, which provides a method called 'annotate' that annotates a given message using an LLM.
-    '''
-
-    def __init__(self, apikey, model, wait_time=0.8) -> None:
-        self.apikey = apikey
-        self.model = model
-
-        self.client = OpenAI(
-            # This is the default and can be omitted
-            api_key=apikey
-        )
-
-    def annotate(self, text, prompt, parse_function=None, temperature=0.1):
-        '''
-        Annotate the given text in the way the prompt instructs you to.
-
-        Parameters:
-        - text (str): text you want classified
-        - prompt (str): the classification prompt/instruction
-        - temperature (float): how deterministic (low number) vs. random (higher number) your results should be
-        - parse_function (method): a method that parses the resulting data.
-
-        Returns:
-        - model's response to prompt (classification outcome)
-        '''
-        failed = True
-        tries = 0
-        while(failed):
-            try:
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    temperature=temperature,
-                    messages=[
-                        {"role": "system", "content": f"'{prompt}'"},  # The system instruction tells the bot how it is supposed to behave
-                        {"role": "user", "content": f"'{text}'"}  # This provides the text to be analyzed.
-                    ]
-                )
-                failed = False
-
-            # Handle errors.
-            # If the API gets an error, perhaps because it is overwhelmed, we wait 10 seconds and then we try again.
-            # We do this 10 times, and then we give up.
-            except openai.APIError as e:
-                print(f"OpenAI API returned an API Error: {e}")
-
-                if tries < 10:
-                    print(f"Caught an APIError: {e}. Waiting 10 seconds and then trying again...")
-                    failed = True
-                    tries += 1
-                    time.sleep(10)
-                else:
-                    print(f"Caught an APIError: {e}. Too many exceptions. Giving up.")
-                    raise e
-
-            except openai.APIConnectionError as e:
-                print(f"Failed to connect to OpenAI API: {e}")
-                pass
-            except openai.RateLimitError as e:
-                print(f"OpenAI API request exceeded rate limit: {e}")
-                pass
-
-            # If the text is too long, we truncate it and try again. Note that if you get this error, you probably want to chunk your texts.
-            except openai.BadRequestError as e:
-                # Shorten request text
-                print(f"Received a InvalidRequestError. Request likely too long. {e}")
-                raise e
-
-            except Exception as e:
-                print(f"Caught unhandled error. {e}")
-                raise e
-
-        result = ''
-        for choice in response.choices:
-            result += choice.message.content
-
-        # Parse the result using provided function
-        if parse_function is not None:
-            result = parse_function(result)
-
-        return result
-
 
 class PromptStabilityAnalysis:
 
-    def __init__(self, llm, data, metric_fn=simpledorff.metrics.nominal_metric, parse_function=None) -> None:
-        self.llm = llm
+    def __init__(self, annotation_function, data, metric_fn=simpledorff.metrics.nominal_metric) -> None:
+        self.annotation_function = annotation_function
         self.embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
         model_name = 'tuner007/pegasus_paraphrase'
         self.torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.tokenizer = PegasusTokenizer.from_pretrained(model_name)
-        self.model = PegasusForConditionalGeneration.from_pretrained(model_name).to(self.torch_device)
-        self.parse_function = parse_function
+        self.model = PegasusForConditionalGeneration.from_pretrained(model_name).to(self.torch_device)        
         self.data = data
         self.metric_fn = metric_fn
 
@@ -147,7 +61,7 @@ class PromptStabilityAnalysis:
             annotations = []
 
             for j, d in enumerate(self.data):
-                annotation = self.llm.annotate(d, prompt, parse_function=self.parse_function)
+                annotation = self.annotation_function(d, prompt)
                 annotations.append({'id': j, 'text': d, 'annotation': annotation, 'iteration': i})
 
             all_annotations.extend(annotations)  # Extend the list with the current iteration's annotations
@@ -212,7 +126,7 @@ class PromptStabilityAnalysis:
                     print(f"Temperature {temp}, Iteration {i+1}/{iterations}", end='\r')
                     sys.stdout.flush()
                     for k, d in enumerate(self.data):
-                        annotation = self.llm.annotate(d, paraphrase, parse_function=self.parse_function)
+                        annotation = self.annotation_function(d, paraphrase)
                         annotated.append({'id': k, 'text': d, 'annotation': annotation, 'prompt_id': j, 'prompt': paraphrase, 'original': original, 'temperature': temp})
 
                 end_time = time.time()  #

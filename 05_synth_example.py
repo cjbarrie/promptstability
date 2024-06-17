@@ -1,17 +1,39 @@
 import pandas as pd
-from utils import LLMWrapper, PromptStabilityAnalysis, get_openai_api_key
+from utils import PromptStabilityAnalysis, get_openai_api_key
 import matplotlib.pyplot as plt
+from openai import OpenAI
 
 APIKEY = get_openai_api_key()
 MODEL = 'gpt-3.5-turbo'
+
+# Example: We use the OpenAI API
+client = OpenAI(
+    api_key = get_openai_api_key()
+)
+
+def annotate(text, prompt, temperature=0.1):
+    try:
+        response = client.chat.completions.create(
+            model='gpt-3.5-turbo',
+            temperature=temperature,
+            messages=[
+                {"role": "system", "content": prompt}, 
+                {"role": "user", "content": text}
+            ]
+        )
+    except Exception as e:
+        print(f"Caught exception: {e}")
+        raise e
+
+    return ''.join(choice.message.content for choice in response.choices)
 
 # Data
 df = pd.read_csv('data/profiles.csv')
 df = df.sample(100, random_state=123)
 example_data = list(df['profile'].values)
 
-llm = LLMWrapper(apikey=APIKEY, model=MODEL)
-psa = PromptStabilityAnalysis(llm=llm, data=example_data)
+
+psa = PromptStabilityAnalysis(annotation_function=annotate, data=example_data)
 
 # Step 2: Construct the Prompt
 original_text = 'In the 2020 presidential election, Donald Trump is the Republican candidate, and Joe Biden is the Democratic candidate. The following is some information about an individual voter. I want you to tell me how you think they voted.'
