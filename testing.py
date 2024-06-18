@@ -44,5 +44,5 @@ prompt_postfix = '[Respond 0 for Democrat, or 1 for Republican. Guess if you do 
 # Get KA scores across different temperature paraphrasings
 temperatures = [0.1, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5,  5.0]
 
-#ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=5, temperatures=temperatures, iterations = 1, print_prompts=False, edit_prompts_path='/Users/ellipalaiologou/Downloads/test_prompts.csv',plot=True, save_path='/Users/ellipalaiologou/Downloads/test_plot.png', save_csv = '/Users/ellipalaiologou/Downloads/test_data.csv')
+ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=5, temperatures=temperatures, iterations = 1, print_prompts=False, edit_prompts_path='/Users/ellipalaiologou/Downloads/test_prompts.csv',plot=True, save_path='/Users/ellipalaiologou/Downloads/test_plot.png', save_csv = '/Users/ellipalaiologou/Downloads/test_data.csv')
 ka_scores, annotated_data = psa.manual_interprompt_stochasticity(edit_prompts_path='/Users/ellipalaiologou/Downloads/test_prompts.csv', plot=True, save_path='/Users/ellipalaiologou/Downloads/testmanual_plot.png', save_csv = '/Users/ellipalaiologou/Downloads/testmanual_data.csv')
