@@ -30,7 +30,7 @@ class PromptStabilityAnalysis:
         model_name = 'tuner007/pegasus_paraphrase'
         self.torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.tokenizer = PegasusTokenizer.from_pretrained(model_name)
-        self.model = PegasusForConditionalGeneration.from_pretrained(model_name).to(self.torch_device)        
+        self.model = PegasusForConditionalGeneration.from_pretrained(model_name).to(self.torch_device)
         self.data = data
         self.metric_fn = metric_fn
 
@@ -164,8 +164,96 @@ class PromptStabilityAnalysis:
                 print(prompt)
 
         if edit_prompts_path:
-            combined_annotated_data['prompt'].to_csv(edit_prompts_path, index=False)
-            print(f"Prompts saved to {save_csv}")
+            prompts_df = combined_annotated_data.drop_duplicates(subset=['prompt_id', 'temperature', 'prompt', 'original'])
+            prompts_df = prompts_df[['prompt_id', 'temperature', 'prompt', 'original']]
+            prompts_df.columns = ['prompt_id', 'temperature', 'prompt_text', 'original_prompt']
+            prompts_df.to_csv(edit_prompts_path, index=False)
+            print(f"{nr_variations} prompts per temperature saved and available to edit at {edit_prompts_path}")
+
+        if plot:
+            temperatures_list = list(ka_scores.keys())
+            ka_values = [ka_scores[temp]['Average Alpha'] for temp in temperatures_list]
+            ka_lowers = [ka_scores[temp]['Average Alpha'] - ka_scores[temp]['CI Lower'] for temp in temperatures_list]
+            ka_uppers = [ka_scores[temp]['CI Upper'] - ka_scores[temp]['Average Alpha'] for temp in temperatures_list]
+
+            plt.figure(figsize=(10, 5))
+            plt.plot(temperatures_list, ka_values, marker='o', linestyle='-', color='b')
+            plt.errorbar(temperatures_list, ka_values, yerr=[ka_lowers, ka_uppers], fmt='o', linestyle='-', color='b', ecolor='gray', capsize=3)
+            plt.xlabel('Temperature')
+            plt.ylabel('Krippendorff\'s Alpha (KA)')
+            plt.title('Krippendorff\'s Alpha Scores with 95% CI Across Temperatures')
+            plt.xticks(temperatures_list)  # Set x-axis ticks to be whole integers
+            plt.grid(True)
+            plt.ylim(0.0, 1.05)
+            plt.axhline(y=0.80, color='black', linestyle='--', linewidth=.5)
+
+            if save_path:
+                plt.savefig(save_path)
+                print(f"Plot saved to {save_path}")
+            else:
+                plt.show()
+
+        return ka_scores, combined_annotated_data
+
+    def manual_interprompt_stochasticity(self, edit_prompts_path, bootstrap_samples=1000, plot=False, save_path=None, save_csv=None):
+        # Load the manually edited prompts CSV
+        prompts_df = pd.read_csv(edit_prompts_path)
+
+        # Assuming 'original_prompt' column is used to filter out original, unedited prompts
+        prompts_df = prompts_df[prompts_df['original_prompt'] == False]
+
+        ka_scores = {}
+        all_annotated = []
+
+        # Iterate through each unique temperature found in the prompts DataFrame
+        for temp in prompts_df['temperature'].unique():
+            temp_prompts = prompts_df[prompts_df['temperature'] == temp]
+            annotated = []
+            start_time = time.time()
+
+            # Annotate data using each prompt at the current temperature
+            for _, prompt_entry in temp_prompts.iterrows():
+                prompt = prompt_entry['prompt_text']
+                prompt_id = prompt_entry['prompt_id']
+
+                for k, d in enumerate(self.data):
+                    annotation = self.annotation_function(d, prompt)
+                    annotated.append({
+                        'id': k,
+                        'text': d,
+                        'annotation': annotation,
+                        'prompt_id': prompt_id,
+                        'prompt': prompt,
+                        'temperature': temp
+                    })
+
+            end_time = time.time()  #
+            elapsed_time = end_time - start_time  #
+            print(f"Temperature {temp} completed in {elapsed_time:.2f} seconds")
+
+            annotated_data = pd.DataFrame(annotated)
+            all_annotated.append(annotated_data)
+
+            # Bootstrap Krippendorff's Alpha calculation for each temperature
+            print(f'KA calculation for {bootstrap_samples} bootstrap samples...')
+            mean_alpha, (ci_lower, ci_upper) = self.bootstrap_krippendorff(annotated_data, 'prompt_id', bootstrap_samples)
+            ka_scores[temp] = {'Average Alpha': mean_alpha, 'CI Lower': ci_lower, 'CI Upper': ci_upper}
+            print(f'KA calculation completed.')
+            print()
+
+        # Concatenate all annotated data
+        combined_annotated_data = pd.concat(all_annotated, ignore_index=True)
+
+        # Add average KA, CI lower, and CI upper to the combined data for CSV output
+        for temp in ka_scores:
+            combined_annotated_data.loc[combined_annotated_data['temperature'] == temp, 'ka_mean'] = ka_scores[temp]['Average Alpha']
+            combined_annotated_data.loc[combined_annotated_data['temperature'] == temp, 'ka_lower'] = ka_scores[temp]['CI Lower']
+            combined_annotated_data.loc[combined_annotated_data['temperature'] == temp, 'ka_upper'] = ka_scores[temp]['CI Upper']
+
+        # Output results as needed
+        if save_csv:
+            combined_annotated_data.to_csv(save_csv, index=False)
+            print(f"Annotated data saved to {save_csv}")
 
         if plot:
             temperatures_list = list(ka_scores.keys())
