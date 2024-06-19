@@ -1,7 +1,6 @@
 import pandas as pd
 from utils import PromptStabilityAnalysis, get_openai_api_key
 import matplotlib.pyplot as plt
-
 from openai import OpenAI
 
 # Example: We here use the OpenAI API. You can provide any annotation function.

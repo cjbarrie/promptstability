@@ -42,7 +42,7 @@ all_results['temperature'] = all_results['temperature'].map('{:.1f}'.format)
 # Format the output
 output_lines = [
     r"\lstset{breaklines=true, breakatwhitespace=true}",
-    r"\begin{lstlisting}",
+    r"\begin{lstlisting}[label=lst:promptvariants]",
     r"% Format: Dataset \t Temperature \t Prompt"
 ]
 for index, row in all_results.iterrows():

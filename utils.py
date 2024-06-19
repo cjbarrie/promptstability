@@ -24,12 +24,13 @@ def get_openai_api_key():
 
 class PromptStabilityAnalysis:
 
-    def __init__(self, annotation_function, data, metric_fn=simpledorff.metrics.nominal_metric) -> None:
+    def __init__(self, annotation_function, data, metric_fn=simpledorff.metrics.nominal_metric, parse_function=None) -> None:
         self.annotation_function = annotation_function
         self.embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
         model_name = 'tuner007/pegasus_paraphrase'
         self.torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.tokenizer = PegasusTokenizer.from_pretrained(model_name)
+        self.parse_function = parse_function
         self.model = PegasusForConditionalGeneration.from_pretrained(model_name).to(self.torch_device)
         self.data = data
         self.metric_fn = metric_fn

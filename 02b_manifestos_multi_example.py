@@ -3,7 +3,6 @@ from utils import PromptStabilityAnalysis, get_openai_api_key
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import matplotlib.pyplot as plt
 import simpledorff
-
 from openai import OpenAI
 
 # Example: We here use the OpenAI API. You can provide any annotation function.

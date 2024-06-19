@@ -7,22 +7,30 @@ within_files = {
     'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_within.csv',
     'Tweets (Populism)': 'data/annotated/tweets_pop_within.csv',
     'News': 'data/annotated/news_within.csv',
+    'News (Short)': 'data/annotated/news_short_within.csv',
     'Manifestos': 'data/annotated/manifestos_within.csv',
     'Manifestos Multi': 'data/annotated/manifestos_multi_within.csv',
     'Stance': 'data/annotated/stance_within.csv',
+    'Stance (Long)': 'data/annotated/stance_long_within.csv',
     'MII': 'data/annotated/mii_within.csv',
-    'Synthetic': 'data/annotated/synth_within.csv'
+    'MII (Long)': 'data/annotated/mii_long_within.csv',
+    'Synthetic': 'data/annotated/synth_within.csv',
+    'Synthetic (Short)': 'data/annotated/synth_short_within.csv'
 }
 
 between_files = {
     'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_between.csv',
     'Tweets (Populism)': 'data/annotated/tweets_pop_between.csv',
     'News': 'data/annotated/news_between.csv',
+    'News (Short)': 'data/annotated/news_short_between.csv',
     'Manifestos': 'data/annotated/manifestos_between.csv',
     'Manifestos Multi': 'data/annotated/manifestos_multi_between.csv',
     'Stance': 'data/annotated/stance_between.csv',
+    'Stance (Long)': 'data/annotated/stance_long_between.csv',
     'MII': 'data/annotated/mii_between.csv',
-    'Synthetic': 'data/annotated/synth_between.csv'
+    'MII (Long)': 'data/annotated/mii_long_between.csv',
+    'Synthetic': 'data/annotated/synth_between.csv',
+    'Synthetic (Short)': 'data/annotated/synth_short_between.csv'
 }
 
 # Define a color palette
@@ -30,11 +38,15 @@ color_palette = {
     'Tweets (Rep. Dem.)': 'darkcyan',
     'Tweets (Populism)': 'cyan',
     'News': 'orange',
+    'News (Short)': 'darkorange',
     'Manifestos': 'green',
     'Manifestos Multi': 'red',
     'Stance': 'hotpink',
+    'Stance (Long)': 'deeppink',
     'MII': 'mediumseagreen',
-    'Synthetic': 'indianred'
+    'MII (Long)': 'seagreen',
+    'Synthetic': 'indianred',
+    'Synthetic (Short)': 'brown'
 }
 
 def combine_within_files(files):

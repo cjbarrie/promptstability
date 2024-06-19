@@ -91,7 +91,7 @@ ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_
 And then to plot all data:
 
 ```bash
-python 03_plot_all.py
+python 11_plot_all.py
 ```
 
 ![](plots/combined_within.png)
