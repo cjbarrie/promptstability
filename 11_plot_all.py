@@ -82,7 +82,7 @@ def plot_combined_within(data, order, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(data, col="label", col_wrap=3, height=5, aspect=1, sharey=False, col_order=order)
+    g = sns.FacetGrid(data, col="label", col_wrap=4, height=4, aspect=1, sharey=False, col_order=order)
 
     # Map the lineplot to the FacetGrid
     g.map_dataframe(sns.lineplot, x='iteration', y='ka_mean', marker='o', linewidth=1.5)
@@ -95,8 +95,8 @@ def plot_combined_within(data, order, save_path=None):
         color = color_palette[label]
         ax.errorbar(subset['iteration'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color, ecolor=color, capsize=3)
         avg_ka = subset['ka_mean'].mean()
-        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
-        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')
+        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average PSS: {avg_ka:.2f}')
+        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold PSS: 0.80')
         ax.legend(fontsize=10, frameon=False)
         ax.spines['top'].set_linewidth(1.5)
         ax.spines['right'].set_linewidth(1.5)
@@ -104,7 +104,7 @@ def plot_combined_within(data, order, save_path=None):
         ax.spines['bottom'].set_linewidth(1.5)
 
     # Customize the plot for a professional look
-    g.set_axis_labels('Iteration', "Krippendorff's Alpha (KA)", fontsize=16, fontweight='bold')
+    g.set_axis_labels('Iteration', "Intra-PSS", fontsize=16, fontweight='bold')
     g.set_titles("{col_name} Within", size=18, fontweight='bold')
     g.set(xticks=data['iteration'].unique())
     g.set(yticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
@@ -127,7 +127,7 @@ def plot_combined_between(data, order, save_path=None):
     sns.set_style("white")
 
     # Create the FacetGrid
-    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=3, height=5, aspect=1, sharey=False, col_order=order)
+    g = sns.FacetGrid(average_ka_per_temp, col="label", col_wrap=4, height=4, aspect=1, sharey=False, col_order=order)
 
     # Map the lineplot to the FacetGrid
     g.map_dataframe(sns.lineplot, x='temperature', y='ka_mean', marker='o', linewidth=1.5)
@@ -140,8 +140,8 @@ def plot_combined_between(data, order, save_path=None):
         color = color_palette[label]
         ax.errorbar(subset['temperature'], subset['ka_mean'], yerr=[ci_lowers, ci_uppers], fmt='o', linestyle='-', color=color, ecolor=color, capsize=3)
         avg_ka = subset['ka_mean'].mean()
-        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average KA: {avg_ka:.2f}')
-        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold KA: 0.80')
+        ax.axhline(y=avg_ka, color='red', linestyle='--', linewidth=1.5, label=f'Average PSS: {avg_ka:.2f}')
+        ax.axhline(y=0.80, color='black', linestyle=':', linewidth=1.5, label='Threshold PSS: 0.80')
         ax.legend(fontsize=10, frameon=False)
         ax.spines['top'].set_linewidth(1.5)
         ax.spines['right'].set_linewidth(1.5)
@@ -149,7 +149,7 @@ def plot_combined_between(data, order, save_path=None):
         ax.spines['bottom'].set_linewidth(1.5)
 
     # Customize the plot for a professional look
-    g.set_axis_labels('Temperature', "Krippendorff's Alpha (KA)", fontsize=16, fontweight='bold')
+    g.set_axis_labels('Temperature', "Inter-PSS", fontsize=16, fontweight='bold')
     g.set_titles("{col_name} Between", size=18, fontweight='bold')
     g.set(xticks=average_ka_per_temp['temperature'].unique())
     g.set(yticks=[0.0, 0.2, 0.4, 0.6, 0.8, 1.0])

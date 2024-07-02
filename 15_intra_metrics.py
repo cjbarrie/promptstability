@@ -97,7 +97,7 @@ def print_metrics(results, metric_colors):
         print()
 
 
-def create_ranking_plot(results, save_path):
+def create_ranking_plot(results, save_path, color_palette):
     data = []
 
     for name, metrics in results.items():
@@ -134,7 +134,7 @@ def create_ranking_plot(results, save_path):
     
     metrics_order = ['Weighted mean', 'AUC-PSS', 'Variance', 'Iteration threshold']
     
-    fig, axes = plt.subplots(2, 2, figsize=(10, 5))
+    fig, axes = plt.subplots(2, 2, figsize=(10, 8))
     axes = axes.flatten()
     
     for ax, metric in zip(axes, metrics_order):
@@ -145,7 +145,7 @@ def create_ranking_plot(results, save_path):
             subset = metric_df_sorted[metric_df_sorted['Rank'] == rank]
             alpha_value = 0.3 + 0.7 * (rank / metric_df_sorted['Rank'].max())  # Increasing alpha by rank
             sns.barplot(data=subset, y="Dataset", x="Value", 
-                        color=color, ax=ax, alpha=alpha_value, linewidth=0)
+                        palette=[color_palette[name] for name in subset['Dataset']], ax=ax, alpha=alpha_value, linewidth=0)
 
         ax.set_ylabel("Dataset", fontsize=12)
         ax.set_xlabel("Value", fontsize=12)
@@ -192,6 +192,21 @@ if __name__ == '__main__':
         'AUC-PSS': 'yellow',
     }
 
+    color_palette = {
+        'Tweets (Rep. Dem.)': 'darkcyan',
+        'Tweets (Populism)': 'cyan',
+        'News': 'orange',
+        'News (Short)': 'darkorange',
+        'Manifestos': 'green',
+        'Manifestos Multi': 'red',
+        'Stance': 'hotpink',
+        'Stance (Long)': 'deeppink',
+        'MII': 'mediumseagreen',
+        'MII (Long)': 'seagreen',
+        'Synthetic': 'indianred',
+        'Synthetic (Short)': 'brown'
+    }
+
     results = {}
     for name, file_path in files.items():
         try:
@@ -205,4 +220,4 @@ if __name__ == '__main__':
     print_metrics(results, metric_colors)
     
     # Create the ranking plot
-    create_ranking_plot(results, save_path='plots/metrics_within.png')
+    create_ranking_plot(results, save_path='plots/metrics_within.png', color_palette=color_palette)
