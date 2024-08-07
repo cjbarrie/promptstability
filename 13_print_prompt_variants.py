@@ -6,7 +6,7 @@ import re
 directory = 'data/annotated/'
 
 # Find all _between files in the directory
-files = glob.glob(f'{directory}/*_between.csv')
+files = glob.glob(f'{directory}/*_between_expanded.csv')
 
 # Initialize a list to hold the results
 results = []
@@ -52,7 +52,7 @@ for index, row in all_results.iterrows():
 output_lines.append(r"\end{lstlisting}")
 
 # Save to a .txt file
-with open('data/output/prompt_variants.tex', 'w') as f:
+with open('data/output/prompt_variants_expanded.tex', 'w') as f:
     f.write('\n'.join(output_lines))
 
 print("LaTeX table created successfully!")

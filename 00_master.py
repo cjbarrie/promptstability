@@ -8,17 +8,17 @@ warnings.filterwarnings("ignore", message="Some weights of PegasusForConditional
 
 # Define the paths to the example scripts
 scripts = [
-    # "00a_tweets_rd_example.py",
-    # "00b_tweets_pop_example.py",
-    # "01a_news_example.py",
+    "00a_tweets_rd_example.py",
+    "00b_tweets_pop_example.py",
+    "01a_news_example.py",
     "01b_news_short_example.py",
-    # "02a_manifestos_example.py",
-    # "02b_manifestos_multi_example.py",
-    # "03a_stance_example.py",
+    "02a_manifestos_example.py",
+    "02b_manifestos_multi_example.py",
+    "03a_stance_example.py",
     "03b_stance_long_example.py",
-    # "04a_mii_example.py",
+    "04a_mii_example.py",
     "04b_mii_long_example.py",
-    # "05a_synth_example.py",
+    "05a_synth_example.py",
     "05b_synth_short_example.py"
 ]
 

@@ -4,33 +4,33 @@ import matplotlib.pyplot as plt
 
 # Define file paths and labels for the datasets
 within_files = {
-    'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_within.csv',
-    'Tweets (Populism)': 'data/annotated/tweets_pop_within.csv',
-    'News': 'data/annotated/news_within.csv',
-    'News (Short)': 'data/annotated/news_short_within.csv',
-    'Manifestos': 'data/annotated/manifestos_within.csv',
-    'Manifestos Multi': 'data/annotated/manifestos_multi_within.csv',
-    'Stance': 'data/annotated/stance_within.csv',
-    'Stance (Long)': 'data/annotated/stance_long_within.csv',
-    'MII': 'data/annotated/mii_within.csv',
-    'MII (Long)': 'data/annotated/mii_long_within.csv',
-    'Synthetic': 'data/annotated/synth_within.csv',
-    'Synthetic (Short)': 'data/annotated/synth_short_within.csv'
+    'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_within_expanded.csv',
+    'Tweets (Populism)': 'data/annotated/tweets_pop_within_expanded.csv',
+    'News': 'data/annotated/news_within_expanded.csv',
+    'News (Short)': 'data/annotated/news_short_within_expanded.csv',
+    'Manifestos': 'data/annotated/manifestos_within_expanded.csv',
+    'Manifestos Multi': 'data/annotated/manifestos_multi_within_expanded.csv',
+    'Stance': 'data/annotated/stance_within_expanded.csv',
+    'Stance (Long)': 'data/annotated/stance_long_within_expanded.csv',
+    'MII': 'data/annotated/mii_within_expanded.csv',
+    'MII (Long)': 'data/annotated/mii_long_within_expanded.csv',
+    'Synthetic': 'data/annotated/synth_within_expanded.csv',
+    'Synthetic (Short)': 'data/annotated/synth_short_within_expanded.csv'
 }
 
 between_files = {
-    'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_between.csv',
-    'Tweets (Populism)': 'data/annotated/tweets_pop_between.csv',
-    'News': 'data/annotated/news_between.csv',
-    'News (Short)': 'data/annotated/news_short_between.csv',
-    'Manifestos': 'data/annotated/manifestos_between.csv',
-    'Manifestos Multi': 'data/annotated/manifestos_multi_between.csv',
-    'Stance': 'data/annotated/stance_between.csv',
-    'Stance (Long)': 'data/annotated/stance_long_between.csv',
-    'MII': 'data/annotated/mii_between.csv',
-    'MII (Long)': 'data/annotated/mii_long_between.csv',
-    'Synthetic': 'data/annotated/synth_between.csv',
-    'Synthetic (Short)': 'data/annotated/synth_short_between.csv'
+    'Tweets (Rep. Dem.)': 'data/annotated/tweets_rd_between_expanded.csv',
+    'Tweets (Populism)': 'data/annotated/tweets_pop_between_expanded.csv',
+    'News': 'data/annotated/news_between_expanded.csv',
+    'News (Short)': 'data/annotated/news_short_between_expanded.csv',
+    'Manifestos': 'data/annotated/manifestos_between_expanded.csv',
+    'Manifestos Multi': 'data/annotated/manifestos_multi_between_expanded.csv',
+    'Stance': 'data/annotated/stance_between_expanded.csv',
+    'Stance (Long)': 'data/annotated/stance_long_between_expanded.csv',
+    'MII': 'data/annotated/mii_between_expanded.csv',
+    'MII (Long)': 'data/annotated/mii_long_between_expanded.csv',
+    'Synthetic': 'data/annotated/synth_between_expanded.csv',
+    'Synthetic (Short)': 'data/annotated/synth_short_between_expanded.csv'
 }
 
 # Define a color palette
@@ -163,9 +163,9 @@ def plot_combined_between(data, order, save_path=None):
 # Combine "within" datasets and order them by average KA
 combined_within_data = combine_within_files(within_files)
 within_order = combined_within_data.groupby('label')['ka_mean'].mean().sort_values(ascending=False).index.tolist()
-plot_combined_within(combined_within_data, within_order, save_path="plots/combined_within.png")
+plot_combined_within(combined_within_data, within_order, save_path="plots/combined_within_expanded.png")
 
 # Combine "between" datasets and order them by average KA
 combined_between_data = combine_between_files(between_files)
 between_order = combined_between_data.groupby('label')['ka_mean'].mean().sort_values(ascending=False).index.tolist()
-plot_combined_between(combined_between_data, between_order, save_path="plots/combined_between.png")
+plot_combined_between(combined_between_data, between_order, save_path="plots/combined_between_expanded.png")
