@@ -3,21 +3,21 @@ library(knitr)
 library(kableExtra)
 library(tidyr)
 
-# --- Input: File paths tibble ---
+# --- Step 1: Define the file paths ---
 file_paths <- tibble::tribble(
-  ~file, ~dataset, ~type,
-  "data/annotated/reannotated/filtered_with_pss//manifestos_multi_with_pss.csv", "manifestos_multi", "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//manifestos_with_pss.csv",         "manifestos",       "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//mii_long_with_pss.csv",             "mii_long",         "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//mii_with_pss.csv",                  "mii",              "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//news_short_with_pss.csv",           "news_short",       "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//news_with_pss.csv",                 "news",             "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//stance_long_with_pss.csv",          "stance_long",      "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//stance_with_pss.csv",               "stance",           "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//synth_short_with_pss.csv",          "synth_short",      "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//synth_with_pss.csv",                "synth",            "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//tweets_pop_with_pss.csv",           "tweets_pop",       "Filtered",
-  "data/annotated/reannotated/filtered_with_pss//tweets_rd_with_pss.csv",            "tweets_rd",        "Filtered"
+  ~file,                                    ~dataset,       ~type,
+  "data/annotated/reannotated/comparison/cleaned_manifestos_filtered.csv",     "manifestos",      "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_manifestos_multi_filtered.csv", "manifestos_multi", "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_mii_filtered.csv",            "mii",             "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_mii_long_filtered.csv",       "mii_long",        "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_news_filtered.csv",           "news",            "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_news_short_filtered.csv",     "news_short",      "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_stance_filtered.csv",         "stance",          "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_stance_long_filtered.csv",    "stance_long",     "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_synth_filtered.csv",          "synth",           "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_synth_short_filtered.csv",    "synth_short",     "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_tweets_pop_filtered.csv",     "tweets_pop",      "Filtered",
+  "data/annotated/reannotated/comparison/cleaned_tweets_rd_filtered.csv",      "tweets_rd",       "Filtered"
 )
 
 # --- Output directory ---

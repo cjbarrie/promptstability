@@ -3,13 +3,15 @@ import matplotlib.pyplot as plt
 from utils import PromptStabilityAnalysis, get_openai_api_key
 from openai import OpenAI
 import ollama
+import os
+import time
 
 #############################################
 # 1. Load a 5% subsample of the manifestos dataset
 #############################################
 df = pd.read_csv('data/manifestos.csv')
 df = df[df['scale'] == 'Economic']
-# Take 5% of the rows (at least 1 row if the dataset is very small)
+# Take 10% of the rows
 sample_size = max(1, int(0.1 * len(df)))
 df = df.sample(sample_size, random_state=123)
 data = list(df['sentence_context'].values)
@@ -19,14 +21,14 @@ original_text = (
     "The text provided is a UK party manifesto. "
     "Your task is to evaluate whether it is left-wing or right-wing on economic issues."
 )
-prompt_postfix = "Respond with 0 for left-wing or 1 for right-wing."
+prompt_postfix = "Respond with 0 for left-wing or 1 for right-wing. Only respond with a one token integer. Do not respond with anything else."
 
 #############################################
 # 2. ANALYSIS USING OPENAI (e.g., GPT-3.5-turbo)
 #############################################
 # Define the OpenAI annotation function
 APIKEY = get_openai_api_key()
-OPENAI_MODEL = 'gpt-3.5-turbo'
+OPENAI_MODEL = 'gpt-4o'
 client = OpenAI(api_key=APIKEY)
 
 def annotate_openai(text, prompt, temperature=0.1):
@@ -55,7 +57,7 @@ ka_openai_intra, annotated_openai_intra = psa_openai.intra_pss(
     iterations=3,   # minimal iterations
     plot=False
 )
-print("OpenAI intra-prompt KA scores:", ka_openai_intra)
+print("OpenAI intra-PSS:", ka_openai_intra)
 
 # Run inter-prompt analysis using the updated method name `inter_pss`
 temperatures = [0.1, 0.5, 1.0]
@@ -68,14 +70,29 @@ ka_openai_inter, annotated_openai_inter = psa_openai.inter_pss(
     iterations=1,
     plot=False
 )
-print("OpenAI inter-prompt KA scores:", ka_openai_inter)
+print("OpenAI inter-PSS:", ka_openai_inter)
 
+# Create the new subdirectory data/example if it doesn't exist
+output_dir = os.path.join('data', 'example')
+os.makedirs(output_dir, exist_ok=True)
+
+# Save OpenAI intra-prompt annotations
+openai_intra_csv = os.path.join(output_dir, 'openai_intra.csv')
+annotated_openai_intra.to_csv(openai_intra_csv, index=False)
+print(f"OpenAI intra-prompt annotations saved to {openai_intra_csv}")
+
+# Save OpenAI inter-prompt annotations
+openai_inter_csv = os.path.join(output_dir, 'openai_inter.csv')
+annotated_openai_inter.to_csv(openai_inter_csv, index=False)
+print(f"OpenAI inter-prompt annotations saved to {openai_inter_csv}")
 
 #############################################
 # 3. ANALYSIS USING OLLAMA (with your local deepseek-r1:8b)
 #############################################
 # Define the Ollama annotation function.
-# (Make sure that your Ollama server is running locally and that 'deepseek-r1:8b' is available.)
+temperatures = [0.1, 0.5]  # List of temperatures to test
+nr_variations = 3         # Number of paraphrase variations per temperature
+
 OLLAMA_MODEL = 'deepseek-r1:8b'
 def annotate_ollama(text, prompt, temperature=0.1):
     try:
@@ -99,10 +116,13 @@ ka_ollama_intra, annotated_ollama_intra = psa_ollama.intra_pss(
     iterations=3,
     plot=False
 )
-print("Ollama intra-prompt KA scores:", ka_ollama_intra)
+print("Ollama intra-PSS:", ka_ollama_intra)
+
+# Output the annotations to the terminal
+print("\nOllama Intra-Prompt Annotations:")
+print(annotated_ollama_intra[['id', 'text', 'annotation']].head(20))  # adjust the number of rows to print as needed
 
 # Run inter-prompt analysis for Ollama with a couple of temperatures
-temperatures = [0.1, 0.5]  # or whichever temperatures you want to test
 print("Running Ollama inter-prompt analysis...")
 ka_ollama_inter, annotated_ollama_inter = psa_ollama.inter_pss(
     original_text, 
@@ -112,4 +132,14 @@ ka_ollama_inter, annotated_ollama_inter = psa_ollama.inter_pss(
     iterations=1,
     plot=False
 )
-print("Ollama inter-prompt KA scores:", ka_ollama_inter)
+print("Ollama inter-PSS:", ka_ollama_inter)
+
+# Save Ollama intra-prompt annotations
+ollama_intra_csv = os.path.join(output_dir, 'ollama_intra.csv')
+annotated_ollama_intra.to_csv(ollama_intra_csv, index=False)
+print(f"Ollama intra-prompt annotations saved to {ollama_intra_csv}")
+
+# Save Ollama inter-prompt annotations
+ollama_inter_csv = os.path.join(output_dir, 'ollama_inter.csv')
+annotated_ollama_inter.to_csv(ollama_inter_csv, index=False)
+print(f"Ollama inter-prompt annotations saved to {ollama_inter_csv}")
