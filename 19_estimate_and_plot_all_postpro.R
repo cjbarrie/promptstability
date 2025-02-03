@@ -1,0 +1,217 @@
+library(dplyr)
+library(ggplot2)
+library(reticulate)
+library(tidyr)
+
+# Set the Python executable for the virtual environment
+use_python("pssenv/bin/python", required = TRUE)
+
+# Input: File paths tibble
+file_paths <- tibble::tribble(
+  ~file, ~dataset, ~type,
+  "data/annotated/reannotated/filtered_with_pss//manifestos_multi_with_pss.csv", "manifestos_multi", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//manifestos_with_pss.csv", "manifestos", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//mii_long_with_pss.csv", "mii_long", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//mii_with_pss.csv", "mii", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//news_short_with_pss.csv", "news_short", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//news_with_pss.csv", "news", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//stance_long_with_pss.csv", "stance_long", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//stance_with_pss.csv", "stance", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//synth_short_with_pss.csv", "synth_short", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//synth_with_pss.csv", "synth", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//tweets_pop_with_pss.csv", "tweets_pop", "Filtered",
+  "data/annotated/reannotated/filtered_with_pss//tweets_rd_with_pss.csv", "tweets_rd", "Filtered",
+  "data/annotated/reannotated/filtered_balanced_with_pss//manifestos_multi_with_pss.csv", "manifestos_multi", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//manifestos_with_pss.csv", "manifestos", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//mii_long_with_pss.csv", "mii_long", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//mii_with_pss.csv", "mii", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//news_short_with_pss.csv", "news_short", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//news_with_pss.csv", "news", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//stance_long_with_pss.csv", "stance_long", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//stance_with_pss.csv", "stance", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//synth_short_with_pss.csv", "synth_short", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//synth_with_pss.csv", "synth", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//tweets_pop_with_pss.csv", "tweets_pop", "Filtered & Balanced",
+  "data/annotated/reannotated/filtered_balanced_with_pss//tweets_rd_with_pss.csv", "tweets_rd", "Filtered & Balanced"
+)
+
+# Output directory
+output_dir <- "data/annotated/reannotated/comparison/"
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+# Function to clean datasets
+clean_data <- function(file) {
+  read.csv(file) %>%
+    mutate(
+      temperature = as.numeric(temperature),  # Ensure temperature is numeric
+      annotation = as.numeric(annotation)    # Ensure annotation is numeric
+    ) %>%
+    select(-ka_mean, -ka_lower, -ka_upper)    # Remove unnecessary columns
+}
+
+# Clean and save all datasets
+file_paths <- file_paths %>%
+  rowwise() %>%
+  mutate(
+    cleaned_file = {
+      if (file.exists(file)) {
+        output_file <- file.path(output_dir, paste0("cleaned_", dataset, "_", tolower(type), ".csv"))
+        cleaned_data <- clean_data(file)
+        write.csv(cleaned_data, output_file, row.names = FALSE)
+        output_file
+      } else {
+        NA_character_
+      }
+    }
+  ) %>%
+  filter(!is.na(cleaned_file)) # Filter out missing files
+
+# Step 2: Write Python script
+python_script <- "
+import pandas as pd
+from simpledorff import calculate_krippendorffs_alpha_for_df, metrics
+
+def calculate_ka(df, dataset, annotator_col='prompt_id', class_col='annotation'):
+    df[annotator_col] = pd.to_numeric(df[annotator_col], errors='coerce')
+    df[class_col] = pd.to_numeric(df[class_col], errors='coerce')
+    df = df.dropna(subset=[annotator_col, class_col])
+    grouped = df.groupby('temperature')
+    results = []
+    
+    # Use interval metric for manifestos_multi; nominal for others
+    metric_fn = metrics.interval_metric if dataset == 'manifestos_multi' else metrics.nominal_metric
+
+    for temp, group in grouped:
+        try:
+            alpha = calculate_krippendorffs_alpha_for_df(
+                group,
+                experiment_col='id',
+                annotator_col=annotator_col,
+                class_col=class_col,
+                metric_fn=metric_fn
+            )
+            results.append({'temperature': temp, 'ka_mean': alpha})
+        except Exception as e:
+            print(f'Error calculating KA for temperature {temp}: {e}')
+    return pd.DataFrame(results)
+
+datasets = ["
+
+# Append datasets with type info
+file_paths %>%
+  mutate(
+    dataset_entry = paste0(
+      "{'file': '", cleaned_file, "', 'type': '", type, "', 'dataset': '", dataset, "'}"
+    )
+  ) %>%
+  pull(dataset_entry) %>%
+  paste(collapse = ",\n") %>%
+  {python_script <<- paste0(python_script, ., "\n]")}
+
+python_script <- paste0(
+  python_script,
+  "
+
+results = []
+for ds in datasets:
+    data = pd.read_csv(ds['file'])
+    ka_results = calculate_ka(data, dataset=ds['dataset'])
+    ka_results['dataset'] = ds['dataset']
+    ka_results['type'] = ds['type']
+    results.append(ka_results)
+
+output_file = '", output_dir, "/ka_results_combined.csv'
+pd.concat(results).to_csv(output_file, index=False)
+"
+)
+
+# Execute Python script
+reticulate::py_run_string(python_script)
+
+# Step 4: Read back results and plot
+ka_results <- read.csv(file.path(output_dir, "ka_results_combined.csv"))
+
+# Input: File paths tibble
+file_paths <- tibble::tribble(
+  ~file, ~dataset, ~type,
+  "data/annotated//manifestos_between_expanded.csv", "manifestos", "Original",
+  "data/annotated//manifestos_multi_between_expanded.csv", "manifestos_multi", "Original",
+  "data/annotated//mii_between_expanded.csv", "mii", "Original",
+  "data/annotated//mii_long_between_expanded.csv", "mii_long", "Original",
+  "data/annotated//news_between_expanded.csv", "news", "Original",
+  "data/annotated//news_short_between_expanded.csv", "news_short", "Original",
+  "data/annotated//stance_between_expanded.csv", "stance", "Original",
+  "data/annotated//stance_long_between_expanded.csv", "stance_long", "Original",
+  "data/annotated//synth_between_expanded.csv", "synth", "Original",
+  "data/annotated//synth_short_between_expanded.csv", "synth_short", "Original",
+  "data/annotated//tweets_pop_between_expanded.csv", "tweets_pop", "Original",
+  "data/annotated//tweets_rd_between_expanded.csv", "tweets_rd", "Original"
+)
+
+# Extract original ka_mean values
+original_results <- file_paths %>%
+  rowwise() %>%
+  mutate(original_data = list(read.csv(file) %>% select(temperature, ka_mean))) %>%
+  unnest(original_data) %>%
+  distinct(dataset, type, temperature, ka_mean)
+
+# Combine original and re-estimated results
+combined_results <- bind_rows(
+  original_results,
+  ka_results
+)
+
+# Calculate the mean PSS for ordering
+facet_order <- ka_results %>%
+  group_by(dataset) %>%
+  summarise(mean_pss = mean(ka_mean, na.rm = TRUE)) %>%
+  arrange(desc(mean_pss)) %>%
+  pull(dataset)
+
+# Define a named vector with new facet labels
+facet_labels <- c(
+  "tweets_rd" = "Tweets (Rep. Dem.)",
+  "tweets_pop" = "Tweets (Populism)",
+  "news" = "News",
+  "news_short" = "News (Short)",
+  "manifestos" = "Manifestos",
+  "manifestos_multi" = "Manifestos Multi",
+  "stance" = "Stance",
+  "stance_long" = "Stance (Long)",
+  "mii" = "MII",
+  "mii_long" = "MII (Long)",
+  "synth" = "Synthetic",
+  "synth_short" = "Synthetic (Short)"
+)
+
+# Update the dataset column to be a factor with the desired order
+combined_results <- combined_results %>%
+  mutate(dataset = factor(dataset, levels = facet_order))
+
+# Plot results with ordered facets and renamed facet labels
+final_plot <- ggplot(combined_results, aes(x = temperature, y = ka_mean, color = type)) +
+  geom_line(alpha=.8) +
+  geom_point(alpha=.1) +
+  labs(
+    title = "",
+    x = "Temperature",
+    y = "inter-PSS",
+    color = "Dataset"
+  ) +
+  ylim(0, 1) +
+  facet_wrap(
+    ~ dataset, 
+    scales = "free", 
+    ncol = 4, 
+    labeller = as_labeller(facet_labels)
+  ) + 
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    strip.text = element_text(size = 10)
+  )
+
+print(final_plot)
+
+ggsave("plots/combined_postpro.png", plot = final_plot, width = 16, height = 12, dpi = 300)
+

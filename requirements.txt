@@ -1,10 +1,19 @@
-torch
-transformers
-sentence-transformers
-simpledorff
+# Data manipulation
 pandas
-bumpy
-seaborn
+
+# Plotting and visualization
 matplotlib
-plotly
-sentencepiece 
+seaborn
+termcolor
+
+# NLP models and utilities
+transformers
+openai
+simpledorff
+
+# Numerical computations
+numpy
+scipy
+
+# Parallel processing and system utilities
+concurrent-log-handler

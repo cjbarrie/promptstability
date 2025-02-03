@@ -1,5 +1,5 @@
 import pandas as pd
-from utilstemp import PromptStabilityAnalysis, get_openai_api_key #TODO change back to utils. utilstemp.py is an improvement that permits proper calling of the parse function
+from utils import PromptStabilityAnalysis, get_openai_api_key
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import matplotlib.pyplot as plt
 import simpledorff
