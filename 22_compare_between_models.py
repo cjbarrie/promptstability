@@ -60,7 +60,8 @@ ka_openai_intra, annotated_openai_intra = psa_openai.intra_pss(
 print("OpenAI intra-PSS:", ka_openai_intra)
 
 # Run inter-prompt analysis using the updated method name `inter_pss`
-temperatures = [0.1, 0.5, 1.0]
+temperatures = [0.1, 0.5, 1.0, 2.0, 3.0, 4.0, 5.0]
+nr_variations = 3
 print("Running OpenAI inter-prompt analysis...")
 ka_openai_inter, annotated_openai_inter = psa_openai.inter_pss(
     original_text, 
@@ -90,8 +91,6 @@ print(f"OpenAI inter-prompt annotations saved to {openai_inter_csv}")
 # 3. ANALYSIS USING OLLAMA (with your local deepseek-r1:8b)
 #############################################
 # Define the Ollama annotation function.
-temperatures = [0.1, 0.5]  # List of temperatures to test
-nr_variations = 3         # Number of paraphrase variations per temperature
 
 OLLAMA_MODEL = 'deepseek-r1:8b'
 def annotate_ollama(text, prompt, temperature=0.1):

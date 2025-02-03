@@ -19,6 +19,10 @@ python 11_plot_all.py
 
 ![](plots/combined_between_expanded.png)
 
+![](plots/combined_postpro_diagnostics.png)
+
+![](plots/combined_postpro.png)
+
 # Development package
 
 [![PyPI](https://img.shields.io/pypi/v/promptstability.svg)](https://pypi.org/project/promptstability/)
