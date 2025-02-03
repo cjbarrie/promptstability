@@ -11,7 +11,7 @@ python 00_master.py
 
 And to plot all data:
 
-``bash
+```bash
 python 11_plot_all.py
 ```
 
@@ -159,4 +159,4 @@ print("Ollama inter-prompt KA scores:", ka_ollama_inter)
 ## Development
 
 To contribute to this library, send any PRs to the library repo at [https://github.com/palaiole13/promptstability](https://github.com/palaiole13/promptstability).
-```
+
