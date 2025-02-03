@@ -7,7 +7,7 @@ To run all scripts:
 
 ```bash
 python 00_master.py
-
+```
 
 And to plot all data:
 
