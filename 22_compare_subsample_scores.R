@@ -9,18 +9,18 @@ use_python("pssenv/bin/python", required = TRUE)
 # --- Step 1: Define the file paths ---
 file_paths <- tibble::tribble(
   ~file,                                    ~dataset,       ~type,
-  "data/annotated/reannotated/comparison/cleaned_manifestos_filtered.csv",     "manifestos",      "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_manifestos_multi_filtered.csv", "manifestos_multi", "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_mii_filtered.csv",            "mii",             "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_mii_long_filtered.csv",       "mii_long",        "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_news_filtered.csv",           "news",            "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_news_short_filtered.csv",     "news_short",      "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_stance_filtered.csv",         "stance",          "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_stance_long_filtered.csv",    "stance_long",     "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_synth_filtered.csv",          "synth",           "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_synth_short_filtered.csv",    "synth_short",     "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_tweets_pop_filtered.csv",     "tweets_pop",      "Filtered",
-  "data/annotated/reannotated/comparison/cleaned_tweets_rd_filtered.csv",      "tweets_rd",       "Filtered"
+  "data/annotated/reannotated/between/manifestos_multi_filtered.csv", "manifestos_multi", "Filtered",
+  "data/annotated/reannotated/between/manifestos_filtered.csv", "manifestos", "Filtered",
+  "data/annotated/reannotated/between/mii_long_filtered.csv", "mii_long", "Filtered",
+  "data/annotated/reannotated/between/mii_filtered.csv", "mii", "Filtered",
+  "data/annotated/reannotated/between/news_short_filtered.csv", "news_short", "Filtered",
+  "data/annotated/reannotated/between/news_filtered.csv", "news", "Filtered",
+  "data/annotated/reannotated/between/stance_long_filtered.csv", "stance_long", "Filtered",
+  "data/annotated/reannotated/between/stance_filtered.csv", "stance", "Filtered",
+  "data/annotated/reannotated/between/synth_short_filtered.csv", "synth_short", "Filtered",
+  "data/annotated/reannotated/between/synth_filtered.csv", "synth", "Filtered",
+  "data/annotated/reannotated/between/tweets_pop_filtered.csv", "tweets_pop", "Filtered",
+  "data/annotated/reannotated/between/tweets_rd_filtered.csv", "tweets_rd", "Filtered"
 )
 
 # --- Step 2: Define the output directory and file ---
@@ -95,7 +95,7 @@ ka_results <- read.csv(file.path(output_dir, "ka_results_combined_subsamples.csv
 
 # Ensure 'frac' and 'temperature' are factors for plotting
 ka_results$frac <- as.factor(ka_results$frac)
-ka_results$temperature <- as.factor(ka_results$temperature)
+ka_results$temperature <- as.numeric(ka_results$temperature)
 
 # --- Step 6: Order facets and rename them ---
 # Calculate the mean KA per dataset for ordering (highest mean first)
@@ -133,7 +133,7 @@ final_plot <- ggplot(ka_results, aes(x = temperature, y = ka_mean, color = frac,
     title = "",
     x = "Temperature",
     y = "inter-PSS",
-    color = "Dataset"
+    color = "%"
   ) +
   ylim(0, 1) +
   facet_wrap(
@@ -144,12 +144,11 @@ final_plot <- ggplot(ka_results, aes(x = temperature, y = ka_mean, color = frac,
   ) + 
   theme_minimal() +
   theme(
-    legend.position = "bottom",
-    strip.text = element_text(size = 10)
+    legend.position = "bottom"
   )
 
 # Display the plot
 print(final_plot)
 
 # Save the plot to file
-# ggsave("plots/combined_postpro.png", plot = final_plot, width = 16, height = 12, dpi = 300)
+ggsave("plots/combined_between_subsamples.png", plot = final_plot, width = 8, height = 6, dpi = 300)

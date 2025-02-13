@@ -3,25 +3,19 @@ Repo for paper analyzing stability of outcomes resulting from variations in lang
 
 ## Usage
 
-To run all scripts:
+To run all annotation scripts:
 
 ```bash
 python 00_master.py
 ```
 
-And to plot all data:
+![](plots/combined_within_postpro.png)
 
-```bash
-python 11_plot_all.py
-```
+![](plots/combined_between_posptro_.png)
 
-![](plots/combined_within_expanded.png)
+![](plots/combined_postpro_within_diagnostics.png)
 
-![](plots/combined_between_expanded.png)
-
-![](plots/combined_postpro_diagnostics.png)
-
-![](plots/combined_postpro.png)
+![](plots/combined_postpro_between_diagnostics.png)
 
 # Development package
 

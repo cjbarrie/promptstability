@@ -53,6 +53,73 @@ combine_files_preserve <- function(files) {
 
 combined_between_data <- combine_files_preserve(between_files)
 
+
+# Plot overall scores
+
+order_by_pss <- combined_between_data %>%
+  group_by(label) %>%
+  summarise(mean_pss = mean(as.numeric(ka_mean), na.rm = TRUE), .groups = "drop") %>%
+  arrange(desc(mean_pss)) %>%
+  pull(label)
+
+inter_pss <- combined_between_data %>%
+  group_by(label, temperature) %>%
+  summarise(mean_inter_pss = mean(as.numeric(ka_mean), na.rm = TRUE), .groups = "drop",
+            ka_upper = max(as.numeric(ka_upper),na.rm = TRUE),
+            ka_lower = min(as.numeric(ka_lower), na.rm = TRUE))
+
+mean_pss <- combined_between_data %>%
+  group_by(label) %>%
+  summarise(mean_pss = mean(as.numeric(ka_mean), na.rm = TRUE), .groups = "drop")
+
+plot_data <- left_join(mean_pss, inter_pss, by = c("label")) %>%
+  mutate(label = factor(label, levels = order_by_pss),
+         temperature = as.numeric(temperature))
+
+split_data <- plot_data %>%
+  group_split(label)
+
+plot_single_dataset <- function(df) {
+  this_label <- unique(df$label)
+  
+  ggplot(df) +
+    geom_line(
+      aes(x = temperature, y = mean_inter_pss, color = label),
+      size = 1, group = 1
+    ) +
+    geom_point(
+      aes(x = temperature, y = mean_inter_pss, color = label),
+      size = 1
+    ) +
+    geom_errorbar(aes(x = temperature, y = mean_inter_pss, ymin = ka_lower, ymax = ka_upper, alpha = 0.1), width = 0.2) +
+    geom_hline(aes(yintercept = mean_pss, color = "gray"), linetype = "dashed", size = 0.8) +
+    geom_hline(aes(yintercept = 0.8, color = "black"), linetype = "dashed", size = 0.8) +
+    geom_text(aes(x = Inf, y = mean_pss, label = round(mean_pss, 2), color = "black"),
+              hjust = 1.1, vjust = -0.5, size = 6, show.legend = FALSE) +
+    scale_color_manual(values = color_palette) +
+    labs(
+      x = "temperature",
+      y = "Inter-PSS",
+      title = paste(this_label)
+    ) +
+    ylim(0,1) +
+    theme_minimal() +
+    theme(
+      legend.position = "none",
+      strip.text = element_text(size = 10)
+    )
+}
+
+plot_list <- lapply(split_data, plot_single_dataset)
+
+final_plot <- cowplot::plot_grid(plotlist = plot_list, ncol = 4)
+
+print(final_plot)
+
+ggsave("plots/combined_between_expanded.png", plot = final_plot, width = 18, height = 10, dpi = 300)
+
+# Plot overall scores and unique counts to check annotation performance
+
 unique_counts <- combined_between_data %>%
   group_by(label, temperature) %>%
   summarise(unique_annotations_count = n_distinct(annotation), .groups = "drop")
@@ -133,4 +200,4 @@ final_plot <- cowplot::plot_grid(plotlist = plot_list, ncol = 4)
 
 print(final_plot)
 
-ggsave("plots/combined_postpro_diagnostics.png", plot = final_plot, width = 16, height = 12, dpi = 300)
+ggsave("plots/combined_postpro_between_diagnostics.png", plot = final_plot, width = 16, height = 12, dpi = 300)

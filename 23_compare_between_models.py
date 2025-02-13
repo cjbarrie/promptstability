@@ -24,7 +24,7 @@ original_text = (
 prompt_postfix = "Respond with 0 for left-wing or 1 for right-wing. Only respond with a one token integer. Do not respond with anything else."
 
 #############################################
-# 2. ANALYSIS USING OPENAI (e.g., GPT-3.5-turbo)
+# 2. ANALYSIS USING OPENAI
 #############################################
 # Define the OpenAI annotation function
 APIKEY = get_openai_api_key()
@@ -54,7 +54,7 @@ print("Running OpenAI intra-prompt (baseline) analysis...")
 ka_openai_intra, annotated_openai_intra = psa_openai.intra_pss(
     original_text, 
     prompt_postfix, 
-    iterations=3,   # minimal iterations
+    iterations=20,
     plot=False
 )
 print("OpenAI intra-PSS:", ka_openai_intra)
@@ -112,7 +112,7 @@ print("Running Ollama intra-prompt (baseline) analysis...")
 ka_ollama_intra, annotated_ollama_intra = psa_ollama.intra_pss(
     original_text, 
     prompt_postfix, 
-    iterations=3,
+    iterations=20,
     plot=False
 )
 print("Ollama intra-PSS:", ka_ollama_intra)

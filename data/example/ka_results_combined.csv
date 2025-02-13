@@ -1,3 +1,8 @@
 temperature,ka_mean,dataset,type
-0.1,0.4485265977803292,manifestos,inter
-0.5,0.7292766934557979,manifestos,inter
+0.1,0.5823264629234779,manifestos,inter
+0.5,0.6436058700209644,manifestos,inter
+1.0,0.5737704918032787,manifestos,inter
+2.0,0.37448149991704005,manifestos,inter
+3.0,0.2736486486486486,manifestos,inter
+4.0,0.05072463768115898,manifestos,inter
+5.0,0.21506612995974683,manifestos,inter
