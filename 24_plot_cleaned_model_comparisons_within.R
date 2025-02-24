@@ -92,15 +92,23 @@ df2 <- read_csv(openai_file) %>%
 
 df <- bind_rows(df1, df2)
 
-# Plot KA by iteration
-ggplot(df, aes(x = iteration, y = ka_mean, color = model)) +
+# Create the intra plot and assign it to p_intra
+p_intra <- ggplot(df, aes(x = iteration, y = ka_mean, color = model)) +
+  geom_line(size = 1) +
   geom_point(size = 3) +
-  geom_line() +
   labs(
-    title = "Intra-PSS comparisons across models",
     x = "Iteration",
-    y = "intra-PSS",
+    y = "Intra-PSS",
     color = "Model"
   ) +
-  ylim(0,1) +
-  theme_minimal()
+  scale_color_manual(values = c("deepseek-r1-8b" = "#0072B2", "gpt-4o" = "#D55E00")) +
+  scale_y_continuous(limits = c(0, 1), expand = c(0, 0)) +
+  theme_minimal(base_size = 14) +
+  ylim(0, 1) +
+  theme(
+    legend.position = "top",
+    panel.grid.major = element_line(color = "grey80"),
+    panel.grid.minor = element_blank()
+  )
+
+saveRDS(p_intra, file = file.path(output_dir, "intra_plot.rds"))

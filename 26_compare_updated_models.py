@@ -30,7 +30,7 @@ nr_variations = 10
 iterations = 1
 
 # -----------------------------------------------------------------------------
-# Dataset 1: News
+# Dataset 1: News (Short)
 # -----------------------------------------------------------------------------
 df_news = pd.read_csv('data/news_short.csv')
 df_news = df_news.sample(100, random_state=123)
@@ -64,97 +64,97 @@ ka_scores_news, annotated_data_news = psa_news.inter_pss(
     save_csv='data/annotated/news_short_between_updated.csv'
 )
 
-# # -----------------------------------------------------------------------------
-# # Dataset 1: News
-# # -----------------------------------------------------------------------------
-# df_news = pd.read_csv('data/news.csv')
-# df_news = df_news.sample(100, random_state=123)
-# example_data_news = list(df_news['body'].values)
+# -----------------------------------------------------------------------------
+# Dataset 2: News
+# -----------------------------------------------------------------------------
+df_news = pd.read_csv('data/news.csv')
+df_news = df_news.sample(100, random_state=123)
+example_data_news = list(df_news['body'].values)
 
-# def parse_function(x):
-#     try:
-#         return int(x.strip())  # Ensure the result is treated as nominal
-#     except ValueError:
-#         return None  # In case conversion fails
+def parse_function(x):
+    try:
+        return int(x.strip())  # Ensure the result is treated as nominal
+    except ValueError:
+        return None  # In case conversion fails
 
-# psa_news = PromptStabilityAnalysis(
-#     annotation_function=annotate,
-#     data=example_data_news,
-#     parse_function=parse_function,
-#     metric_fn=simpledorff.metrics.nominal_metric
-# )
+psa_news = PromptStabilityAnalysis(
+    annotation_function=annotate,
+    data=example_data_news,
+    parse_function=parse_function,
+    metric_fn=simpledorff.metrics.nominal_metric
+)
 
-# original_text_news = (
-#     'The text provided is some newspaper text. Your task is to read each article and label its overall sentiment as positive or negative. '
-#     'Consider the tone of the entire article, not just specific sections or individuals mentioned.'
-# )
-# prompt_postfix_news = '[Respond 0 for negative, 1 for positive, and 2 for neutral. Respond nothing else.]'
+original_text_news = (
+    'The text provided is some newspaper text. Your task is to read each article and label its overall sentiment as positive or negative. '
+    'Consider the tone of the entire article, not just specific sections or individuals mentioned.'
+)
+prompt_postfix_news = '[Respond 0 for negative, 1 for positive, and 2 for neutral. Respond nothing else.]'
 
-# ka_scores_news, annotated_data_news = psa_news.inter_pss(
-#     original_text=original_text_news,
-#     prompt_postfix=prompt_postfix_news,
-#     nr_variations=nr_variations,
-#     temperatures=temperatures,
-#     iterations=iterations,
-#     save_path='plots/01a_news_between_updated.png',
-#     save_csv='data/annotated/news_between_updated.csv'
-# )
+ka_scores_news, annotated_data_news = psa_news.inter_pss(
+    original_text=original_text_news,
+    prompt_postfix=prompt_postfix_news,
+    nr_variations=nr_variations,
+    temperatures=temperatures,
+    iterations=iterations,
+    save_path='plots/01a_news_between_updated.png',
+    save_csv='data/annotated/news_between_updated.csv'
+)
 
-# # -----------------------------------------------------------------------------
-# # Dataset 2: Stance
-# # -----------------------------------------------------------------------------
-# df_stance = pd.read_csv('data/stance.csv')
-# df_stance = df_stance.sample(100, random_state=123)
-# example_data_stance = list(df_stance['Tweet'].values)
+# -----------------------------------------------------------------------------
+# Dataset 3: Stance
+# -----------------------------------------------------------------------------
+df_stance = pd.read_csv('data/stance.csv')
+df_stance = df_stance.sample(100, random_state=123)
+example_data_stance = list(df_stance['Tweet'].values)
 
-# psa_stance = PromptStabilityAnalysis(
-#     annotation_function=annotate,
-#     data=example_data_stance,
-#     parse_function=parse_function,
-#     metric_fn=simpledorff.metrics.nominal_metric
-# )
+psa_stance = PromptStabilityAnalysis(
+    annotation_function=annotate,
+    data=example_data_stance,
+    parse_function=parse_function,
+    metric_fn=simpledorff.metrics.nominal_metric
+)
 
-# original_text_stance = (
-#     'The text provided come from some tweets about Donald Trump. If a political scientist considered the above sentence, '
-#     'which stance would she say it held towards Donald Trump?'
-# )
-# prompt_postfix_stance = '[Respond 0 for negative, 1 for positive, and 2 for none. Respond nothing else.]'
+original_text_stance = (
+    'The text provided come from some tweets about Donald Trump. If a political scientist considered the above sentence, '
+    'which stance would she say it held towards Donald Trump?'
+)
+prompt_postfix_stance = '[Respond 0 for negative, 1 for positive, and 2 for none. Respond nothing else.]'
 
-# ka_scores_stance, annotated_data_stance = psa_stance.inter_pss(
-#     original_text=original_text_stance,
-#     prompt_postfix=prompt_postfix_stance,
-#     nr_variations=nr_variations,
-#     temperatures=temperatures,
-#     iterations=iterations,
-#     save_path='plots/03b_stance_between_updated.png',
-#     save_csv='data/annotated/stance_long_between_updated.csv'
-# )
+ka_scores_stance, annotated_data_stance = psa_stance.inter_pss(
+    original_text=original_text_stance,
+    prompt_postfix=prompt_postfix_stance,
+    nr_variations=nr_variations,
+    temperatures=temperatures,
+    iterations=iterations,
+    save_path='plots/03b_stance_between_updated.png',
+    save_csv='data/annotated/stance_long_between_updated.csv'
+)
 
-# # -----------------------------------------------------------------------------
-# # Dataset 3: Profiles
-# # -----------------------------------------------------------------------------
-# df_profiles = pd.read_csv('data/profiles_short.csv')
-# df_profiles = df_profiles.sample(100, random_state=123)
-# example_data_profiles = list(df_profiles['profile'].values)
+# -----------------------------------------------------------------------------
+# Dataset 4: Synthetic (Short)
+# -----------------------------------------------------------------------------
+df_profiles = pd.read_csv('data/profiles_short.csv')
+df_profiles = df_profiles.sample(100, random_state=123)
+example_data_profiles = list(df_profiles['profile'].values)
 
-# # For this dataset, no parse_function or metric_fn was provided in your original code.
-# psa_profiles = PromptStabilityAnalysis(
-#     annotation_function=annotate,
-#     data=example_data_profiles
-# )
+# For this dataset, no parse_function or metric_fn was provided in your original code.
+psa_profiles = PromptStabilityAnalysis(
+    annotation_function=annotate,
+    data=example_data_profiles
+)
 
-# original_text_profiles = (
-#     'In the 2020 presidential election, Donald Trump is the Republican candidate, and Joe Biden is the Democratic candidate. '
-#     'The following is some information about an individual voter. I want you to tell me how you think they voted.'
-# )
-# prompt_postfix_profiles = '[Respond 0 for Biden, or 1 for Trump. Guess if you do not know. Respond nothing else.]'
+original_text_profiles = (
+    'In the 2020 presidential election, Donald Trump is the Republican candidate, and Joe Biden is the Democratic candidate. '
+    'The following is some information about an individual voter. I want you to tell me how you think they voted.'
+)
+prompt_postfix_profiles = '[Respond 0 for Biden, or 1 for Trump. Guess if you do not know. Respond nothing else.]'
 
-# ka_scores_profiles, annotated_data_profiles = psa_profiles.inter_pss(
-#     original_text=original_text_profiles,
-#     prompt_postfix=prompt_postfix_profiles,
-#     nr_variations=nr_variations,
-#     temperatures=temperatures,
-#     iterations=iterations,
-#     save_path='plots/05b_synth_between_updated.png',
-#     save_csv='data/annotated/synth_short_between_updated.csv'
-# )
+ka_scores_profiles, annotated_data_profiles = psa_profiles.inter_pss(
+    original_text=original_text_profiles,
+    prompt_postfix=prompt_postfix_profiles,
+    nr_variations=nr_variations,
+    temperatures=temperatures,
+    iterations=iterations,
+    save_path='plots/05b_synth_between_updated.png',
+    save_csv='data/annotated/synth_short_between_updated.csv'
+)

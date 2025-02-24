@@ -4,6 +4,7 @@ library(readr)
 library(stringr)
 library(tibble)
 library(ggplot2)
+library(cowplot)
 
 # Define output directory (adjust as needed)
 output_dir <- "/Users/christopherbarrie/Dropbox/nyu_projects/promptstability/data/example"
@@ -115,14 +116,40 @@ df2 <- read_csv(openai_file) %>%
 
 df <- bind_rows(df1, df2)
 
-# Plot ka_mean by temperature and overlay with color = model
-ggplot(df, aes(x = temperature, y = ka_mean, color = model)) +
+# Load the intra plot from the first script
+p_intra <- readRDS(file.path(output_dir, "intra_plot.rds"))
+
+# Create (or assign) the inter plot to p_inter (if not already done)
+p_inter <- ggplot(df, aes(x = temperature, y = ka_mean, color = model)) +
+  geom_line(size = 1) +
   geom_point(size = 3) +
-  geom_line() +
   labs(
-    title = "Krippendorff's Alpha by Temperature",
     x = "Temperature",
-    y = "Krippendorff's Alpha",
+    y = "Inter-PSS",
     color = "Model"
   ) +
-  theme_minimal()
+  scale_color_manual(values = c("deepseek-r1-8b" = "#0072B2", "gpt-4o" = "#D55E00")) +
+  scale_y_continuous(limits = c(0, 1), expand = c(0, 0)) +
+  theme_minimal(base_size = 14) +
+  ylim(0, 1) +
+  theme(
+    legend.position = "top",
+    panel.grid.major = element_line(color = "grey80"),
+    panel.grid.minor = element_blank()
+  )
+
+# Combine the two plots side-by-side with labels A and B
+combined_plot <- plot_grid(p_intra, p_inter, labels = c("A", "B"), ncol = 2)
+
+# Display the combined plot
+print(combined_plot)
+
+# Save the combined plot
+ggsave(
+  filename = file.path("plots/combined_model_comparison_plot.png"),
+  plot = combined_plot,
+  width = 12, height = 4, dpi = 300
+)
+
+
+

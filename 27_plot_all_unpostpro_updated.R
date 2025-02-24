@@ -5,15 +5,17 @@ library(tidyr)
 
 
 between_files <- list(
+  'News (Short)' = 'data/annotated/news_short_between_updated.csv',
   'News' = 'data/annotated/news_between_updated.csv',
   'Stance (Long)' = 'data/annotated/stance_long_between_updated.csv',
   'Synthetic (Short)' = 'data/annotated/synth_short_between_updated.csv'
 )
 # Define a color palette
 color_palette <- c(
-  'News' = 'orange',
-  'Stance (Long)' = 'deeppink',
-  'Synthetic (Short)' = 'brown'
+  'News (Short)' = '#E69F00',  # Orange
+  'News' = '#56B4E9',          # Sky Blue
+  'Stance (Long)' = '#009E73',  # Bluish Green
+  'Synthetic (Short)' = '#CC79A7'  # Reddish Purple
 )
 
 # Function to read a dataset and ensure consistent column types
@@ -92,10 +94,10 @@ plot_combined <- function(data, x, y, xlabel, ylabel, ylim_vals, save_path = NUL
   }
   
   g <- ggplot(data, aes_string(x = x, y = y, color = "label")) +
-    geom_line(aes(group = label, alpha = 0.1), size = 1) +
-    geom_point(aes(alpha = 0.1), size = 1) +
-    geom_errorbar(aes(ymin = ka_lower, ymax = ka_upper, alpha = 0.1), width = 0.2) +
-    geom_smooth(method = "loess", se = FALSE, size = 1, span = 2) +
+    geom_line(aes(group = label), size = 1) +
+    geom_point(size = 1) +
+    # geom_errorbar(aes(ymin = ka_lower, ymax = ka_upper, alpha = 0.1), width = 0.2) +
+    # geom_smooth(method = "loess", se = FALSE, size = 1, span = 2) +
     geom_hline(data = mean_pss, aes(yintercept = mean_pss, color = label), linetype = "dashed", size = 0.8) +
     geom_hline(aes(yintercept = 0.8, color = "black"), linetype = "dashed", size = 0.8) +
     geom_text(data = mean_pss, aes(x = Inf, y = mean_pss, label = round(mean_pss, 2), color = "black"),

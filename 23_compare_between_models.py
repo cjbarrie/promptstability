@@ -7,7 +7,7 @@ import os
 import time
 
 #############################################
-# 1. Load a 5% subsample of the manifestos dataset
+# 1. Load a subsubsample of the manifestos dataset
 #############################################
 df = pd.read_csv('data/manifestos.csv')
 df = df[df['scale'] == 'Economic']
@@ -88,7 +88,7 @@ annotated_openai_inter.to_csv(openai_inter_csv, index=False)
 print(f"OpenAI inter-prompt annotations saved to {openai_inter_csv}")
 
 #############################################
-# 3. ANALYSIS USING OLLAMA (with your local deepseek-r1:8b)
+# 3. ANALYSIS USING OLLAMA (with local deepseek-r1:8b)
 #############################################
 # Define the Ollama annotation function.
 

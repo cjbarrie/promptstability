@@ -50,16 +50,16 @@ original_text = (
 )
 prompt_postfix = '[Respond 0 for negative, 1 for positive, and 2 for neutral. Respond nothing else.]'
 
-# Run baseline_stochasticity
-# ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/01a_news_within.png', save_csv="data/annotated/news_within.csv")
-ka_scores, annotated_data = psa.baseline_stochasticity(original_text, prompt_postfix, iterations=30, plot=True, save_path='plots/01a_news_within_expanded.png', save_csv="data/annotated/news_within_expanded.csv")
+# Run intra_pss
+# ka_scores, annotated_data = psa.intra_pss(original_text, prompt_postfix, iterations=20, plot=True, save_path='plots/01a_news_within.png', save_csv="data/annotated/news_within.csv")
+ka_scores, annotated_data = psa.intra_pss(original_text, prompt_postfix, iterations=30, plot=True, save_path='plots/01a_news_within_expanded.png', save_csv="data/annotated/news_within_expanded.csv")
 
-# Run interprompt_stochasticity
+# Run inter_pss
 # Set temperatures
 # temperatures = [0.1, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5,  5.0]
 temperatures = [0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9, 2.1, 2.3, 2.5, 2.7, 2.9, 3.1, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.8, 5.0]
 
 
 # Get KA scores across different temperature paraphrasings
-# ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 1, print_prompts=False, plot=True, save_path='plots/01a_news_between.png', save_csv = 'data/annotated/news_between.csv')
-ka_scores, annotated_data = psa.interprompt_stochasticity(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 3, print_prompts=False, plot=True, save_path='plots/01a_news_between_expanded.png', save_csv = 'data/annotated/news_between_expanded.csv') 
+# ka_scores, annotated_data = psa.inter_pss(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 1, print_prompts=False, plot=True, save_path='plots/01a_news_between.png', save_csv = 'data/annotated/news_between.csv')
+ka_scores, annotated_data = psa.inter_pss(original_text, prompt_postfix, nr_variations=10, temperatures=temperatures, iterations = 3, print_prompts=False, plot=True, save_path='plots/01a_news_between_expanded.png', save_csv = 'data/annotated/news_between_expanded.csv') 
