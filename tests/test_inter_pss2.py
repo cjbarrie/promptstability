@@ -15,7 +15,21 @@ def mock_annotation_function(text, prompt, temperature=0.1):
 
 # Test function for `inter_pss`
 def test_inter_pss():
-    psa = PromptStabilityAnalysis(annotation_function=mock_annotation_function, data=test_data)
+    psa = PromptStabilityAnalysis(
+        annotation_function=mock_annotation_function,
+        data=test_data,
+        load_generation_models=False,
+    )
+
+    paraphrases = pd.DataFrame(
+        [
+            {"phrase": "This is a political statement. Answer 1 if related; 0 if not related.", "original": True},
+            {"phrase": "This is a public statement. Answer 1 if related; 0 if not related.", "original": False},
+            {"phrase": "This is a healthcare statement. Answer 1 if related; 0 if not related.", "original": False},
+            {"phrase": "This is a policy statement. Answer 1 if related; 0 if not related.", "original": False},
+        ]
+    )
+    psa._PromptStabilityAnalysis__generate_paraphrases = lambda *args, **kwargs: paraphrases
     
     # Define parameters for inter_pss
     original_text = "This is a political statement."
@@ -23,8 +37,6 @@ def test_inter_pss():
     temperatures = [0.1, 0.5]
     nr_variations = 3
     iterations = 20
-    bootstrap_samples = 10  # For testing purposes
-
     # Run inter_pss
     ka_scores, annotated_data = psa.inter_pss(
         original_text=original_text,
@@ -32,7 +44,7 @@ def test_inter_pss():
         nr_variations=nr_variations,
         temperatures=temperatures,
         iterations=iterations,
-        plot=False
+        plot=False,
     )
 
     # Assertions to verify functionality

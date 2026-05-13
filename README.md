@@ -7,6 +7,12 @@
 
 Package for generating Prompt Stability Scores (PSS). See paper [here](https://www.arxiv.org/abs/2407.02039) outlining technique for investigating the stability of outcomes resulting from variations in language model prompt specifications. Replication material [here](https://github.com/cjbarrie/promptstability/tree/main).
 
+The current library supports both:
+- cumulative intra-PSS, where repeated runs are accumulated over time
+- adjacent intra-PSS, where each run is compared with the immediately previous run
+
+It also supports post hoc rescoring from saved annotation tables, which is useful when you want to recompute stability summaries without rerunning the model.
+
 ## Table of Contents
 
 - [Requirements](#requirements)
@@ -88,6 +94,16 @@ ka_openai_intra, annotated_openai_intra = psa_openai.intra_pss(
 )
 print("OpenAI intra-prompt KA scores:", ka_openai_intra)
 
+# Optional: compute both cumulative and adjacent intra-PSS plus summary diagnostics
+score_map, rescored_annotations, intra_summaries = psa_openai.intra_pss(
+    original_text,
+    prompt_postfix,
+    iterations=5,
+    analysis_modes=["cumulative_alpha", "adjacent_alpha"],
+    return_summaries=True
+)
+print("Intra summaries:", intra_summaries)
+
 # Run inter-prompt stability analysis using the method `inter_pss`
 print("Running OpenAI inter-prompt analysis...")
 temperatures = [0.1, 0.5, 2.0] # in practice, you would set more temperatures than this
@@ -102,6 +118,7 @@ ka_openai_inter, annotated_openai_inter = psa_openai.inter_pss(
     save_csv="news_inter.csv"
 )
 print("OpenAI inter-prompt KA scores:", ka_openai_inter)
+print("Inter summaries:", psa_openai.summarize_inter_scores(ka_openai_inter))
 ```
 
 #### b) Ollama Example (e.g., your local deepseek-r1:8b)
@@ -148,6 +165,21 @@ ka_ollama_inter, annotated_ollama_inter = psa_ollama.inter_pss(
     plot=False
 )
 print("Ollama inter-prompt KA scores:", ka_ollama_inter)
+```
+
+### Post hoc rescoring from saved annotations
+
+If you already have a long-format annotation table with ``id``, ``annotation``, and
+``iteration`` columns, you can rescore it directly:
+
+```python
+rescored_map, rescored_df = psa_ollama.score_intra_annotations(
+    annotated_ollama_intra,
+    bootstrap_samples=100,
+    analysis_modes=["cumulative_alpha", "adjacent_alpha"]
+)
+
+print(psa_ollama.summarize_intra_scores(rescored_map))
 ```
 ## API Documentation
 Our full API reference documentation is hosted on Read the Docs and includes detailed information on all modules, classes, and functions.

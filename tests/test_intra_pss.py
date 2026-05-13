@@ -1,29 +1,7 @@
-import os
 import pandas as pd
 from promptstability.core import PromptStabilityAnalysis, get_api_key
 from openai import OpenAI
 import pytest
-
-# Initialize OpenAI client
-APIKEY = get_api_key()
-client = OpenAI(api_key=APIKEY)
-
-# Define the annotation function with the specified API call structure
-def annotation_function(text, prompt, temperature=0.1):
-    """Annotation function using OpenAI API client for chat completions."""
-    try:
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            temperature=temperature,
-            messages=[
-                {"role": "system", "content": prompt},
-                {"role": "user", "content": text}
-            ]
-        )
-        return ''.join(choice.message.content for choice in response.choices)
-    except Exception as e:
-        print(f"Caught exception: {e}")
-        return None
 
 # Sample test data
 test_data = [
@@ -34,12 +12,28 @@ test_data = [
     "Healthcare is a critical issue for many people."
 ]
 
-# Initialize PromptStabilityAnalysis with the test annotation function and data
-psa = PromptStabilityAnalysis(annotation_function=annotation_function, data=test_data)
-
 @pytest.mark.requires_api_key
 def test_intra_pss():
     """Test the intra_pss function (within-prompt stability) with iterative CSV output."""
+    api_key = get_api_key()
+    client = OpenAI(api_key=api_key)
+
+    def annotation_function(text, prompt, temperature=0.1):
+        try:
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                temperature=temperature,
+                messages=[
+                    {"role": "system", "content": prompt},
+                    {"role": "user", "content": text},
+                ],
+            )
+            return "".join(choice.message.content for choice in response.choices)
+        except Exception as exc:
+            print(f"Caught exception: {exc}")
+            return None
+
+    psa = PromptStabilityAnalysis(annotation_function=annotation_function, data=test_data)
     original_text = "This is a prompt about the quick brown fox."
     prompt_postfix = "Answer 1 if related; 0 if not related."
     iterations = 20
